@@ -1,0 +1,98 @@
+---
+import MaterialIcon from './MaterialIcon.astro';
+
+interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+const siteDomain = 'https://cctvpalembang.web.id';
+---
+
+<div class={`google-source-card bg-gradient-to-r from-slate-900 to-security-card border border-brand-500/30 rounded-xl p-5 shadow-lg my-8 ${className}`}>
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div class="flex items-start gap-3">
+      <div class="p-2.5 bg-brand-500/10 rounded-lg border border-brand-500/20 text-brand-400 mt-0.5 shrink-0">
+        <MaterialIcon name="saved_search" size={24} />
+      </div>
+      <div>
+        <h4 class="text-base font-bold text-white mb-1">
+          Jadikan Sumber Terpercaya di Google Search
+        </h4>
+        <p class="text-sm text-slate-300">
+          Simpan <strong>cctvpalembang.web.id</strong> sebagai sumber prioritas rekomendasi keamanan properti dan CCTV Anda di Google Search.
+        </p>
+      </div>
+    </div>
+    
+    <button 
+      type="button" 
+      class="gsp-btn inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm rounded-lg transition-all shadow-md hover:shadow-brand-500/25 shrink-0 cursor-pointer active:scale-95"
+      data-domain={siteDomain}
+      aria-label="Tambah CCTV Palembang sebagai sumber preferensi di Google Search"
+    >
+      <MaterialIcon name="bookmark_add" size={18} />
+      <span>+ Ikuti Sumber Ini</span>
+    </button>
+  </div>
+</div>
+
+<script>
+  function setupGspButtons() {
+    const buttons = document.querySelectorAll<HTMLButtonElement>('.gsp-btn');
+    
+    buttons.forEach((btn) => {
+      // Hindari duplikasi event listener jika View Transitions berpindah halaman
+      if (btn.dataset.initialized === 'true') return;
+      btn.dataset.initialized = 'true';
+
+      btn.addEventListener('click', () => {
+        const domain = btn.dataset.domain || 'https://cctvpalembang.web.id';
+        const targetUrl = `https://www.google.com/preferences/source?q=${encodeURIComponent(domain)}`;
+        const textSpan = btn.querySelector('span');
+
+        // 1. Feedback visual instan agar pengguna tahu klik diterima
+        if (textSpan) {
+          textSpan.textContent = 'Membuka Google...';
+        }
+        btn.classList.remove('bg-brand-600', 'hover:bg-brand-500');
+        btn.classList.add('bg-emerald-600', 'hover:bg-emerald-500');
+
+        // 2. Coba API Google Source Preferences (tersedia di Google App / WebView tertentu)
+        const googleWin = window as any;
+        let opened = false;
+        try {
+          if (googleWin.google?.news?.sourcePreferences) {
+            googleWin.google.news.sourcePreferences.showDialog({
+              forceReload: true,
+              sourceUrl: domain,
+            });
+            opened = true;
+          }
+        } catch {
+          // Abaikan dan lanjut ke fallback URL langsung
+        }
+
+        // 3. Fallback utama: buka halaman Google Source Preferences
+        if (!opened) {
+          const newTab = window.open(targetUrl, '_blank', 'noopener,noreferrer');
+          if (!newTab) {
+            // Popup diblokir peramban: arahkan di tab yang sama
+            window.location.href = targetUrl;
+          }
+        }
+
+        // 4. Kembalikan label tombol ke status netral yang jujur
+        setTimeout(() => {
+          if (textSpan) {
+            textSpan.textContent = 'Buka Google Preferences';
+          }
+        }, 2000);
+      });
+    });
+  }
+
+  // Kompatibilitas dengan ClientRouter (Astro View Transitions) dan First Load
+  document.addEventListener('DOMContentLoaded', setupGspButtons);
+  document.addEventListener('astro:page-load', setupGspButtons);
+</script>

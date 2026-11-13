@@ -1,0 +1,24 @@
+{
+  "name": "cctvpalembang-web-id",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "node scripts/generate-images.js && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "generate-images": "node scripts/generate-images.js",
+    "deploy": "python3 /home/abah/.config/opencode/skills/cpanel-domainesia/scripts/deploy.py",
+    "deploy:dry": "python3 /home/abah/.config/opencode/skills/cpanel-domainesia/scripts/deploy.py --dry-run"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.4.11",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "tailwindcss": "^4.3.5"
+  }
+}

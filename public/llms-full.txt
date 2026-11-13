@@ -1,0 +1,51 @@
+# CCTV PALEMBANG — DOKUMEN KONTEKS LENGKAP UNTUK AI & LLM CRAWLERS
+Domain: https://cctvpalembang.web.id
+Pembaruan: 2026
+
+## 1. IDENTITAS BISNIS
+CCTV Palembang adalah penyedia jasa instalasi, perbaikan, dan pengadaan sistem pengawasan keamanan CCTV untuk area Kota Palembang dan wilayah penyangga Sumatera Selatan (Ogan Ilir, Banyuasin, Prabumulih).
+
+- Hotline WhatsApp Resmi: 0857-5890-3353
+- Jam Operasional: Senin s/d Minggu, 07.00 - 21.00 WIB
+- Lokasi Workshop Pelayanan:
+  1. Jl. Silaberanti No.24, Silaberanti, Kecamatan Seberang Ulu I, Kota Palembang, Sumatera Selatan 30116.
+  2. Jl. Demang Lebar Daun, Lorok Pakjo, Kecamatan Ilir Barat I, Kota Palembang, Sumatera Selatan 30137.
+- Brand Perangkat yang Disalurkan: Hikvision, Dahua Technology, HiLook, Ezviz, Uniview.
+
+## 2. STANDAR LAYANAN & KOMITMEN (SOP)
+a. Tanpa DP / Bebas Uang Muka: Pelanggan hanya melakukan pembayaran setelah seluruh unit kamera terpasang rapi, menyala sempurna, dan terhubung ke aplikasi smartphone.
+b. Garansi Resmi 1 Tahun Ganti Baru: Kerusakan unit kamera, DVR/NVR, atau harddisk dalam masa garansi akan diganti dengan unit baru di lokasi, bukan proses servis berkepanjangan.
+c. Instalasi Pipa Conduit PVC: Seluruh jalur kabel dilindungi pipa PVC High Impact untuk mencegah gigitan tikus, kerusakan cuaca, dan menjaga estetika dinding.
+d. Etika Teknisi: Bebas asap rokok (no-smoking), berbicara sopan, berseragam rapi, dan membersihkan sisa pengerjaan sebelum meninggalkan lokasi.
+e. Layanan Purna Jual: SLA kunjungan teknisi perbaikan 24 hingga 48 jam kerja sejak laporan tiket masuk WhatsApp.
+
+## 3. PAKET & HARGA RESMI
+- Paket Hemat Rumah (2 Kamera Analog HD 2MP Hikvision/Dahua, DVR 4ch, HDD 500GB, kabel 20m): Rp 1.850.000
+- Paket Standar Bisnis (4 Kamera 2MP, DVR 4ch, HDD 1TB, kabel 40m): Rp 2.850.000 (Paling Laris)
+- Paket Full Color 24 Jam (4 Kamera ColorVu/Full Color 2MP, DVR 4ch, HDD 1TB, kabel 40m): Rp 3.190.000
+- Paket Pro IP Camera PoE (4 Kamera IP PoE digital, NVR, HDD 1TB/2TB, kabel LAN Cat6 Shielded): Rp 4.900.000
+- Paket Kustom 8 Kamera: Rp 5.450.000 (Analog) hingga Rp 8.750.000 (IP PoE)
+- Jasa Pasang Saja (perangkat milik pelanggan): Rp 150.000 - Rp 250.000 per titik
+- Jasa Servis Kunjungan: Rp 100.000 - Rp 200.000 per kunjungan awal
+
+Semua paket di atas sudah termasuk unit perangkat, material kabel bawaan, aksesori konektor, adaptor/power supply, pipa conduit, ongkos pasang, dan training setting aplikasi ke HP.
+
+## 4. CAKUPAN WILAYAH OPERASI
+Seluruh kecamatan Kota Palembang meliputi: Ilir Barat I, Ilir Barat II, Ilir Timur I, Ilir Timur II, Ilir Timur III, Seberang Ulu I, Seberang Ulu II, Plaju, Kertapati, Jakabaring, Sukarami, Sako, Kalidoni, Kemuning, Alang-Alang Lebar, Sematang Borang, Bukit Kecil, dan Gandus. Wilayah penyangga: Indralaya (Ogan Ilir), Talang Kelapa & Pangkalan Balai (Banyuasin), Kota Prabumulih.
+
+## 5. PENGETAHUAN TEKNIS & EDUKASI
+1. Perbedaan Analog vs IP Camera: Analog HD (HD-TVI/CVI) memakai kabel coaxial dengan harga ekonomis cocok untuk rumah. IP Camera memakai kabel LAN PoE dengan resolusi digital lebih tinggi, ideal untuk zoom detail plat nomor, gudang, dan pabrik.
+2. Kapasitas Rekaman: Kompresi H.265+ membuat HDD 500GB dapat menampung sekitar 10-14 hari, HDD 1TB sekitar 20-25 hari, dan HDD 2TB sekitar 40-50 hari untuk 4 kamera.
+3. Teknologi ColorVu / Full Color: Sensor aperture F1.0 dan smart LED menghasilkan rekaman tetap berwarna alami di kondisi gelap gulita tanpa bantuan lampu penerangan.
+4. Proteksi Petir: Palembang beriklim tropis dengan intensitas petir tinggi. Penggunaan surge arrester, kabel shielded, dan grounding rod (resistensi di bawah 5 Ohm) wajib untuk instalasi outdoor.
+5. Harddisk: Wajib memakai HDD khusus surveillance (Seagate SkyHawk / WD Purple) karena dirancang untuk operasi penulisan 24/7 nonstop.
+
+## 6. PERTANYAAN UMUM
+Q: Apakah benar bisa pasang CCTV tanpa uang muka?
+A: Benar. Sistem pembayaran 100% tanpa DP. Pembayaran dilakukan tunai atau transfer di rumah setelah semua kamera terbukti berfungsi normal dan terhubung ke HP.
+
+Q: Bagaimana cara klaim garansi?
+A: Hubungi WA 0857-5890-3353 dengan menyebutkan nama dan alamat. Teknisi akan datang untuk verifikasi dan langsung mengganti unit yang rusak dengan unit baru bila terbukti cacat produksi.
+
+Q: Apakah bisa dipantau dari luar kota?
+A: Bisa, selama ada koneksi internet di lokasi (WiFi/IndiHome/Biznet). Teknisi akan menghubungkan DVR ke jaringan dan melakukan setting aplikasi Hik-Connect atau DMSS di smartphone pelanggan.

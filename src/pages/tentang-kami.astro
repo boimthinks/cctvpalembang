@@ -1,0 +1,151 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import WhatsAppStickyCard from '@/components/common/WhatsAppStickyCard.astro';
+import MaterialIcon from '@/components/common/MaterialIcon.astro';
+
+const values = [
+  {
+    icon: 'verified_user',
+    title: 'Garansi Resmi 1 Tahun Ganti Baru',
+    desc: 'Kami tidak membiarkan pelanggan menunggu servis berbulan-bulan. Jika kamera, DVR, atau harddisk surveillance rusak dalam masa garansi, kami ganti unit baru langsung di lokasi.',
+  },
+  {
+    icon: 'payments',
+    title: '100% Tanpa Uang Muka (Tanpa DP)',
+    desc: 'Anda hanya membayar setelah seluruh sistem CCTV terpasang rapi, kamera menyala normal, gambar tajam, dan telah diajarkan cara memantau online lewat HP.',
+  },
+  {
+    icon: 'plumbing',
+    title: 'SOP Rapi Berstandar Pipa Conduit',
+    desc: 'Semua tarikan kabel dilindungi pipa conduit PVC High Impact tebal untuk mencegah gigitan tikus di plafon, rembesan air hujan, suhu panas atap, dan menjaga estetika bangunan.',
+  },
+  {
+    icon: 'smoke_free',
+    title: 'Teknisi Sopan & No-Smoking SOP',
+    desc: 'Teknisi kami berseragam rapi, tidak merokok sama sekali di area properti pelanggan, dan selalu membersihkan sisa debu bor atau potongan kabel sebelum berpamitan.',
+  },
+];
+
+const workshops = [
+  {
+    name: 'Workshop Seberang Ulu (Kantor Utama)',
+    address: 'Jl. Silaberanti No.24, Silaberanti, Kec. Seberang Ulu I, Kota Palembang, Sumatera Selatan 30116',
+    coverage: 'Melayani Seberang Ulu I & II, Plaju, Kertapati, Jakabaring, hingga Ogan Ilir (Indralaya).',
+  },
+  {
+    name: 'Workshop Ilir Barat (Hub Pelayanan Ilir)',
+    address: 'Jl. Demang Lebar Daun, Lorok Pakjo, Kec. Ilir Barat I, Kota Palembang, Sumatera Selatan 30137',
+    coverage: 'Melayani Ilir Barat, Ilir Timur, Sukarami, Sako, Kalidoni, Gandus, hingga Talang Kelapa Banyuasin.',
+  },
+];
+---
+
+<BaseLayout
+  title="Tentang Kami — CCTV Palembang Jasa Pasang & Servis Terpercaya"
+  description="Profil CCTV Palembang: vendor instalasi CCTV terpercaya di Palembang. Dua workshop fisik Seberang Ulu & Ilir Barat, garansi 1 tahun ganti baru, tanpa DP."
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-security-dark to-slate-900 pt-12 pb-16 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+      <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-brand-500/15 text-brand-300 border border-brand-500/30 uppercase mb-3">
+        Profil &amp; Komitmen Layanan
+      </span>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-4">
+        Tentang CCTV Palembang
+      </h1>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+        Penyedia resmi sistem keamanan kamera pengawas di Kota Palembang. Berpengalaman memasang ribuan titik CCTV untuk rumah hunian, ruko retail, perkantoran, dan kawasan industri berskala besar.
+      </p>
+    </div>
+  </section>
+
+  <!-- Konten Utama -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      
+      <!-- Kolom Kiri: Cerita & Nilai -->
+      <div class="lg:col-span-8 space-y-10">
+        
+        <!-- Cerita Singkat -->
+        <div class="bg-security-card border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-4">
+          <h2 class="text-2xl font-bold text-white tracking-tight">Dedikasi Keamanan Properti di Kota Palembang</h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Didirikan untuk menjawab keresahan masyarakat Palembang terhadap jasa pemasangan CCTV perorangan yang sering kali menghilang ketika terjadi kendala klaim garansi. Kami hadir dengan komitmen bisnis jangka panjang yang berbadan hukum legal, melayani kuitansi resmi bertanda tangan dan berstempel untuk instansi, CV, maupun perorangan.
+          </p>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Seluruh pengerjaan kami dikawal langsung oleh teknisi berpengalaman yang memahami karakteristik lingkungan tropis basah dataran rendah Sungai Musi: dari antisipasi lonjakan induksi petir, suhu panas atap ruko, hingga perlindungan pipa PVC conduit dari hama tikus di plafon rumah.
+          </p>
+        </div>
+
+        <!-- 4 Nilai Utama (USP) -->
+        <div>
+          <h2 class="text-xl font-bold text-white mb-6">4 Pilar Standar Layanan Kami</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {values.map((v) => (
+              <div class="bg-security-card border border-slate-800 rounded-xl p-5 hover:border-brand-500/40 transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-brand-500/20 text-brand-400 flex items-center justify-center mb-4">
+                  <MaterialIcon name={v.icon} size={22} />
+                </div>
+                <h3 class="text-base font-bold text-white mb-2">{v.title}</h3>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">{v.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Workshop Fisik -->
+        <div class="space-y-4">
+          <h2 class="text-xl font-bold text-white">Dua Workshop Fisik Resmi di Palembang</h2>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Keberadaan kantor fisik memudahkan Anda berkonsultasi langsung, melakukan pengujian perangkat kamera, serta mengurus klaim garansi dengan rasa tenang.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+            {workshops.map((w) => (
+              <div class="bg-security-card border border-slate-800 rounded-xl p-6 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center gap-2 text-brand-400 font-bold text-sm mb-3">
+                    <MaterialIcon name="storefront" size={20} />
+                    <span>{w.name}</span>
+                  </div>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                    {w.address}
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-slate-800 text-[11px] text-slate-400">
+                  <span class="text-brand-300 font-medium">Jangkauan: </span>{w.coverage}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Kolom Kanan: Sticky Sidebar -->
+      <aside class="lg:col-span-4 sticky top-24 space-y-6">
+        <WhatsAppStickyCard
+          title="Konsultasi &amp; Survei Gratis"
+          subtitle="Hubungi admin resmi kami untuk jadwal survei gratis ke rumah atau kantor Anda se-Palembang Raya."
+          message="Halo Admin CCTV Palembang. Saya ingin konsultasi pemasangan CCTV..."
+        />
+
+        <div class="bg-security-card border border-slate-800 rounded-2xl p-6 text-xs text-slate-300 space-y-3">
+          <h3 class="font-bold text-white text-sm">Jam Operasional</h3>
+          <p class="flex items-center justify-between border-b border-slate-800 pb-2">
+            <span>Senin - Minggu:</span>
+            <span class="font-semibold text-brand-300">07.00 - 21.00 WIB</span>
+          </p>
+          <p class="flex items-center justify-between border-b border-slate-800 pb-2">
+            <span>Layanan Panggilan:</span>
+            <span class="font-semibold text-emerald-400">Same-Day Service</span>
+          </p>
+          <p class="text-[11px] text-slate-400 pt-1">
+            Melayani Kota Palembang, Ogan Ilir (Indralaya), Banyuasin (Talang Kelapa), dan Prabumulih.
+          </p>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+</BaseLayout>

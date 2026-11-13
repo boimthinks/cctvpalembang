@@ -1,0 +1,209 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import MaterialIcon from '@/components/common/MaterialIcon.astro';
+
+const packages = [
+  {
+    category: 'Analog HD',
+    name: 'Paket Hemat Rumah (2 Kamera)',
+    description: 'Pilihan paling ekonomis dan populer untuk memantau rumah pribadi, ruko kecil, atau garasi. Menjangkau dua titik kritis dengan kejernihan maksimal.',
+    competitorPrice: 'Rp 2.200.000',
+    price: 'Rp 1.850.000',
+    popular: false,
+    detailLink: '/paket/paket-hemat-rumah-2-kamera/',
+    waMessage: 'Halo Admin CCTV Palembang. Saya tertarik pesan Paket Hemat Rumah 2 Kamera (Rp 1.850.000) tanpa DP...',
+    features: [
+      '2 Unit Kamera Indoor/Outdoor Hikvision/Dahua 2MP',
+      '1 Unit DVR 4-Channel Turbo HD (Bisa upgrade s/d 4 kamera)',
+      'Hard Disk 500GB Khusus CCTV (Rekam s/d 12 hari)',
+      'Konektor BNC & Jack DC lengkap berkualitas',
+      'Kabel CCTV RG59 + Power Coaxial 20 Meter',
+      'Set Adaptor & Power Supply Terpusat',
+      'Gratis Instalasi Rapi SOP & Training Setting ke HP',
+      'Garansi Resmi 1 Tahun (Ganti Baru)',
+      'Layanan Bayar Setelah Selesai Terpasang (Tanpa DP)',
+    ],
+  },
+  {
+    category: 'Analog HD',
+    badge: 'Paling Laris di Palembang',
+    name: 'Paket Standar Bisnis (4 Kamera)',
+    description: 'Rekomendasi terbaik untuk pengawasan medium: rumah 2 lantai, minimarket, kantor administrasi, atau kafe. Mengamankan seluruh sudut penting.',
+    competitorPrice: 'Rp 2.999.000',
+    price: 'Rp 2.850.000',
+    popular: true,
+    detailLink: '/paket/paket-standar-bisnis-4-kamera/',
+    waMessage: 'Halo Admin CCTV Palembang. Saya tertarik pesan Paket Standar Bisnis 4 Kamera (Rp 2.850.000) tanpa DP...',
+    features: [
+      '4 Unit Kamera 2MP Hikvision/Dahua (Bebas pilih Indoor/Outdoor)',
+      '1 Unit DVR 4-Channel Full HD',
+      'Hard Disk 1TB Surveillance (Rekam s/d 20 hari)',
+      'Konektor BNC & Jack DC premium anti korosi',
+      'Kabel CCTV RG59 + Power Coaxial 40 Meter',
+      'Power Supply Sentral 10A Jaring Berkualitas',
+      'Gratis Instalasi Rapi SOP & Training Setting ke HP',
+      'Garansi Resmi 1 Tahun (Ganti Baru)',
+      'Layanan Bayar Setelah Selesai Terpasang (Tanpa DP)',
+    ],
+  },
+  {
+    category: 'Full Color',
+    name: 'Paket Full Color 24 Jam (4 Kamera)',
+    description: 'Dilengkapi teknologi ColorVu / Full Color. Kamera tetap menghasilkan rekaman BERWARNA JAM 12 MALAM meskipun dalam kondisi gelap gulita tanpa cahaya.',
+    competitorPrice: 'Rp 3.300.000',
+    price: 'Rp 3.190.000',
+    popular: false,
+    detailLink: '/layanan/paket-cctv-palembang-murah/',
+    waMessage: 'Halo Admin CCTV Palembang. Saya tertarik pesan Paket Full Color 24 Jam 4 Kamera (Rp 3.190.000) tanpa DP...',
+    features: [
+      '4 Unit Kamera Hikvision/Dahua Full Color 2MP (Tetap berwarna di malam gelap)',
+      '1 Unit DVR 4-Channel Active Defending Full HD',
+      'Hard Disk 1TB Surveillance (Rekam s/d 18 hari)',
+      'Konektor BNC & Jack DC berkualitas tinggi',
+      'Kabel Coaxial RG59 Spesial Shielded 40 Meter',
+      'Power Supply Premium anti petir & induksi listrik',
+      'Gratis Instalasi Rapi SOP & Training Setting ke HP',
+      'Garansi Resmi 1 Tahun (Ganti Baru)',
+      'Layanan Bayar Setelah Selesai Terpasang (Tanpa DP)',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Daftar Paket CCTV Palembang Murah — Tanpa DP & Garansi 1 Tahun Ganti Baru"
+  description="Daftar paket CCTV Palembang murah terima beres. Paket 2 kamera Rp 1.850.000, 4 kamera Rp 2.850.000, dan Full Color Rp 3.190.000. Tanpa DP, bayar setelah selesai pasang!"
+  image="/images/services/paket-cctv-palembang-murah.webp"
+>
+  <main class="py-16 sm:py-20 bg-slate-950 min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Heading Header -->
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight uppercase">
+          Daftar Paket CCTV
+        </h1>
+        <p class="text-sm sm:text-base text-slate-400 leading-relaxed">
+          Bandingkan langsung harga jujur kami dengan kompetitor. Tanpa tambahan tersembunyi, pengerjaan super cepat, dan garansi penuh 1 tahun ganti baru!
+        </p>
+      </div>
+
+      <!-- Grid 3 Kolom Card Paket -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch pt-4">
+        {packages.map((pkg) => (
+          <div
+            class:list={[
+              'rounded-2xl p-6 sm:p-7 border transition-all flex flex-col justify-between relative shadow-xl',
+              pkg.popular
+                ? 'bg-slate-900/90 border-amber-400 shadow-amber-400/10 ring-2 ring-amber-400/80 -translate-y-1'
+                : 'bg-slate-900/60 border-slate-800 hover:border-slate-700',
+            ]}
+          >
+            {pkg.popular && (
+              <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-400 text-slate-950 text-[10px] font-black py-1 px-4 rounded-full uppercase tracking-wider shadow-md shrink-0">
+                {pkg.badge}
+              </span>
+            )}
+
+            <div class="space-y-4">
+              <!-- Kategori Tag -->
+              <span class="text-[10px] font-bold bg-slate-800 border border-slate-700 text-amber-400 rounded-md py-1 px-2.5 font-mono uppercase tracking-wider inline-block">
+                {pkg.category}
+              </span>
+
+              <!-- Nama Paket -->
+              <h2 class="text-xl font-black text-white tracking-tight leading-snug">
+                {pkg.name}
+              </h2>
+
+              <!-- Deskripsi Paket -->
+              <p class="text-xs text-slate-400 leading-relaxed min-h-[48px]">
+                {pkg.description}
+              </p>
+
+              <hr class="border-slate-800" />
+
+              <!-- Bagian Harga -->
+              <div class="space-y-1">
+                <span class="text-xs text-slate-500 block line-through font-mono">
+                  Kompetitor Terendah: {pkg.competitorPrice}
+                </span>
+                <span class="text-3xl font-black text-amber-400 block font-mono">
+                  {pkg.price}
+                </span>
+                <span class="text-xs text-amber-400 font-bold uppercase tracking-wide flex items-center gap-1">
+                  <MaterialIcon name="bolt" size={16} className="text-amber-400 shrink-0" />
+                  Bayar Setelah Selesai Pasang!
+                </span>
+              </div>
+
+              <hr class="border-slate-800" />
+
+              <!-- Checklist Fitur -->
+              <ul class="space-y-2.5 text-xs text-slate-300">
+                {pkg.features.map((feat) => (
+                  <li class="flex items-start gap-2 leading-relaxed">
+                    <MaterialIcon name="check" size={16} className="text-amber-400 shrink-0 mt-0.5" />
+                    <span>{feat}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <!-- Tombol Aksi Bawah -->
+            <div class="mt-8 space-y-2.5 pt-4 border-t border-slate-800/80">
+              <a
+                href={pkg.detailLink}
+                class="w-full text-center py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all block bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-slate-200"
+              >
+                Lihat Detail Paket
+              </a>
+              <a
+                href={`https://wa.me/6285758903353?text=${encodeURIComponent(pkg.waMessage)}`}
+                target="_blank"
+                rel="noopener nofollow"
+                class:list={[
+                  'w-full text-center py-3 rounded-xl font-extrabold text-xs uppercase tracking-wider transition-all block shadow-md',
+                  pkg.popular
+                    ? 'bg-amber-400 hover:bg-amber-300 text-slate-950 font-black'
+                    : 'bg-emerald-600 hover:bg-emerald-500 text-white',
+                ]}
+              >
+                Pesan Pasang (Tanpa DP)
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Info Tambahan Paket Khusus / Industri -->
+      <div class="bg-gradient-to-r from-slate-900 via-slate-900 to-brand-950 border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left shadow-lg">
+        <div>
+          <h3 class="text-lg font-bold text-white mb-1">
+            Butuh Paket 8 Titik, 16 Titik, atau IP Camera Pabrik?
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-400 max-w-2xl leading-relaxed">
+            Kami juga melayani paket custom gedung bertingkat, gudang logistik, dan kawasan industri dengan perangkat PoE resolusi hingga 4K dan kabel LAN Cat6 Shielded.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-3 shrink-0">
+          <a
+            href="/layanan/instalasi-ip-camera-gedung-pabrik-palembang/"
+            class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs rounded-xl border border-slate-700 transition-colors"
+          >
+            Lihat IP Camera Industri
+          </a>
+          <a
+            href="https://wa.me/6285758903353?text=Halo%20Admin%20CCTV%20Palembang.%20Saya%20tertarik%20konsultasi%20paket%20custom%20CCTV%20skala%20besar..."
+            target="_blank"
+            rel="noopener nofollow"
+            class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-md transition-all"
+          >
+            Konsultasi WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</BaseLayout>

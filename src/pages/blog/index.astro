@@ -1,0 +1,72 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import MaterialIcon from '@/components/common/MaterialIcon.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+posts.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+---
+
+<BaseLayout
+  title="Pusat Edukasi & Blog CCTV Palembang — Panduan Keamanan & Tips Teknis"
+  description="Kumpulan artikel edukasi panduan memilih CCTV, rincian biaya pasang, tips mengatasi kamera rusak, dan rekomendasi sistem keamanan di Palembang."
+  image="/images/blog/default.webp"
+>
+  <section class="bg-gradient-to-b from-security-dark to-slate-900 pt-10 pb-16 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/10 text-brand-300 border border-brand-500/30 mb-4">
+        <MaterialIcon name="menu_book" size={16} />
+        <span>Pusat Edukasi Keamanan CCTV</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-black text-white tracking-tight mb-4">
+        Panduan &amp; Tips CCTV Palembang
+      </h1>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+        Ditulis langsung oleh tim teknisi berpengalaman untuk membantu Anda membuat keputusan keamanan yang tepat, hemat biaya, dan tahan lama.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    {posts.length === 0 ? (
+      <div class="text-center py-16 bg-security-card border border-slate-800 rounded-2xl max-w-md mx-auto p-8">
+        <p class="text-slate-300 text-sm">Artikel blog sedang disiapkan oleh tim teknisi kami.</p>
+        <a href="/" class="mt-4 inline-block text-brand-400 font-semibold text-xs hover:underline">Kembali ke Beranda</a>
+      </div>
+    ) : (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <article class="bg-security-card border border-slate-800 rounded-2xl overflow-hidden hover:border-brand-500/50 transition-all hover:-translate-y-1 shadow-md flex flex-col justify-between">
+            <div>
+              <a href={`/blog/${post.id}/`}>
+                <div class="aspect-[4/3] bg-slate-950 overflow-hidden">
+                  <img src={post.data.image} alt={post.data.title} width="800" height="600" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+                </div>
+              </a>
+              <div class="p-5">
+                <div class="flex items-center gap-2 text-xs text-brand-400 font-semibold mb-2">
+                  <span>{post.data.category}</span>
+                  <span>•</span>
+                  <span class="text-slate-400">{post.data.publishDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                </div>
+                <h2 class="text-lg font-bold text-white mb-2 leading-snug">
+                  <a href={`/blog/${post.id}/`} class="hover:text-brand-300 transition-colors">
+                    {post.data.title}
+                  </a>
+                </h2>
+                <p class="text-xs text-slate-400 line-clamp-3 leading-relaxed">
+                  {post.data.description}
+                </p>
+              </div>
+            </div>
+            <div class="p-5 pt-0">
+              <a href={`/blog/${post.id}/`} class="text-xs font-bold text-brand-400 hover:text-brand-300 inline-flex items-center gap-1">
+                Baca Selengkapnya <MaterialIcon name="arrow_forward" size={14} />
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>

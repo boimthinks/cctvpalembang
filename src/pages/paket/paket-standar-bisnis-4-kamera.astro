@@ -1,0 +1,554 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import WhatsAppStickyCard from '@/components/common/WhatsAppStickyCard.astro';
+import MaterialIcon from '@/components/common/MaterialIcon.astro';
+
+const siteURL = Astro.site ? Astro.site.origin : 'https://cctvpalembang.web.id';
+const currentUrl = `${siteURL}/paket/paket-standar-bisnis-4-kamera/`;
+
+// Metadata Page
+const pageTitle = 'Paket Standar Bisnis (4 Kamera) - CCTV Palembang Murah';
+const pageDescription = 'Jasa pasang CCTV Palembang murah ✓ 4 Kamera 2MP ✓ Tanpa DP ✓ Garansi Resmi 1 Tahun Ganti Baru ✓ Teknisi Rapi, Sopan & Tanpa Asap Rokok. Rp 2.850.000';
+const ogImage = '/images/services/paket-standar-bisnis-4-kamera.webp';
+
+// JSON-LD Structured Data: Product, Service, Breadcrumbs
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  '@id': `${currentUrl}#product`,
+  name: 'Paket Standar Bisnis (4 Kamera) CCTV Palembang',
+  image: `${siteURL}${ogImage}`,
+  description: 'Paket pemasangan CCTV 4 kamera analog HD 2MP Hikvision dan Dahua paling laris di Palembang. Cocok untuk rumah 2 lantai, ruko, toko, dan minimarket. Lengkap DVR 4 channel, harddisk 1TB surveillance, kabel 40 meter, dan pipa conduit.',
+  brand: {
+    '@type': 'Brand',
+    name: 'Hikvision & Dahua',
+  },
+  sku: 'CCTV-PLG-PKT-4CAM-STD',
+  offers: {
+    '@type': 'Offer',
+    url: currentUrl,
+    priceCurrency: 'IDR',
+    price: '2850000',
+    priceValidUntil: '2027-12-31',
+    availability: 'https://schema.org/InStock',
+    itemCondition: 'https://schema.org/NewCondition',
+    seller: {
+      '@id': `${siteURL}/#localbusiness`,
+    },
+  },
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${currentUrl}#service`,
+  name: 'Jasa Pemasangan Paket Standar Bisnis 4 Kamera Palembang',
+  serviceType: 'Commercial and Residential Security Camera Installation',
+  description: pageDescription,
+  provider: {
+    '@id': `${siteURL}/#localbusiness`,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Palembang' },
+    { '@type': 'AdministrativeArea', name: 'Banyuasin' },
+    { '@type': 'AdministrativeArea', name: 'Ogan Ilir' },
+  ],
+  url: currentUrl,
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Beranda',
+      item: `${siteURL}/`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Paket CCTV',
+      item: `${siteURL}/paket/`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Paket Standar Bisnis (4 Kamera)',
+      item: currentUrl,
+    },
+  ],
+};
+
+const additionalSchemas = [productSchema, serviceSchema, breadcrumbSchema];
+
+// Data Spesifikasi dan Komponen Paket
+const packageFeatures = [
+  '4 Unit Kamera 2MP Full HD 1080p Hikvision atau Dahua (Bebas tentukan kombinasi Indoor Dome dan Outdoor Bullet IP66)',
+  '1 Unit DVR 4-Channel Turbo HD Penta-brid H.265+ dengan fitur Smart Playback dan Cloud Mobile Access',
+  '1 Unit Harddisk 1TB Khusus Surveillance 24/7 (Kapasitas penyimpanan rekaman otomatis berulang 18 hingga 20 hari)',
+  '40 Meter Kabel Coaxial RG59 Shielded 95 persen dengan inti tembaga murni dan kabel power terpadu',
+  '1 Unit Power Supply Sentral 10A Jaring Aluminium Berkualitas dengan sekring proteksi korsleting',
+  '1 Set Konektor BNC Taiwan Crimp Presisi dan Jack DC male female tahan korosi',
+  'Gratis Pipa Conduit PVC High Impact 20mm untuk jalur kabel plafon dan dinding rapi anti tikus',
+  'Gratis Jasa Instalasi SOP Teknisi Rapi dan Pelatihan Setting Online ke HP seluruh anggota keluarga / staf',
+  'Garansi Resmi 1 Tahun Penuh Ganti Baru untuk Kamera, DVR, dan Harddisk',
+  '100% Bebas Uang Muka (Tanpa DP): Bayar di tempat setelah pemasangan rapi dan CCTV menyala normal',
+];
+
+const rabDetails = [
+  { component: 'Kamera CCTV 2MP Hikvision / Dahua', spec: 'Kombinasi Indoor & Outdoor 1080p, Smart IR 20m, Lensa 2.8mm/3.6mm', qty: '4 Unit', unitPrice: 'Rp 280.000', subtotal: 'Rp 1.120.000' },
+  { component: 'Perekam DVR 4-Channel Turbo HD', spec: 'Hikvision Turbo HD / Dahua Pentabrid H.265+ Compression Dual Output', qty: '1 Unit', unitPrice: 'Rp 550.000', subtotal: 'Rp 550.000' },
+  { component: 'Harddisk 1TB Khusus Surveillance', spec: 'Seagate SkyHawk / WD Purple 24/7 Continuous Video Writing', qty: '1 Unit', unitPrice: 'Rp 650.000', subtotal: 'Rp 650.000' },
+  { component: 'Power Supply Sentral 10A Jaring', spec: 'Casing Aluminium Pendingin Pasif dengan Fuse Protection', qty: '1 Unit', unitPrice: 'Rp 180.000', subtotal: 'Rp 180.000' },
+  { component: 'Kabel Coaxial RG59 + Power', spec: 'Shielded Braiding 95% Tembaga Murni (Kuota 40 Meter)', qty: '40 Meter', unitPrice: 'Rp 6.000', subtotal: 'Rp 240.000' },
+  { component: 'Konektor BNC Taiwan & Jack DC', spec: 'BNC Crimp Taiwan Anti Goyang + Male/Female Jack DC', qty: '1 Set', unitPrice: 'Rp 110.000', subtotal: 'Rp 110.000' },
+  { component: 'Pipa Conduit PVC High Impact & Klem', spec: 'Pipa pelindung kabel plafon dari gigitan tikus dan suhu panas', qty: 'Promo', unitPrice: 'Rp 0', subtotal: 'Rp 0 (Bonus)' },
+  { component: 'Jasa Pasang & Setting Multi-HP', spec: 'Instalasi teknisi sopan, no-smoking, dan setting aplikasi HP', qty: '4 Titik', unitPrice: 'Promo', subtotal: 'Rp 0 (Bonus)' },
+];
+
+const faqs = [
+  {
+    question: 'Mengapa paket 4 kamera ini menjadi yang paling laris di Palembang?',
+    answer: 'Paket ini menjadi favorit warga dan pemilik usaha di Palembang karena empat titik kamera mampu menutup seluruh sudut penting secara seimbang. Pada rumah tinggal 2 lantai, 4 kamera dapat mengawasi teras depan, garasi mobil, halaman belakang, dan ruang keluarga. Pada ruko atau tempat usaha, empat titik dapat memantau meja kasir, pintu masuk, etalase toko, dan area parkir luar.',
+  },
+  {
+    question: 'Berapa hari rekaman tersimpan pada harddisk 1TB dengan 4 kamera?',
+    answer: 'Dengan algoritma kompresi H.265+ generasi terbaru yang efisien, harddisk 1TB khusus surveillance sanggup menampung rekaman continuous 24 jam untuk 4 kamera selama 18 hingga 20 hari. Jika rekaman telah mencapai hari ke-21, sistem secara otomatis menimpa rekaman hari pertama (auto overwrite) sehingga rekaman tidak pernah terhenti.',
+  },
+  {
+    question: 'Apakah kamera bisa dipasang kombinasi indoor dan outdoor sesuai kebutuhan saya?',
+    answer: 'Tentu saja bisa. Anda bebas menentukan komposisi kamera tanpa ada biaya tambahan. Contohnya: 2 kamera outdoor tahan air untuk depan rumah dan belakang, serta 2 kamera indoor dome untuk ruang tamu dan ruang keluarga. Begitu pula untuk ruko: 1 outdoor untuk parkir, 3 indoor untuk area belanja dan kasir.',
+  },
+  {
+    question: 'Bagaimana jika saya ingin memantau CCTV dari luar kota melalui HP?',
+    answer: 'Sangat mudah. Selama di rumah atau tempat usaha Anda terdapat koneksi internet WiFi (seperti IndiHome, Biznet, MyRepublic, First Media, atau Iconnet), teknisi kami akan menghubungkan DVR ke internet dan memasang aplikasi resmi Hik-Connect atau DMSS di seluruh ponsel anggota keluarga atau pemilik bisnis tanpa biaya tambahan.',
+  },
+  {
+    question: 'Bagaimana prosedur pembayaran tanpa uang muka (Tanpa DP)?',
+    answer: 'Kami menerapkan sistem 100 persen tanpa DP demi kenyamanan dan rasa aman konsumen. Teknisi kami datang ke lokasi Anda membawa seluruh perangkat baru, mengerjakan pemasangan hingga rapi berpipa conduit, menyalakan sistem ke monitor atau TV, mengajari setting HP, dan memastikan seluruh sudut pandang telah sesuai. Pembayaran baru Anda bayarkan setelah semua pekerjaan selesai dan teruji.',
+  },
+  {
+    question: 'Bagaimana jika kabel bawaan 40 meter kurang saat pemasangan di lokasi?',
+    answer: 'Panjang 40 meter umumnya sangat cukup untuk rumah ukuran standar atau ruko 2 lantai. Namun jika denah bangunan Anda memiliki jarak bentang yang sangat panjang dan membutuhkan penambahan kabel ekstra, biayanya sangat transparan dan hemat, yakni Rp 6.000 per meter.',
+  },
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  image={ogImage}
+  additionalSchemas={additionalSchemas}
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-b from-security-dark via-slate-900 to-slate-900 pt-10 pb-16 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumb Nav -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-brand-300">Beranda</a>
+        <span>/</span>
+        <a href="/paket/" class="hover:text-brand-300">Paket CCTV</a>
+        <span>/</span>
+        <span class="text-brand-400 font-medium truncate">Paket Standar Bisnis (4 Kamera)</span>
+      </nav>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-400/10 text-amber-300 border border-amber-400/30 mb-4">
+            <MaterialIcon name="stars" size={16} />
+            <span>Paket Paling Laris di Palembang</span>
+            <span>•</span>
+            <span>Rp 2.850.000 Terima Beres</span>
+          </div>
+          
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            Paket Standar Bisnis (4 Kamera) CCTV Palembang
+          </h1>
+          
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-6">
+            Rekomendasi terbaik dan paling populer untuk pengawasan rumah tinggal bertingkat 2 lantai, minimarket, ruko perdagangan, kafe, dan kantor administrasi di Kota Palembang. Gambar jernih 2MP Full HD, harddisk besar 1TB, dan garansi resmi 1 tahun ganti baru tanpa DP.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm text-slate-200">
+            <span class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-800/80 border border-slate-700">
+              <MaterialIcon name="bolt" size={16} className="text-amber-400" />
+              <strong class="text-amber-400">Tanpa DP:</strong> Bayar Usai Terpasang
+            </span>
+            <span class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-800/80 border border-slate-700">
+              <MaterialIcon name="shield" size={16} className="text-brand-400" />
+              <strong class="text-brand-400">Garansi:</strong> 1 Thn Ganti Baru
+            </span>
+            <span class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-800/80 border border-slate-700">
+              <MaterialIcon name="engineering" size={16} className="text-emerald-400" />
+              <strong class="text-emerald-400">SOP:</strong> Pipa PVC &amp; No-Smoking
+            </span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden border border-amber-400/40 shadow-2xl bg-security-card aspect-[4/3] ring-1 ring-amber-400/20">
+            <img
+              src={ogImage}
+              alt="Paket Standar Bisnis 4 Kamera CCTV Palembang"
+              width="800"
+              height="600"
+              class="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Konten Utama 2 Kolom -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      
+      <!-- Kolom Kiri: Ulasan Lengkap, RAB, Hardware, SOP, FAQ -->
+      <article class="lg:col-span-8 space-y-12">
+        
+        <!-- Kartu Komparasi Harga -->
+        <div class="bg-gradient-to-r from-slate-900 to-security-card border border-amber-400/40 rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
+          <div class="absolute -right-12 -top-12 w-40 h-40 bg-amber-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+            <div>
+              <span class="inline-block px-2.5 py-1 text-[11px] font-black uppercase rounded-md bg-amber-400 text-slate-950 mb-2">
+                Paling Laris di Palembang
+              </span>
+              <h2 class="text-2xl font-black text-white">Paket 4 Kamera Komplit Terima Beres</h2>
+              <p class="text-xs sm:text-sm text-slate-400 mt-1">Mengamankan seluruh penjuru sudut penting tanpa celah titik buta.</p>
+            </div>
+            <div class="text-left sm:text-right shrink-0">
+              <span class="text-xs text-slate-400 line-through block font-mono">Kompetitor Terendah: Rp 2.999.000</span>
+              <span class="text-3xl sm:text-4xl font-black text-amber-400 block font-mono">Rp 2.850.000</span>
+              <span class="text-xs text-emerald-400 font-bold flex items-center sm:justify-end gap-1 mt-1">
+                <MaterialIcon name="bolt" size={14} /> Bebas Uang Muka (Tanpa DP)
+              </span>
+            </div>
+          </div>
+
+          <div class="pt-6 space-y-4">
+            <h3 class="text-sm font-bold text-slate-200 uppercase tracking-wider">Item dan Layanan yang Anda Dapatkan:</h3>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-300">
+              {packageFeatures.map((item) => (
+                <li class="flex items-start gap-2.5 leading-relaxed">
+                  <MaterialIcon name="check_circle" size={18} className="text-amber-400 shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row gap-3">
+            <a
+              href="https://wa.me/6285758903353?text=Halo%20Admin%20CCTV%20Palembang.%20Saya%20tertarik%20pesan%20Paket%20Standar%20Bisnis%204%20Kamera%20%28Rp%202.850.000%29%20tanpa%20DP..."
+              target="_blank"
+              rel="noopener nofollow"
+              class="w-full sm:w-auto text-center px-6 py-3.5 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm uppercase tracking-wider rounded-xl shadow-lg shadow-amber-400/20 transition-all flex items-center justify-center gap-2"
+            >
+              <MaterialIcon name="chat" size={18} />
+              <span>Pesan Pasang 4 Kamera (Tanpa DP)</span>
+            </a>
+            <a
+              href="/layanan/pasang-cctv-ruko-toko-palembang/"
+              class="w-full sm:w-auto text-center px-5 py-3.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs uppercase tracking-wider rounded-xl border border-slate-700 transition-colors flex items-center justify-center gap-1.5"
+            >
+              <span>Pelajari Layanan Ruko &amp; Toko</span>
+              <MaterialIcon name="arrow_forward" size={14} />
+            </a>
+          </div>
+        </div>
+
+        <!-- Ulasan Mengapa 4 Kamera Adalah Standar Emas -->
+        <div class="space-y-4">
+          <div class="pb-2 border-b border-slate-800">
+            <h2 class="text-2xl font-bold text-white">Konfigurasi Penempatan Empat Kamera Paling Efektif</h2>
+            <p class="text-sm text-slate-400">Panduan zonasi proteksi untuk hunian bertingkat dan properti komersial di Palembang.</p>
+          </div>
+          
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+            Paket empat kamera adalah konfigurasi paling ideal untuk mencakup seluruh perimeter properti secara 360 derajat. Berdasarkan ratusan proyek yang telah dikerjakan teknisi kami di Kota Palembang, berikut adalah dua skema zonasi yang paling sering diterapkan konsumen:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+            <div class="bg-security-card border border-slate-800 rounded-xl p-5 space-y-3">
+              <div class="flex items-center gap-2 text-amber-300 font-bold text-base border-b border-slate-800 pb-2">
+                <MaterialIcon name="home" size={20} className="text-amber-400" />
+                <h3>Skenario Rumah Tinggal 2 Lantai</h3>
+              </div>
+              <ul class="text-xs sm:text-sm text-slate-300 space-y-2">
+                <li>• <strong>Titik 1 (Outdoor Depan):</strong> Memantau pagar gerbang utama dan area carport mobil.</li>
+                <li>• <strong>Titik 2 (Outdoor Samping / Belakang):</strong> Mengawasi pintu akses dapur atau lorong samping jemuran.</li>
+                <li>• <strong>Titik 3 (Indoor Ruang Tamu):</strong> Menghadap ke arah pintu utama dan ruang penerimaan tamu.</li>
+                <li>• <strong>Titik 4 (Indoor Lantai 2):</strong> Memantau tangga naik dan lorong akses antar-kamar tidur.</li>
+              </ul>
+            </div>
+
+            <div class="bg-security-card border border-slate-800 rounded-xl p-5 space-y-3">
+              <div class="flex items-center gap-2 text-brand-300 font-bold text-base border-b border-slate-800 pb-2">
+                <MaterialIcon name="storefront" size={20} className="text-brand-400" />
+                <h3>Skenario Ruko, Toko &amp; Minimarket</h3>
+              </div>
+              <ul class="text-xs sm:text-sm text-slate-300 space-y-2">
+                <li>• <strong>Titik 1 (Kamera Fokus Kasir):</strong> Lensa 3.6mm terarah tajam ke meja laci uang dan transaksi.</li>
+                <li>• <strong>Titik 2 (Outdoor Parkir Depan):</strong> Mengawasi kendaraan pelanggan dan pintu rolling door.</li>
+                <li>• <strong>Titik 3 (Indoor Lorong Etalase):</strong> Mengawasi area rak produk dari risiko pencurian barang.</li>
+                <li>• <strong>Titik 4 (Indoor Pintu Gudang/Belakang):</strong> Memantau keluar masuk stok barang operasional.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabel Breakdown Simulasi RAB Riil Transparan -->
+        <div class="space-y-4">
+          <div class="pb-2 border-b border-slate-800">
+            <h2 class="text-2xl font-bold text-white">Transparansi Rincian Komponen dan Simulasi RAB 4 Kamera</h2>
+            <p class="text-sm text-slate-400">Spesifikasi material asli teruji tanpa komponen rekondisi.</p>
+          </div>
+
+          <div class="overflow-x-auto rounded-xl border border-slate-700 bg-slate-900/60 shadow-md">
+            <table class="w-full text-left text-xs sm:text-sm">
+              <thead class="bg-slate-800 text-brand-300 border-b border-slate-700">
+                <tr>
+                  <th class="p-3.5 font-semibold">Komponen Perangkat</th>
+                  <th class="p-3.5 font-semibold">Spesifikasi Teknis</th>
+                  <th class="p-3.5 font-semibold">Volume</th>
+                  <th class="p-3.5 font-semibold text-right">Nilai Wajar</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800 text-slate-300">
+                {rabDetails.map((item) => (
+                  <tr class="hover:bg-slate-800/30 transition-colors">
+                    <td class="p-3.5 font-medium text-white">{item.component}</td>
+                    <td class="p-3.5 text-slate-400 text-xs">{item.spec}</td>
+                    <td class="p-3.5 font-mono">{item.qty}</td>
+                    <td class="p-3.5 text-right font-semibold text-brand-300 font-mono">{item.subtotal}</td>
+                  </tr>
+                ))}
+              </tbody>
+              <tfoot class="bg-slate-800/90 font-bold text-white border-t border-slate-700">
+                <tr>
+                  <td colspan="3" class="p-3.5 text-right">Total Paket Paling Laris Terima Beres:</td>
+                  <td class="p-3.5 text-right text-amber-400 text-base font-mono">Rp 2.850.000</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <p class="text-xs text-slate-400 italic">
+            * Kuota kabel bawaan paket adalah 40 meter. Jika tata letak bangunan membutuhkan penambahan kabel ekstra di atas kuota 40 meter, biaya penambahan hanya dikenakan tarif hemat Rp 6.000 per meter.
+          </p>
+        </div>
+
+        <!-- Spesifikasi Hardware Asli -->
+        <div class="space-y-4">
+          <div class="pb-2 border-b border-slate-800">
+            <h2 class="text-2xl font-bold text-white">Spesifikasi Hardware Standar Industri Kelas Dunia</h2>
+            <p class="text-sm text-slate-400">Komponen tahan panas, tahan arus petir tropis, dan sanggup bekerja nonstop tahunan.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-security-card border border-slate-800 rounded-xl p-5 space-y-2.5">
+              <h3 class="text-base font-bold text-amber-300">Optik &amp; Sensor Kamera 2MP 1080p</h3>
+              <ul class="text-xs text-slate-300 space-y-2">
+                <li>• <strong>Kejernihan Full HD:</strong> Resolusi 1920 x 1080 piksel memberikan ketajaman rekaman gerak dan ekspresi wajah.</li>
+                <li>• <strong>Smart Infrared Night Vision:</strong> Mengatur intensitas inframerah secara otomatis agar wajah orang di malam hari tidak silau putih saat mendekati kamera.</li>
+                <li>• <strong>Housing Waterproof IP66:</strong> Bodi kamera tahan guyuran hujan lebat dan sengatan terik panas atap Palembang.</li>
+              </ul>
+            </div>
+
+            <div class="bg-security-card border border-slate-800 rounded-xl p-5 space-y-2.5">
+              <h3 class="text-base font-bold text-amber-300">Perekam DVR 4-Channel Turbo HD</h3>
+              <ul class="text-xs text-slate-300 space-y-2">
+                <li>• <strong>Teknologi Kompresi H.265+:</strong> Mengompres ukuran file rekaman tanpa mengurangi kualitas resolusi video asli.</li>
+                <li>• <strong>Aplikasi Mobile Gratis:</strong> Hik-Connect atau DMSS resmi untuk Android dan iPhone tanpa biaya server bulanan.</li>
+                <li>• <strong>Smart Motion Detection:</strong> Mampu memfilter alarm pergerakan daun atau bayangan pohon agar tidak menimbulkan notifikasi palsu di HP.</li>
+              </ul>
+            </div>
+
+            <div class="bg-security-card border border-slate-800 rounded-xl p-5 space-y-2.5">
+              <h3 class="text-base font-bold text-amber-300">Harddisk 1TB Khusus Surveillance 24/7</h3>
+              <ul class="text-xs text-slate-300 space-y-2">
+                <li>• <strong>Durabilitas Beban Kerja Tinggi:</strong> Khusus Seagate SkyHawk atau WD Purple, sanggup beroperasi menulis video 24 jam sehari selama bertahun-tahun.</li>
+                <li>• <strong>Kapasitas Rekam 20 Hari:</strong> Menyimpan riwayat video selama kurun waktu hampir 3 minggu untuk kemudahan audit berkala.</li>
+                <li>• <strong>Auto Overwrite:</strong> Sistem secara otomatis mengganti hari terlama saat memori penuh.</li>
+              </ul>
+            </div>
+
+            <div class="bg-security-card border border-slate-800 rounded-xl p-5 space-y-2.5">
+              <h3 class="text-base font-bold text-amber-300">Power Supply Sentral 10A Jaring</h3>
+              <ul class="text-xs text-slate-300 space-y-2">
+                <li>• <strong>Arus Terpusat Stabil:</strong> Memberikan suplai tegangan 12V murni ke masing-masing kamera tanpa drop voltase.</li>
+                <li>• <strong>Dedicated Fuse Protection:</strong> Dilengkapi sekring pengaman di tiap channel untuk memutus arus bila terjadi korsleting mendadak.</li>
+                <li>• <strong>Pipa Pelindung Conduit:</strong> Seluruh jalur kabel plafon dilindungi pipa PVC tebal agar aman dari gigitan tikus.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Standar SOP Teknisi & Garansi Resmi -->
+        <div class="space-y-4">
+          <div class="pb-2 border-b border-slate-800">
+            <h2 class="text-2xl font-bold text-white">Standar Operasional Pemasangan dan Garansi Resmi</h2>
+            <p class="text-sm text-slate-400">Pelayanan beretika dan perlindungan hak konsumen tanpa kompromi.</p>
+          </div>
+
+          <div class="bg-security-card border border-amber-400/30 rounded-2xl p-6 space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-300">
+              <div class="flex items-start gap-3">
+                <MaterialIcon name="smoke_free" size={20} className="text-emerald-400 shrink-0 mt-0.5" />
+                <div>
+                  <h3 class="font-bold text-white mb-0.5">SOP Bebas Asap Rokok</h3>
+                  <p class="text-slate-400 text-xs">Teknisi kami dilarang merokok selama bekerja di area properti, rumah, atau tempat usaha Anda.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <MaterialIcon name="cleaning_services" size={20} className="text-emerald-400 shrink-0 mt-0.5" />
+                <div>
+                  <h3 class="font-bold text-white mb-0.5">Pembersihan Sisa Pemasangan</h3>
+                  <p class="text-slate-400 text-xs">Serbuk semen dinding bekas bor dan sisa potongan kabel dibersihkan tuntas sebelum serah terima sistem.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <MaterialIcon name="autorenew" size={20} className="text-emerald-400 shrink-0 mt-0.5" />
+                <div>
+                  <h3 class="font-bold text-white mb-0.5">Garansi 1 Tahun Ganti Baru</h3>
+                  <p class="text-slate-400 text-xs">Bila terjadi kerusakan unit kamera, DVR, atau harddisk, teknisi menggantinya langsung dengan unit baru.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <MaterialIcon name="receipt_long" size={20} className="text-emerald-400 shrink-0 mt-0.5" />
+                <div>
+                  <h3 class="font-bold text-white mb-0.5">Kuitansi dan Invoice Resmi</h3>
+                  <p class="text-slate-400 text-xs">Dokumen fisik berstempel resmi perusahaan untuk kelengkapan administrasi dan klaim purna jual.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Interaktif -->
+        <div class="space-y-4">
+          <div class="pb-2 border-b border-slate-800">
+            <h2 class="text-2xl font-bold text-white">Pertanyaan Seputar Paket Standar Bisnis 4 Kamera (FAQ)</h2>
+            <p class="text-sm text-slate-400">Jawaban lugas atas hal yang sering ditanyakan sebelum pemesanan.</p>
+          </div>
+
+          <div class="space-y-3.5">
+            {faqs.map((faq) => (
+              <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5">
+                <h3 class="text-base font-bold text-white mb-2 flex items-start gap-2.5">
+                  <span class="text-amber-400 font-black">Q:</span>
+                  <span>{faq.question}</span>
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-300 pl-6 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Informasi Layanan Terkait -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <h3 class="text-lg font-bold text-white">Lihat Pilihan Paket dan Panduan Lainnya</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Sesuaikan kebutuhan sistem pengawasan Anda dengan varian paket lainnya yang kami sediakan:
+          </p>
+          <div class="flex flex-wrap gap-2.5 pt-1">
+            <a
+              href="/paket/paket-hemat-rumah-2-kamera/"
+              class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-brand-300 text-xs font-semibold border border-slate-700 transition-colors"
+            >
+              Paket Hemat Rumah (2 Kamera) Rp 1.850.000
+            </a>
+            <a
+              href="/layanan/pasang-cctv-ruko-toko-palembang/"
+              class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-brand-300 text-xs font-semibold border border-slate-700 transition-colors"
+            >
+              Layanan CCTV Ruko &amp; Kasir
+            </a>
+            <a
+              href="/layanan/pasang-cctv-rumah-palembang/"
+              class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-brand-300 text-xs font-semibold border border-slate-700 transition-colors"
+            >
+              Layanan CCTV Rumah Tinggal
+            </a>
+            <a
+              href="/paket/"
+              class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-brand-300 text-xs font-semibold border border-slate-700 transition-colors"
+            >
+              Semua Katalog Paket CCTV
+            </a>
+          </div>
+        </div>
+
+      </article>
+
+      <!-- Kolom Kanan: Sticky Sidebar Kontak & Workshop Fisik -->
+      <aside class="lg:col-span-4 sticky top-24 space-y-6">
+        
+        <WhatsAppStickyCard
+          title="Pesan Paket 4 Kamera (Best Seller)"
+          subtitle="Jadwalkan teknisi kami langsung ke rumah atau tempat usaha Anda di Palembang. Tanpa DP, bayar setelah terpasang dan online."
+          ctaText="Pesan 4 Kamera via WhatsApp"
+          message="Halo Admin CCTV Palembang. Saya ingin memesan Paket Standar Bisnis 4 Kamera (Rp 2.850.000) tanpa uang muka untuk alamat saya..."
+        />
+
+        <!-- Ringkasan Keunggulan Khusus Paket Ini -->
+        <div class="bg-security-card border border-amber-400/30 rounded-2xl p-5 space-y-3.5 text-xs text-slate-300">
+          <h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2 flex items-center gap-2">
+            <MaterialIcon name="military_tech" size={16} className="text-amber-400" />
+            Alasan Mengapa Paling Laris
+          </h4>
+          <ul class="space-y-2.5">
+            <li class="flex items-start gap-2">
+              <MaterialIcon name="check" size={15} className="text-amber-400 shrink-0 mt-0.5" />
+              <span>Cakupan seimbang untuk 4 penjuru rumah atau tempat usaha.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <MaterialIcon name="check" size={15} className="text-amber-400 shrink-0 mt-0.5" />
+              <span>Harddisk 1TB surveillance sanggup menyimpan riwayat rekam hingga 20 hari.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <MaterialIcon name="check" size={15} className="text-amber-400 shrink-0 mt-0.5" />
+              <span>Bebas pilih kombinasi indoor dan outdoor tanpa selisih harga.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <MaterialIcon name="check" size={15} className="text-amber-400 shrink-0 mt-0.5" />
+              <span>Power supply sentral jaring menjamin pasokan listrik stabil ke semua kamera.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Info Workshop Fisik di Palembang -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 text-xs text-slate-300 space-y-3">
+          <h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">
+            Workshop &amp; Titik Armada Fisik
+          </h4>
+          <div>
+            <p class="font-semibold text-brand-300">Workshop Seberang Ulu (Kantor Utama):</p>
+            <p class="text-slate-400">Jl. Silaberanti No.24, Silaberanti, Kec. Seberang Ulu I, Palembang</p>
+          </div>
+          <div>
+            <p class="font-semibold text-brand-300">Workshop Ilir Barat (Hub Pelayanan Ilir):</p>
+            <p class="text-slate-400">Jl. Demang Lebar Daun, Lorok Pakjo, Kec. Ilir Barat I, Palembang</p>
+          </div>
+          <div class="pt-2 text-[11px] text-emerald-400 flex items-center gap-1.5 font-semibold">
+            <MaterialIcon name="schedule" size={14} /> Jam Layanan: 07.00 - 21.00 WIB (Setiap Hari)
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </section>
+</BaseLayout>

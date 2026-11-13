@@ -1,0 +1,102 @@
+---
+import GoogleSourcePreferences from '../common/GoogleSourcePreferences.astro';
+import MaterialIcon from '../common/MaterialIcon.astro';
+
+const currentYear = new Date().getFullYear();
+const waLink = 'https://wa.me/6285758903353?text=Halo%20Admin%20CCTV%20Palembang...';
+---
+
+<footer class="bg-security-dark border-t border-slate-800 text-slate-400 text-sm mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Google Source Preferences Widget -->
+    <GoogleSourcePreferences />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <!-- Col 1: Brand & USP -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <img
+            src="/favicon.png"
+            alt="Logo CCTV Palembang"
+            width={36}
+            height={36}
+            class="w-9 h-9 rounded-xl object-contain"
+            loading="lazy"
+            decoding="async"
+          />
+          <div>
+            <span class="text-base font-black text-white block">CCTV PALEMBANG</span>
+            <span class="text-xs text-brand-400 font-mono">cctvpalembang.web.id</span>
+          </div>
+        </div>
+        <p class="text-xs leading-relaxed text-slate-300">
+          Penyedia jasa pasang dan servis CCTV nomor 1 di Kota Palembang. Sistem pembayaran <strong>100% Tanpa DP</strong>, garansi 1 tahun ganti baru, instalasi rapi pipa PVC conduit, dan teknisi no-smoking.
+        </p>
+        <div class="text-xs text-slate-400 space-y-1.5">
+          <p class="flex items-center gap-1.5"><MaterialIcon name="call" size={14} className="text-emerald-400" /> Hotline: <a href={waLink} class="text-emerald-400 font-bold hover:underline">0857-5890-3353</a></p>
+          <p class="flex items-center gap-1.5"><MaterialIcon name="schedule" size={14} className="text-emerald-400" /> Buka: Senin - Minggu (07.00 - 21.00 WIB)</p>
+        </div>
+      </div>
+
+      <!-- Col 2: Halaman Pilar Layanan (Money Pages) -->
+      <div>
+        <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Layanan Utama</h4>
+        <ul class="space-y-2.5 text-xs">
+          <li><a href="/layanan/pasang-cctv-rumah-palembang/" class="hover:text-brand-300 transition-colors">Pasang CCTV Rumah &amp; Cluster</a></li>
+          <li><a href="/layanan/pasang-cctv-ruko-toko-palembang/" class="hover:text-brand-300 transition-colors">Instalasi CCTV Ruko &amp; Toko Kasir</a></li>
+          <li><a href="/layanan/instalasi-ip-camera-gedung-pabrik-palembang/" class="hover:text-brand-300 transition-colors">IP Camera PoE Gedung &amp; Pabrik</a></li>
+          <li><a href="/layanan/jasa-servis-maintenance-cctv-palembang/" class="hover:text-brand-300 transition-colors">Jasa Servis &amp; Perbaikan CCTV</a></li>
+          <li><a href="/layanan/paket-cctv-palembang-murah/" class="hover:text-brand-300 transition-colors">Paket Pasang CCTV Murah All-in</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Alamat Workshop Fisik -->
+      <div>
+        <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Workshop Resmi</h4>
+        <div class="space-y-3 text-xs leading-relaxed text-slate-300">
+          <div>
+            <p class="font-semibold text-white">Workshop 1 (Seberang Ulu):</p>
+            <p>Jl. Silaberanti No.24, Silaberanti, Kec. Seberang Ulu I, Kota Palembang 30116</p>
+          </div>
+          <div>
+            <p class="font-semibold text-white">Workshop 2 (Ilir Barat):</p>
+            <p>Jl. Demang Lebar Daun, Lorok Pakjo, Kec. Ilir Barat I, Kota Palembang 30137</p>
+          </div>
+          <p class="text-[11px] text-brand-400">Armada teknisi siap datang langsung ke lokasi se-Kota Palembang.</p>
+        </div>
+      </div>
+
+      <!-- Col 4: Area Jangkauan Pelayanan -->
+      <div>
+        <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Cakupan Wilayah</h4>
+        <p class="text-xs text-slate-300 mb-2">Gratis survei dan pengiriman armada teknisi express:</p>
+        <div class="flex flex-wrap gap-1.5 text-[11px]">
+          <span class="px-2 py-1 bg-slate-800 rounded border border-slate-700/60">Ilir Barat</span>
+          <span class="px-2 py-1 bg-slate-800 rounded border border-slate-700/60">Ilir Timur</span>
+          <span class="px-2 py-1 bg-slate-800 rounded border border-slate-700/60">Seberang Ulu</span>
+          <span class="px-2 py-1 bg-slate-800 rounded border border-slate-700/60">Plaju</span>
+          <span class="px-2 py-1 bg-slate-800 rounded border border-slate-700/60">Jakabaring</span>
+          <span class="px-2 py-1 bg-slate-800 rounded border border-slate-700/60">Sukarami</span>
+          <span class="px-2 py-1 bg-slate-800 rounded border border-slate-700/60">Sako</span>
+          <span class="px-2 py-1 bg-slate-800 rounded border border-slate-700/60">Kalidoni</span>
+          <span class="px-2 py-1 bg-slate-800 rounded border border-slate-700/60">Ogan Ilir</span>
+          <span class="px-2 py-1 bg-slate-800 rounded border border-slate-700/60">Banyuasin</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright & SEO Note -->
+    <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+      <p>© {currentYear} cctvpalembang.web.id. Seluruh hak cipta dilindungi undang-undang.</p>
+      <div class="flex items-center gap-4 text-slate-400">
+        <a href="/tentang-kami/" class="hover:text-brand-300">Tentang Kami</a>
+        <span>•</span>
+        <a href="/area/" class="hover:text-brand-300">Area Layanan</a>
+        <span>•</span>
+        <a href="/paket/" class="hover:text-brand-300">Paket CCTV</a>
+        <span>|</span>
+        <a href="/sitemap-index.xml" class="hover:text-white">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>

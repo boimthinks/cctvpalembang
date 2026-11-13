@@ -1,0 +1,80 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import WhatsAppStickyCard from '@/components/common/WhatsAppStickyCard.astro';
+import MaterialIcon from '@/components/common/MaterialIcon.astro';
+
+const districts = [
+  {
+    name: 'Seberang Ulu & Sekitarnya',
+    areas: ['Silaberanti (Workshop Utama)', 'Seberang Ulu I', 'Seberang Ulu II', 'Plaju', 'Jakabaring', 'Kertapati'],
+    note: 'Area prioritas armada teknisi express Seberang Ulu.'
+  },
+  {
+    name: 'Ilir Barat & Pusat Kota',
+    areas: ['Lorok Pakjo / Demang Lebar Daun (Workshop Hub)', 'Ilir Barat I', 'Ilir Barat II', 'Bukit Kecil', 'Gandus'],
+    note: 'Area cakupan cepat dari workshop Demang Lebar Daun.'
+  },
+  {
+    name: 'Ilir Timur & Kawasan Bisnis',
+    areas: ['Ilir Timur I (Sudirman / Kol. Atmo)', 'Ilir Timur II', 'Ilir Timur III', 'Kemuning', 'Sekip'],
+    note: 'Pusat perdagangan retail, ruko, perbankan, dan restoran.'
+  },
+  {
+    name: 'Kawasan Perumahan & Timur',
+    areas: ['Sukarami', 'Alang-Alang Lebar', 'Sako', 'Kalidoni', 'Sematang Borang'],
+    note: 'Kawasan cluster residensial dan pergudangan bandara.'
+  },
+  {
+    name: 'Area Penyangga / Luar Kota',
+    areas: ['Indralaya (Ogan Ilir)', 'Talang Kelapa (Banyuasin)', 'Pangkalan Balai', 'Kota Prabumulih'],
+    note: 'Tersedia layanan panggilan same-day dengan konfirmasi jadwal pagi.'
+  }
+];
+---
+
+<BaseLayout
+  title="Area Jangkauan Pasang CCTV Palembang — Layanan Seluruh Kecamatan"
+  description="Area jangkauan pemasangan dan servis CCTV di Palembang: Seberang Ulu, Ilir Barat, Ilir Timur, Plaju, Jakabaring, Sukarami, Sako, Ogan Ilir & Banyuasin."
+>
+  <section class="bg-gradient-to-b from-security-dark to-slate-900 pt-10 pb-16 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+      <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-brand-500/15 text-brand-300 border border-brand-500/30 uppercase mb-3">
+        Cakupan Teknisi Lokal
+      </span>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-4">
+        Area Layanan CCTV Palembang
+      </h1>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+        Didukung oleh dua pos armada workshop resmi di Seberang Ulu dan Ilir Barat, teknisi kami siap datang langsung ke lokasi rumah atau kantor Anda.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      <div class="lg:col-span-8 space-y-6">
+        {districts.map((d) => (
+          <div class="bg-security-card border border-slate-800 rounded-2xl p-6">
+            <h2 class="text-xl font-bold text-white mb-2">{d.name}</h2>
+            <p class="text-xs text-brand-400 font-medium mb-4">{d.note}</p>
+            <div class="flex flex-wrap gap-2">
+              {d.areas.map((a) => (
+                <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-slate-300 inline-flex items-center gap-1.5">
+                  <MaterialIcon name="location_on" size={14} className="text-brand-400" /> {a}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <aside class="lg:col-span-4 sticky top-24 space-y-6">
+        <WhatsAppStickyCard
+          title="Apakah Lokasi Anda Terjangkau?"
+          subtitle="Tanyakan jadwal teknisi ke kecamatan Anda hari ini melalui WhatsApp."
+          message="Halo Admin CCTV Palembang. Saya ingin menanyakan apakah area saya tercover teknisi pasang CCTV..."
+        />
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

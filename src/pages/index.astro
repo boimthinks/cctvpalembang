@@ -1,0 +1,274 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import WhatsAppStickyCard from '@/components/common/WhatsAppStickyCard.astro';
+import MaterialIcon from '@/components/common/MaterialIcon.astro';
+import { servicesData } from '@/data/services';
+import { getCollection } from 'astro:content';
+
+const services = servicesData;
+
+const allPosts = await getCollection('blog');
+allPosts.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+const blogPosts = allPosts.slice(0, 3);
+---
+
+<BaseLayout
+  title="Jasa Pasang CCTV Palembang — Tanpa DP & Garansi 1 Tahun Ganti Baru"
+  description="Jasa pasang CCTV Palembang terpercaya. Instalasi kamera Hikvision & Dahua untuk rumah, ruko, gudang, dan pabrik. Sistem Tanpa DP, garansi 1 tahun ganti baru, teknisi bersertifikat SOP rapi."
+  image="/images/og/default.webp"
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-b from-security-dark via-slate-900 to-slate-900 pt-12 pb-20 overflow-hidden border-b border-slate-800">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(2,132,199,0.15),transparent_70%)] pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-accent-500/15 text-accent-500 border border-accent-500/30 uppercase tracking-wider">
+            <MaterialIcon name="bolt" size={16} /> Promo 2026: Bebas Uang Muka (Tanpa DP)
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
+            Jasa Pasang CCTV <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-sky-300">Palembang Murah</span>
+          </h1>
+          
+          <p class="text-lg text-slate-300 leading-relaxed max-w-xl">
+            Solusi sistem pengawasan keamanan properti Anda dari teknisi ahli Palembang. 
+            <strong class="text-white">Bayar hanya setelah kamera menyala sempurna</strong>, instalasi rapi memakai pipa PVC conduit, dan garansi resmi 1 tahun ganti baru.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="bg-slate-800/70 p-3 rounded-xl border border-slate-700">
+              <p class="text-xs text-slate-400 uppercase font-semibold">Uang Muka</p>
+              <p class="text-sm font-black text-accent-500">Rp 0 (Tanpa DP)</p>
+            </div>
+            <div class="bg-slate-800/70 p-3 rounded-xl border border-slate-700">
+              <p class="text-xs text-slate-400 uppercase font-semibold">Garansi</p>
+              <p class="text-sm font-black text-brand-300">1 Tahun Ganti</p>
+            </div>
+            <div class="bg-slate-800/70 p-3 rounded-xl border border-slate-700">
+              <p class="text-xs text-slate-400 uppercase font-semibold">Kabel</p>
+              <p class="text-sm font-black text-emerald-400">Pipa PVC Conduit</p>
+            </div>
+            <div class="bg-slate-800/70 p-3 rounded-xl border border-slate-700">
+              <p class="text-xs text-slate-400 uppercase font-semibold">Teknisi</p>
+              <p class="text-sm font-black text-white">Bebas Rokok</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="/layanan/paket-cctv-palembang-murah/" class="px-7 py-3.5 bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm rounded-xl shadow-lg shadow-brand-900/50 transition-all hover:-translate-y-0.5">
+              Lihat Daftar Paket Harga <MaterialIcon name="arrow_forward" size={16} />
+            </a>
+            <a href="https://wa.me/6285758903353?text=Halo%20Admin%20CCTV%20Palembang.%20Saya%20ingin%20pasang%20CCTV%20di%20Palembang..." target="_blank" rel="noopener nofollow" class="px-7 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl shadow-lg shadow-emerald-900/50 transition-all hover:-translate-y-0.5 flex items-center gap-2">
+              <MaterialIcon name="chat" size={18} />
+              Konsultasi WA: 0857-5890-3353
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Image CCTV -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl bg-security-card border border-brand-500/40 p-3 shadow-2xl">
+            <div class="flex items-center justify-between mb-3 px-1 pb-3 border-b border-slate-700/60 text-xs">
+              <span class="flex items-center gap-1.5 font-bold text-red-400">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> LIVE VIEW
+              </span>
+              <span class="font-mono text-slate-400">CAM-01 &bull; 1080P</span>
+            </div>
+
+            <div class="relative rounded-xl overflow-hidden border border-slate-800 bg-slate-950">
+              <img
+                src="/images/cctv-palembang-hero_poco.webp"
+                alt="Teknisi pasang CCTV Palembang memasang kamera pengawas rapi dengan pipa conduit dan pantauan langsung dari HP"
+                width="800"
+                height="597"
+                class="w-full h-auto object-cover"
+                loading="eager"
+                fetchpriority="high"
+              />
+
+              <!-- Overlay HUD -->
+              <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/30"></div>
+
+              <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2 py-1 rounded-md bg-slate-950/80 backdrop-blur border border-slate-700 text-[10px] font-bold text-red-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span> REC
+              </div>
+
+              <div class="absolute bottom-3 left-3 right-3 flex flex-wrap items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 backdrop-blur">
+                  <MaterialIcon name="verified" size={13} /> Garansi 12 Bulan
+                </span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-brand-500/20 text-brand-200 border border-brand-500/40 backdrop-blur">
+                  <MaterialIcon name="smartphone" size={13} /> Online ke HP
+                </span>
+              </div>
+            </div>
+
+            <div class="mt-3 p-3 bg-slate-900 rounded-lg text-xs flex items-center justify-between">
+              <span class="text-slate-300">Paket Terlaris:</span>
+              <span class="font-bold text-accent-500">4 Cam Rp 2.850.000</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 Money Pages Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">Pilih Layanan Sesuai Kebutuhan Anda</h2>
+      <p class="text-slate-400 text-sm">Instalasi presisi untuk residensial, komersial, dan industri di seluruh wilayah Palembang.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map((svc) => (
+        <a href={`/layanan/${svc.slug}/`} class="group bg-security-card border border-slate-800 rounded-2xl overflow-hidden hover:border-brand-500/60 transition-all hover:-translate-y-1 shadow-lg flex flex-col">
+          <div class="aspect-[4/3] overflow-hidden bg-slate-900 relative">
+            <img src={svc.image} alt={svc.title} width="800" height="600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+          </div>
+          <div class="p-5 flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-white group-hover:text-brand-300 transition-colors mb-2">{svc.title}</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">{svc.description}</p>
+            </div>
+            <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-400">Mulai dari</span>
+              <span class="font-bold text-accent-500">{svc.packages[0]?.price}</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Trust & USP Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-5">
+        <h2 class="text-3xl font-black text-white mb-4">Mengapa Memilih Kami?</h2>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+          Banyak penyedia jasa pasang CCTV di Palembang meminta uang muka besar tanpa bukti pengerjaan. Kami menghadirkan standar berbeda: bayar di rumah setelah kamera terbukti merekam dengan sempurna.
+        </p>
+        <WhatsAppStickyCard title="Tanya Admin Sekarang" subtitle="Admin kami siap konsultasi tanpa dipungut biaya." />
+      </div>
+
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-security-card border border-slate-800 p-5 rounded-xl">
+          <div class="mb-2"><MaterialIcon name="payments" size={28} className="text-accent-500" /></div>
+          <h3 class="font-bold text-white text-sm mb-1">Bebas Uang Muka</h3>
+          <p class="text-xs text-slate-400">Tidak perlu transaksi transfer awal. Bayar setelah puas melihat hasilnya.</p>
+        </div>
+        <div class="bg-security-card border border-slate-800 p-5 rounded-xl">
+          <div class="mb-2"><MaterialIcon name="shield" size={28} className="text-brand-400" /></div>
+          <h3 class="font-bold text-white text-sm mb-1">Garansi Ganti Baru</h3>
+          <p class="text-xs text-slate-400">Unit kamera atau DVR rusak langsung diganti baru, bukan diservis lama.</p>
+        </div>
+        <div class="bg-security-card border border-slate-800 p-5 rounded-xl">
+          <div class="mb-2"><MaterialIcon name="build" size={28} className="text-emerald-400" /></div>
+          <h3 class="font-bold text-white text-sm mb-1">Pipa Conduit PVC</h3>
+          <p class="text-xs text-slate-400">Kabel terlindung dari gigitan tikus, panas atap, dan rembesan air hujan.</p>
+        </div>
+        <div class="bg-security-card border border-slate-800 p-5 rounded-xl">
+          <div class="mb-2"><MaterialIcon name="smoke_free" size={28} className="text-rose-400" /></div>
+          <h3 class="font-bold text-white text-sm mb-1">Teknisi No-Smoking</h3>
+          <p class="text-xs text-slate-400">Berseragam rapi, sopan, dan membersihkan sisa pengerjaan sebelum pergi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Cardview Blog & Edukasi Terbaru -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/10 text-brand-300 border border-brand-500/30 mb-3">
+          <MaterialIcon name="menu_book" size={15} />
+          <span>Edukasi &amp; Panduan CCTV</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
+          Artikel &amp; Tips Keamanan Terbaru
+        </h2>
+        <p class="text-slate-400 text-sm mt-1 max-w-xl">
+          Panduan teknis, studi kasus instalasi riil, dan tips hemat biaya pasang CCTV di iklim Palembang dari tim teknisi kami.
+        </p>
+      </div>
+      <a
+        href="/blog/"
+        class="inline-flex items-center gap-2 text-xs font-bold text-brand-400 hover:text-brand-300 transition-colors shrink-0 group self-start md:self-auto"
+      >
+        <span>Lihat Semua Artikel</span>
+        <MaterialIcon name="arrow_forward" size={16} className="group-hover:translate-x-1 transition-transform" />
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      {blogPosts.map((post) => (
+        <article class="bg-security-card border border-slate-800 rounded-2xl overflow-hidden hover:border-brand-500/50 transition-all hover:-translate-y-1 shadow-md flex flex-col justify-between group">
+          <div>
+            <a href={`/blog/${post.id}/`} class="block overflow-hidden relative aspect-[4/3] bg-slate-950">
+              <img
+                src={post.data.image}
+                alt={post.data.title}
+                width="800"
+                height="600"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-950/80 text-brand-300 border border-slate-800 backdrop-blur">
+                {post.data.category}
+              </span>
+            </a>
+            <div class="p-5">
+              <div class="flex items-center gap-2 text-xs text-slate-400 mb-2.5">
+                <span class="flex items-center gap-1">
+                  <MaterialIcon name="calendar_today" size={13} className="text-brand-400" />
+                  {post.data.publishDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'short', day: 'numeric' })}
+                </span>
+                <span>•</span>
+                <span class="flex items-center gap-1">
+                  <MaterialIcon name="person" size={13} className="text-slate-500" />
+                  Teknisi
+                </span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-white mb-2 leading-snug group-hover:text-brand-300 transition-colors">
+                <a href={`/blog/${post.id}/`}>
+                  {post.data.title}
+                </a>
+              </h3>
+              <p class="text-xs text-slate-400 line-clamp-2 leading-relaxed">
+                {post.data.description}
+              </p>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <a
+              href={`/blog/${post.id}/`}
+              class="text-xs font-bold text-brand-400 hover:text-brand-300 inline-flex items-center gap-1 group-hover:gap-1.5 transition-all"
+            >
+              <span>Baca Selengkapnya</span>
+              <MaterialIcon name="arrow_forward" size={14} />
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Area Layanan Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-bold text-white mb-2">Cakupan Wilayah Palembang &amp; Sekitarnya</h2>
+      <p class="text-slate-400 text-sm">Armada teknisi siap meluncur langsung ke lokasi Anda tanpa biaya survei.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto text-xs">
+      {['Seberang Ulu I', 'Seberang Ulu II', 'Plaju', 'Kertapati', 'Jakabaring', 'Ilir Barat I', 'Ilir Barat II', 'Ilir Timur I', 'Ilir Timur II', 'Ilir Timur III', 'Sukarami', 'Sako', 'Kalidoni', 'Kemuning', 'Alang-Alang Lebar', 'Sematang Borang', 'Gandus', 'Indralaya (Ogan Ilir)', 'Talang Kelapa (Banyuasin)', 'Prabumulih'].map((area) => (
+        <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 font-medium inline-flex items-center gap-1.5"><MaterialIcon name="location_on" size={14} className="text-brand-400" /> {area}</span>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,401 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import WhatsAppStickyCard from '@/components/common/WhatsAppStickyCard.astro';
+import MaterialIcon from '@/components/common/MaterialIcon.astro';
+import { servicesData, type ServiceDetail } from '@/data/services';
+
+export async function getStaticPaths() {
+  return servicesData.map((service) => ({
+    params: { slug: service.slug },
+    props: { service },
+  }));
+}
+
+interface Props {
+  service: ServiceDetail;
+}
+
+const { service } = Astro.props;
+const siteURL = Astro.site ? Astro.site.origin : 'https://cctvpalembang.web.id';
+// Trailing slash selalu konsisten pada seluruh URL kanonik & schema
+const currentUrl = `${siteURL}/layanan/${service.slug}/`;
+
+// JSON-LD Schema: Service & BreadcrumbList
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${currentUrl}#service`,
+  name: service.title,
+  serviceType: service.serviceType,
+  description: service.description,
+  provider: {
+    '@id': `${siteURL}/#localbusiness`,
+  },
+  areaServed: {
+    '@type': 'City',
+    name: 'Palembang',
+  },
+  url: currentUrl,
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: `Katalog ${service.title}`,
+    itemListElement: service.packages.map((pkg, idx) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: pkg.name,
+      },
+      priceCurrency: 'IDR',
+      price: pkg.price.replace(/[^0-9]/g, ''),
+      position: idx + 1,
+    })),
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Beranda',
+      item: `${siteURL}/`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Layanan',
+      item: `${siteURL}/layanan/paket-cctv-palembang-murah/`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: service.title,
+      item: currentUrl,
+    },
+  ],
+};
+
+const additionalSchemas = [serviceSchema, breadcrumbSchema];
+---
+
+<BaseLayout
+  title={service.metaTitle}
+  description={service.description}
+  image={service.image}
+  additionalSchemas={additionalSchemas}
+>
+  <!-- Hero Section Pilar Layanan -->
+  <section class="relative bg-gradient-to-b from-security-dark via-slate-900 to-slate-900 pt-10 pb-16 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Breadcrumb Nav -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-brand-300">Beranda</a>
+        <span>/</span>
+        <a href="/layanan/paket-cctv-palembang-murah/" class="hover:text-brand-300">Layanan</a>
+        <span>/</span>
+        <span class="text-brand-400 font-medium truncate">{service.title}</span>
+      </nav>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/10 text-brand-300 border border-brand-500/30 mb-4">
+            <MaterialIcon name="verified_user" size={16} />
+            <span>Pilar Layanan Resmi</span>
+            <span>•</span>
+            <span>Palembang &amp; Sekitarnya</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            {service.heroHeadline}
+          </h1>
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-6">
+            {service.heroSubtitle}
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-slate-200">
+            <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700">
+              <MaterialIcon name="bolt" size={16} className="text-accent-500" />
+              <strong class="text-accent-500">Tanpa DP:</strong> Bayar Usai Terpasang
+            </span>
+            <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700">
+              <MaterialIcon name="shield" size={16} className="text-brand-400" />
+              <strong class="text-brand-400">Garansi:</strong> 1 Thn Ganti Baru
+            </span>
+            <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700">
+              <MaterialIcon name="engineering" size={16} className="text-emerald-400" />
+              <strong class="text-emerald-400">SOP:</strong> Pipa PVC &amp; No-Smoking
+            </span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden border border-brand-500/30 shadow-2xl bg-security-card aspect-[4/3]">
+            <img
+              src={service.image}
+              alt={service.title}
+              width="800"
+              height="600"
+              class="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content: Layout 2 Kolom (Sticky Sidebar) -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      
+      <!-- Kolom Kiri: Dokumen Solusi Lengkap (Pilar Berbobot Tinggi) -->
+      <article class="lg:col-span-8 space-y-12">
+        
+        <!-- 1. Tiered Packages (Paket Bertingkat) -->
+        <div>
+          <div class="flex items-center gap-3 mb-6 pb-2 border-b border-slate-800">
+            <span class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-sm">1</span>
+            <div>
+              <h2 class="text-2xl font-bold text-white">Pilihan Paket Pemasangan Resmi</h2>
+              <p class="text-sm text-slate-400">Harga terima beres, material original dan tanpa biaya siluman.</p>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            {service.packages.map((pkg) => (
+              <div class="bg-security-card border border-slate-700/80 rounded-2xl p-6 hover:border-brand-500/50 transition-all shadow-md">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+                  <div>
+                    {pkg.badge && (
+                      <span class="inline-block px-2.5 py-1 text-[11px] font-bold uppercase rounded-md bg-brand-500/20 text-brand-300 border border-brand-500/30 mb-2">
+                        {pkg.badge}
+                      </span>
+                    )}
+                    <h3 class="text-xl font-bold text-white">{pkg.name}</h3>
+                  </div>
+                  <div class="text-left sm:text-right shrink-0">
+                    {pkg.competitorPrice && (
+                      <p class="text-xs text-slate-400 line-through">Kompetitor: {pkg.competitorPrice}</p>
+                    )}
+                    <p class="text-2xl font-black text-accent-500">{pkg.price}</p>
+                    <p class="text-[11px] text-emerald-400 font-semibold flex items-center justify-end gap-1">
+                      <MaterialIcon name="bolt" size={14} /> Bayar Setelah Selesai Pasang
+                    </p>
+                  </div>
+                </div>
+
+                <div class="pt-4 border-t border-slate-800">
+                  <p class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Item Yang Anda Dapatkan:</p>
+                  <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
+                    {pkg.features.map((feat) => (
+                      <li class="flex items-start gap-2">
+                        <MaterialIcon name="check" size={16} className="text-emerald-400 shrink-0 mt-0.5" />
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- 2. Breakdown Simulasi RAB Riil Transparan -->
+        <div>
+          <div class="flex items-center gap-3 mb-6 pb-2 border-b border-slate-800">
+            <span class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-sm">2</span>
+            <div>
+              <h2 class="text-2xl font-bold text-white">Transparansi Simulasi RAB Alokasi Biaya</h2>
+              <p class="text-sm text-slate-400">{service.rabSimulation.packageName}</p>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto rounded-xl border border-slate-700 bg-slate-900/60">
+            <table class="w-full text-left text-xs sm:text-sm">
+              <thead class="bg-slate-800/80 text-brand-300">
+                <tr>
+                  <th class="p-3 font-semibold">Komponen &amp; Material</th>
+                  <th class="p-3 font-semibold">Spesifikasi Teknis</th>
+                  <th class="p-3 font-semibold">Volume</th>
+                  <th class="p-3 font-semibold text-right">Subtotal</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800 text-slate-300">
+                {service.rabSimulation.items.map((item) => (
+                  <tr class="hover:bg-slate-800/30">
+                    <td class="p-3 font-medium text-white">{item.component}</td>
+                    <td class="p-3 text-slate-400">{item.spec}</td>
+                    <td class="p-3">{item.qty}</td>
+                    <td class="p-3 text-right font-semibold text-brand-300">{item.subtotal}</td>
+                  </tr>
+                ))}
+              </tbody>
+              <tfoot class="bg-slate-800/90 font-bold text-white border-t border-slate-700">
+                <tr>
+                  <td colspan="3" class="p-3 text-right">Total Estimasi RAB:</td>
+                  <td class="p-3 text-right text-accent-500 text-base">{service.rabSimulation.total}</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <p class="text-xs text-slate-400 mt-2 italic">* {service.rabSimulation.notes}</p>
+        </div>
+
+        <!-- 3. Spesifikasi Teknis Hardware Asli -->
+        <div>
+          <div class="flex items-center gap-3 mb-6 pb-2 border-b border-slate-800">
+            <span class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-sm">3</span>
+            <div>
+              <h2 class="text-2xl font-bold text-white">Spesifikasi Hardware &amp; Perangkat Fisik</h2>
+              <p class="text-sm text-slate-400">Komponen standar industri demi keawetan bertahun-tahun.</p>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            {service.hardwareSpecs.map((cat) => (
+              <div class="bg-security-card border border-slate-800 rounded-xl p-5">
+                <h3 class="text-lg font-bold text-brand-300 mb-4">{cat.category}</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {cat.details.map((d) => (
+                    <div class="bg-slate-900/70 p-3.5 rounded-lg border border-slate-700/50">
+                      <p class="text-xs font-semibold text-accent-500 uppercase">{d.name}</p>
+                      <p class="text-sm font-bold text-white my-1">{d.spec}</p>
+                      <p class="text-xs text-slate-400 leading-relaxed">{d.benefit}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- 4. Analisis Kondisi Lokasi & Wilayah Palembang -->
+        <div>
+          <div class="flex items-center gap-3 mb-6 pb-2 border-b border-slate-800">
+            <span class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-sm">4</span>
+            <div>
+              <h2 class="text-2xl font-bold text-white">Analisis Kondisi Lapangan Kota Palembang</h2>
+              <p class="text-sm text-slate-400">Penyesuaian konfigurasi berdasarkan karakteristik wilayah.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {service.localAreaAnalysis.map((loc) => (
+              <div class="bg-security-card border border-slate-700/60 rounded-xl p-4 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-sm font-bold text-brand-300 mb-2">{loc.area}</h3>
+                  <p class="text-xs text-slate-300 mb-3 leading-relaxed">{loc.characteristics}</p>
+                </div>
+                <div class="pt-3 border-t border-slate-800 text-xs">
+                  <span class="font-semibold text-accent-500 block mb-1">Rekomendasi Sistem:</span>
+                  <span class="text-slate-300">{loc.recommendedSystem}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- 5. Standar Operasional Prosedur (SOP) & K3 Lapangan -->
+        <div>
+          <div class="flex items-center gap-3 mb-6 pb-2 border-b border-slate-800">
+            <span class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-sm">5</span>
+            <div>
+              <h2 class="text-2xl font-bold text-white">SOP Kerja &amp; Keselamatan Kerja (K3)</h2>
+              <p class="text-sm text-slate-400">Jaminan kerapihan interior, kebersihan rumah, dan keamanan teknisi.</p>
+            </div>
+          </div>
+
+          <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+              {service.sopAndK3.map((sop, idx) => (
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-brand-500/20 text-brand-400 font-bold flex items-center justify-center text-xs shrink-0 mt-0.5">
+                    {idx + 1}
+                  </span>
+                  <span>{sop}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <!-- 6. Legalitas Usaha & Garansi Resmi -->
+        <div>
+          <div class="flex items-center gap-3 mb-6 pb-2 border-b border-slate-800">
+            <span class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-sm">6</span>
+            <div>
+              <h2 class="text-2xl font-bold text-white">Jaminan Purna Jual &amp; Garansi Ganti Baru</h2>
+              <p class="text-sm text-slate-400">Perlindungan hak konsumen dan kepastian klaim.</p>
+            </div>
+          </div>
+
+          <div class="bg-security-card border border-emerald-500/30 rounded-xl p-5">
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
+              {service.legalityAndWarranty.map((leg) => (
+                <li class="flex items-start gap-2.5">
+                  <MaterialIcon name="verified_user" size={18} className="text-emerald-400 shrink-0 mt-0.5" />
+                  <span>{leg}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <!-- 7. Tanya Jawab Lengkap (6 Butir FAQ Komprehensif) -->
+        <div>
+          <div class="flex items-center gap-3 mb-6 pb-2 border-b border-slate-800">
+            <span class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-sm">7</span>
+            <div>
+              <h2 class="text-2xl font-bold text-white">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+              <p class="text-sm text-slate-400">Jawaban lugas dan transparan seputar layanan {service.title}.</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            {service.faqs.map((faq) => (
+              <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5">
+                <h3 class="text-base font-bold text-white mb-2 flex items-start gap-2">
+                  <span class="text-brand-400 font-black">Q:</span>
+                  <span>{faq.question}</span>
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-300 pl-6 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </article>
+
+      <!-- Kolom Kanan: Sticky Sidebar CTA & Inbound Leads -->
+      <div class="lg:col-span-4 sticky top-24 space-y-6">
+        <WhatsAppStickyCard
+          title={`Pesan ${service.title}`}
+          subtitle="Konsultasikan kebutuhan jumlah titik kamera dan estimasi biaya tanpa dipungut DP sepeser pun."
+          message={`Halo Admin CCTV Palembang. Saya ingin memesan layanan: ${service.title} untuk wilayah saya...`}
+        />
+
+        <!-- Workshop Lokasi Card -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 text-xs text-slate-300 space-y-3">
+          <h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">
+            Workshop &amp; Titik Armada
+          </h4>
+          <div>
+            <p class="font-semibold text-brand-300">Workshop Seberang Ulu:</p>
+            <p class="text-slate-400">Jl. Silaberanti No.24, Silaberanti, Kec. Seberang Ulu I, Palembang</p>
+          </div>
+          <div>
+            <p class="font-semibold text-brand-300">Workshop Ilir Barat:</p>
+            <p class="text-slate-400">Jl. Demang Lebar Daun, Lorok Pakjo, Kec. Ilir Barat I, Palembang</p>
+          </div>
+          <div class="pt-2 text-[11px] text-emerald-400 flex items-center gap-1.5 font-semibold">
+            <MaterialIcon name="radio_button_checked" size={14} /> Armada teknisi ready bergerak ke lokasi Anda
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>

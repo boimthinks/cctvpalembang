@@ -1,0 +1,289 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import WhatsAppStickyCard from '@/components/common/WhatsAppStickyCard.astro';
+import GoogleSourcePreferences from '@/components/common/GoogleSourcePreferences.astro';
+import MaterialIcon from '@/components/common/MaterialIcon.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: any;
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+
+// Ambil semua artikel untuk kalkulasi artikel terkait
+const allPosts = await getCollection('blog');
+
+// Algoritma rekomendasi artikel terkait:
+// 1. Kecualikan artikel yang sedang dibaca
+// 2. Berikan skor berdasarkan kesamaan kategori dan kesamaan tag
+// 3. Ambil 3 artikel dengan skor relevansi tertinggi (fallback urutan tanggal terbaru)
+const relatedPosts = allPosts
+  .filter((p) => p.id !== post.id)
+  .map((p) => {
+    let score = 0;
+    if (p.data.category === post.data.category) score += 3;
+    const commonTags = (p.data.tags || []).filter((t: string) => (post.data.tags || []).includes(t));
+    score += commonTags.length * 2;
+    return { post: p, score };
+  })
+  .sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return b.post.data.publishDate.getTime() - a.post.data.publishDate.getTime();
+  })
+  .slice(0, 3)
+  .map((item) => item.post);
+
+const siteURL = Astro.site ? Astro.site.origin : 'https://cctvpalembang.web.id';
+const currentUrl = `${siteURL}/blog/${post.id}/`;
+
+// Filter headings untuk Table of Contents (H2 & H3)
+const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
+
+// JSON-LD Schemas: Article, Breadcrumbs, FAQPage
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': `${currentUrl}#article`,
+  headline: post.data.title,
+  description: post.data.description,
+  image: `${siteURL}${post.data.image}`,
+  datePublished: post.data.publishDate.toISOString(),
+  dateModified: post.data.publishDate.toISOString(),
+  author: {
+    '@type': 'Person',
+    name: post.data.author,
+  },
+  publisher: {
+    '@id': `${siteURL}/#organization`,
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': currentUrl,
+  },
+  url: currentUrl,
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: `${siteURL}/` },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteURL}/blog/` },
+    { '@type': 'ListItem', position: 3, name: post.data.title, item: currentUrl },
+  ],
+};
+
+const additionalSchemas: Record<string, any>[] = [articleSchema, breadcrumbSchema];
+
+if (post.data.faq && post.data.faq.length > 0) {
+  additionalSchemas.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.data.faq.map((item: any) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  });
+}
+---
+
+<BaseLayout
+  title={`${post.data.title} — CCTV Palembang`}
+  description={post.data.description}
+  image={post.data.image}
+  type="article"
+  publishedTime={post.data.publishDate.toISOString()}
+  additionalSchemas={additionalSchemas}
+>
+  <article class="py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-brand-300">Beranda</a>
+        <span>/</span>
+        <a href="/blog/" class="hover:text-brand-300">Blog</a>
+        <span>/</span>
+        <span class="text-slate-400 truncate max-w-xs">{post.data.title}</span>
+      </nav>
+
+      <!-- Post Header -->
+      <header class="max-w-4xl mb-10">
+        <div class="flex items-center gap-2 text-xs font-semibold text-brand-400 uppercase tracking-wider mb-3">
+          <span>{post.data.category}</span>
+          <span>•</span>
+          <span class="text-slate-400 font-normal">
+            {post.data.publishDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </span>
+          <span>•</span>
+          <span class="text-slate-400 font-normal">Oleh {post.data.author}</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+          {post.data.title}
+        </h1>
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+          {post.data.description}
+        </p>
+      </header>
+
+      <!-- Layout 2 Kolom -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Kolom Kiri: Featured Image & Isi Artikel Markdown -->
+        <div class="lg:col-span-8">
+          <!-- Featured Image Rasio 4:3 -->
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-slate-700 shadow-xl mb-8 bg-slate-950">
+            <img
+              src={post.data.image}
+              alt={post.data.title}
+              width="800"
+              height="600"
+              class="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
+
+          <!-- Markdown Content Body -->
+          <div class="markdown-content">
+            <Content />
+          </div>
+
+          <!-- Frontmatter FAQ Section (Jika ada) -->
+          {post.data.faq && post.data.faq.length > 0 && (
+            <div class="mt-12 pt-8 border-t border-slate-800">
+              <h2 class="text-2xl font-bold text-white mb-6">Tanya Jawab Terkait (FAQ)</h2>
+              <div class="space-y-4">
+                {post.data.faq.map((item: any) => (
+                  <div class="bg-security-card border border-slate-800 rounded-xl p-5">
+                    <h3 class="text-base font-bold text-brand-300 mb-2">{item.question}</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">{item.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- Google Source Preferences Widget -->
+          <GoogleSourcePreferences className="mt-10" />
+
+          <!-- Section Artikel Terkait -->
+          {relatedPosts.length > 0 && (
+            <section class="mt-12 pt-8 border-t border-slate-800">
+              <div class="flex items-center justify-between gap-4 mb-6">
+                <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+                  <MaterialIcon name="auto_stories" size={22} className="text-brand-400" />
+                  Artikel Terkait
+                </h2>
+                <a href="/blog/" class="text-xs font-bold text-brand-400 hover:text-brand-300 inline-flex items-center gap-1 shrink-0">
+                  Semua Artikel <MaterialIcon name="arrow_forward" size={14} />
+                </a>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {relatedPosts.map((rel) => (
+                  <article class="bg-security-card border border-slate-800 rounded-xl overflow-hidden hover:border-brand-500/50 transition-all hover:-translate-y-1 shadow-md flex flex-col justify-between group">
+                    <div>
+                      <a href={`/blog/${rel.id}/`} class="block aspect-[4/3] overflow-hidden bg-slate-950 relative">
+                        <img
+                          src={rel.data.image}
+                          alt={rel.data.title}
+                          width="800"
+                          height="600"
+                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <span class="absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-bold bg-slate-950/80 text-brand-300 border border-slate-800 backdrop-blur">
+                          {rel.data.category}
+                        </span>
+                      </a>
+                      <div class="p-4">
+                        <p class="text-[11px] text-slate-500 mb-1.5 flex items-center gap-1">
+                          <MaterialIcon name="calendar_today" size={12} className="text-brand-400" />
+                          {rel.data.publishDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'short', day: 'numeric' })}
+                        </p>
+                        <h3 class="text-sm font-bold text-white leading-snug mb-1.5 group-hover:text-brand-300 transition-colors">
+                          <a href={`/blog/${rel.id}/`}>{rel.data.title}</a>
+                        </h3>
+                        <p class="text-[11px] text-slate-400 line-clamp-2 leading-relaxed">
+                          {rel.data.description}
+                        </p>
+                      </div>
+                    </div>
+                    <div class="px-4 pb-4">
+                      <a href={`/blog/${rel.id}/`} class="text-[11px] font-bold text-brand-400 hover:text-brand-300 inline-flex items-center gap-1">
+                        Baca Artikel <MaterialIcon name="arrow_forward" size={13} />
+                      </a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
+
+        <!-- Kolom Kanan: Sticky Sidebar (TOC + WhatsApp CTA) -->
+        <aside class="lg:col-span-4 sticky top-24 space-y-6">
+          
+          <!-- Table of Contents -->
+          {tocHeadings.length > 0 && (
+            <div class="bg-security-card border border-slate-800 rounded-2xl p-5 text-xs">
+              <h3 class="font-bold text-white uppercase tracking-wider text-xs mb-3 pb-2 border-b border-slate-800 flex items-center gap-2">
+                <MaterialIcon name="toc" size={16} className="text-brand-400" /> Daftar Isi Artikel
+              </h3>
+              <nav class="space-y-1.5 max-h-72 overflow-y-auto pr-1">
+                {tocHeadings.map((h) => (
+                  <a
+                    href={`#${h.slug}`}
+                    class={`block py-1 hover:text-brand-300 transition-colors leading-snug ${
+                      h.depth === 2 ? 'text-slate-300 font-semibold' : 'text-slate-400 pl-3 text-[11px]'
+                    }`}
+                  >
+                    {h.text}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          )}
+
+          <!-- WhatsApp Lead CTA -->
+          <WhatsAppStickyCard
+            title="Konsultasi Pasang CCTV?"
+            subtitle="Tanyakan paket yang tepat untuk rumah, ruko, atau kantor Anda langsung ke teknisi."
+            message={`Halo Admin CCTV Palembang. Saya baru saja membaca artikel "${post.data.title}" dan ingin konsultasi pasang CCTV...`}
+          />
+
+          <!-- Quick Money Pages Shortcut -->
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 text-xs space-y-2.5">
+            <h4 class="font-bold text-white uppercase tracking-wider text-[11px] border-b border-slate-800 pb-2">
+              Layanan Utama Palembang
+            </h4>
+            <ul class="space-y-2 text-slate-400">
+              <li><a href="/layanan/pasang-cctv-rumah-palembang/" class="hover:text-brand-300 flex items-center gap-1.5"><MaterialIcon name="chevron_right" size={14} /> Pasang CCTV Rumah (Tanpa DP)</a></li>
+              <li><a href="/layanan/pasang-cctv-ruko-toko-palembang/" class="hover:text-brand-300 flex items-center gap-1.5"><MaterialIcon name="chevron_right" size={14} /> Pasang CCTV Ruko &amp; Kasir</a></li>
+              <li><a href="/layanan/instalasi-ip-camera-gedung-pabrik-palembang/" class="hover:text-brand-300 flex items-center gap-1.5"><MaterialIcon name="chevron_right" size={14} /> IP Camera PoE Pabrik &amp; Gudang</a></li>
+              <li><a href="/layanan/jasa-servis-maintenance-cctv-palembang/" class="hover:text-brand-300 flex items-center gap-1.5"><MaterialIcon name="chevron_right" size={14} /> Servis &amp; Setting HP Panggilan</a></li>
+              <li><a href="/layanan/paket-cctv-palembang-murah/" class="hover:text-brand-300 flex items-center gap-1.5"><MaterialIcon name="chevron_right" size={14} /> Daftar Paket CCTV Murah</a></li>
+            </ul>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </article>
+</BaseLayout>

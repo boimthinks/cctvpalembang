@@ -1,0 +1,149 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import JsonLd from '../components/seo/JsonLd.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  type?: string;
+  publishedTime?: string;
+  faq?: { question: string; answer: string }[];
+  breadcrumbs?: { name: string; url: string }[];
+  additionalSchemas?: Record<string, any>[];
+}
+
+const {
+  title,
+  description,
+  image = '/images/og/default.webp',
+  type = 'website',
+  publishedTime,
+  breadcrumbs = [],
+  additionalSchemas = [],
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const imageURL = new URL(image, Astro.site);
+const siteURL = Astro.site ? Astro.site.origin : 'https://cctvpalembang.web.id';
+
+const baseSchemas: Record<string, any>[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${siteURL}/#website`,
+    url: siteURL,
+    name: 'CCTV Palembang',
+    description: 'Jasa Pasang CCTV Palembang Terpercaya, Tanpa DP, Garansi Resmi 1 Tahun Ganti Baru.',
+    inLanguage: 'id-ID',
+    publisher: { '@id': `${siteURL}/#organization` },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${siteURL}/#organization`,
+    name: 'CCTV Palembang',
+    url: siteURL,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteURL}/images/og/default.webp`,
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+62-857-5890-3353',
+      contactType: 'customer service',
+      areaServed: 'ID',
+      availableLanguage: ['Indonesian'],
+    },
+    sameAs: ['https://cctvpalembang.web.id'],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': `${siteURL}/#localbusiness`,
+    name: 'CCTV Palembang',
+    image: `${siteURL}/images/og/default.webp`,
+    url: siteURL,
+    telephone: '+62-857-5890-3353',
+    priceRange: 'Rp 1.850.000 - Rp 13.500.000',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Jl. Silaberanti No.24, Silaberanti',
+      addressLocality: 'Kota Palembang',
+      addressRegion: 'Sumatera Selatan',
+      postalCode: '30116',
+      addressCountry: 'ID',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: -2.9888,
+      longitude: 104.7567,
+    },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '07:00',
+      closes: '21:00',
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Palembang' },
+      { '@type': 'AdministrativeArea', name: 'Ogan Ilir' },
+      { '@type': 'AdministrativeArea', name: 'Banyuasin' },
+    ],
+  },
+];
+
+const schemasToRender = [...baseSchemas, ...additionalSchemas];
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="CCTV Palembang" />
+    <meta name="geo.region" content="ID-SS" />
+    <meta name="geo.placename" content="Palembang" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content="CCTV Palembang" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={imageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="id_ID" />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageURL} />
+
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+    <ClientRouter />
+
+    {schemasToRender.map((schema) => <JsonLd data={schema} />)}
+  </head>
+  <body>
+    <Header currentPath={Astro.url.pathname} />
+    <main class="min-h-screen">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

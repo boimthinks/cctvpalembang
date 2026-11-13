@@ -1,0 +1,175 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import MaterialIcon from '@/components/common/MaterialIcon.astro';
+
+const pageTitle = 'Halaman Tidak Ditemukan (Error 404) - CCTV Palembang';
+const pageDescription = 'Halaman yang Anda cari tidak ditemukan atau telah dipindahkan ke tautan baru. Temukan paket CCTV dan layanan resmi CCTV Palembang di sini.';
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+>
+  <main class="min-h-[80vh] flex items-center justify-center py-16 sm:py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
+      
+      <!-- Icon & Status 404 -->
+      <div class="space-y-4">
+        <div class="inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-amber-400/10 border border-amber-400/30 text-amber-400 shadow-xl shadow-amber-400/5">
+          <MaterialIcon name="videocam_off" size={48} />
+        </div>
+        
+        <div class="space-y-2">
+          <p class="text-xs sm:text-sm font-mono font-bold tracking-widest text-amber-400 uppercase">
+            Sinyal Terputus • Kode Error 404
+          </p>
+          <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+            Halaman Tidak Ditemukan
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300 max-w-xl mx-auto leading-relaxed pt-1">
+            Alamat web yang Anda tuju mungkin salah ketik, sudah dipindahkan ke struktur baru, atau tautan telah diperbarui. Jangan khawatir, Anda tetap berada di situs resmi CCTV Palembang.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tombol Aksi Cepat -->
+      <div class="flex flex-wrap justify-center gap-3 text-xs sm:text-sm font-bold">
+        <a
+          href="/"
+          class="px-6 py-3.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl shadow-lg shadow-brand-950/50 transition-all flex items-center gap-2"
+        >
+          <MaterialIcon name="home" size={18} />
+          <span>Kembali ke Beranda</span>
+        </a>
+        <a
+          href="/paket/"
+          class="px-6 py-3.5 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black rounded-xl shadow-lg shadow-amber-400/10 transition-all flex items-center gap-2"
+        >
+          <MaterialIcon name="inventory_2" size={18} />
+          <span>Lihat Katalog Paket CCTV</span>
+        </a>
+        <a
+          href="https://wa.me/6285758903353?text=Halo%20Admin%20CCTV%20Palembang.%20Saya%20mengalami%20kendala%20halaman%20tidak%20ditemukan%20dan%20ingin%20tanya%20informasi%20paket%20CCTV..."
+          target="_blank"
+          rel="noopener nofollow"
+          class="px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl shadow-lg shadow-emerald-950/50 transition-all flex items-center gap-2"
+        >
+          <MaterialIcon name="chat" size={18} />
+          <span>Tanya Admin via WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Rekomendasi Pintasan Halaman Populer -->
+      <div class="pt-6 border-t border-slate-800 text-left">
+        <p class="text-xs font-bold text-slate-400 uppercase tracking-wider text-center mb-6">
+          Mungkin Ini Halaman yang Anda Cari:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Paket 2 Kamera -->
+          <a
+            href="/paket/paket-hemat-rumah-2-kamera/"
+            class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-amber-400/50 transition-all group block"
+          >
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-slate-800 text-amber-400">Paket Hemat</span>
+              <span class="text-xs font-mono font-bold text-amber-400">Rp 1.850.000</span>
+            </div>
+            <h2 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">
+              Paket Hemat Rumah (2 Kamera)
+            </h2>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">
+              Lengkap 2 kamera 2MP, DVR 4ch, harddisk 500GB surveillance, tanpa DP.
+            </p>
+          </a>
+
+          <!-- Paket 4 Kamera -->
+          <a
+            href="/paket/paket-standar-bisnis-4-kamera/"
+            class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-amber-400/50 transition-all group block"
+          >
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-amber-400/20 text-amber-300">Paling Laris</span>
+              <span class="text-xs font-mono font-bold text-amber-400">Rp 2.850.000</span>
+            </div>
+            <h2 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">
+              Paket Standar Bisnis (4 Kamera)
+            </h2>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">
+              Best seller rumah 2 lantai dan ruko. Harddisk 1TB, bebas pilih indoor/outdoor.
+            </p>
+          </a>
+
+          <!-- Layanan Rumah -->
+          <a
+            href="/layanan/pasang-cctv-rumah-palembang/"
+            class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-400/50 transition-all group block"
+          >
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-slate-800 text-brand-300">Pilar Layanan</span>
+              <MaterialIcon name="arrow_forward" size={14} className="text-slate-500 group-hover:text-brand-300 transition-colors" />
+            </div>
+            <h2 class="text-sm font-bold text-white group-hover:text-brand-300 transition-colors">
+              Pasang CCTV Rumah Palembang
+            </h2>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">
+              Panduan instalasi residensial pipa PVC conduit rapi dan no-smoking SOP.
+            </p>
+          </a>
+
+          <!-- Layanan Ruko & Toko -->
+          <a
+            href="/layanan/pasang-cctv-ruko-toko-palembang/"
+            class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-400/50 transition-all group block"
+          >
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-slate-800 text-brand-300">Pilar Komersial</span>
+              <MaterialIcon name="arrow_forward" size={14} className="text-slate-500 group-hover:text-brand-300 transition-colors" />
+            </div>
+            <h2 class="text-sm font-bold text-white group-hover:text-brand-300 transition-colors">
+              Pasang CCTV Ruko &amp; Toko
+            </h2>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">
+              Solusi pantau laci meja kasir, etalase, dan area parkir ruko 24 jam.
+            </p>
+          </a>
+
+          <!-- Layanan Servis -->
+          <a
+            href="/layanan/jasa-servis-maintenance-cctv-palembang/"
+            class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-400/50 transition-all group block"
+          >
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-slate-800 text-brand-300">Panggilan Cepat</span>
+              <MaterialIcon name="arrow_forward" size={14} className="text-slate-500 group-hover:text-brand-300 transition-colors" />
+            </div>
+            <h2 class="text-sm font-bold text-white group-hover:text-brand-300 transition-colors">
+              Jasa Servis &amp; Setting HP
+            </h2>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">
+              Perbaikan kamera mati, reset password DVR, ganti harddisk, dan setting WiFi.
+            </p>
+          </a>
+
+          <!-- Pusat Edukasi Blog -->
+          <a
+            href="/blog/"
+            class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-400/50 transition-all group block"
+          >
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-slate-800 text-brand-300">Artikel Edukasi</span>
+              <MaterialIcon name="arrow_forward" size={14} className="text-slate-500 group-hover:text-brand-300 transition-colors" />
+            </div>
+            <h2 class="text-sm font-bold text-white group-hover:text-brand-300 transition-colors">
+              Blog &amp; Panduan Keamanan
+            </h2>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">
+              Tips teknis, komparasi IP Camera vs Analog, dan ulasan sistem pengawas.
+            </p>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</BaseLayout>
