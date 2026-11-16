@@ -12,19 +12,19 @@ Setiap artikel blog di bawah ini dirancang untuk menargetkan kata kunci informas
 ### Klaster A: Panduan Pembelian & Estimasi Biaya
 | Hari | Judul Artikel | Target Keyword Utama | Internal Link Money Page |
 | :--- | :--- | :--- | :--- |
-| 1 | Estimasi Biaya Pasang CCTV Rumah di Palembang Rincian Paket Hemat Tanpa DP | biaya pasang cctv rumah palembang | `/layanan/pasang-cctv-rumah-palembang/` |
-| 2 | Perbedaan CCTV Analog HD vs IP Camera PoE untuk Properti Palembang | perbedaan cctv analog vs ip camera | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` |
-| 3 | Rekomendasi CCTV Terbaik untuk Ruko & Toko di Palembang | cctv terbaik untuk ruko palembang | `/layanan/pasang-cctv-ruko-toko-palembang/` |
+| 1 | Estimasi Biaya Pasang CCTV Rumah di Palembang Rincian Paket Hemat Tanpa DP | biaya pasang cctv rumah palembang | `/layanan/pasang-cctv-rumah-palembang/` | ✅ Terbit 2026-11-07 |
+| 2 | Perbedaan CCTV Analog HD vs IP Camera PoE untuk Properti Palembang | perbedaan cctv analog vs ip camera | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` | ✅ Terbit 2026-11-09 |
+| 3 | Rekomendasi CCTV Terbaik untuk Ruko & Toko di Palembang | cctv terbaik untuk ruko palembang | `/layanan/pasang-cctv-ruko-toko-palembang/` | ✅ Terbit 2026-11-10 |
 | 4 | Rincian Biaya Pasang CCTV 4 Kamera di Palembang: Transparan Tanpa Biaya Tersembunyi | biaya pasang cctv 4 kamera palembang | `/layanan/paket-cctv-palembang-murah/` |
 | 5 | Tips Memilih Merk CCTV Hikvision, Dahua, dan HiLook: Panduan Orisinalitas | merk cctv terbaik hikvision dahua | `/layanan/paket-cctv-palembang-murah/` | ✅ Terbit 2026-11-13 |
-| 6 | Berapa Lama Rekaman CCTV Tersimpan Berdasarkan Kapasitas Harddisk? | kapasitas rekaman cctv harddisk | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 6 | Berapa Lama Rekaman CCTV Tersimpan Berdasarkan Kapasitas Harddisk? | kapasitas rekaman cctv harddisk | `/layanan/jasa-servis-maintenance-cctv-palembang/` | ✅ Terbit 2026-11-16 |
 
 ### Klaster B: Masalah Lapangan & Troubleshooting Servis
 | Hari | Judul Artikel | Target Keyword Utama | Internal Link Money Page |
 | :--- | :--- | :--- | :--- |
 | 7 | Penyebab Kamera CCTV Mati Total dan Cara Mengatasinya dengan Tepat | kamera cctv mati total | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
-| 8 | Mengapa CCTV Tidak Bisa Online di HP: Solusi Lengkap | cctv tidak bisa online di hp | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
-| 9 | Cara Mengatasi DVR CCTV Bunyi Beep Terus Menerus | dvr cctv bunyi beep terus | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 8 | Mengapa CCTV Tidak Bisa Online di HP: Solusi Lengkap | cctv tidak bisa online di hp | `/layanan/jasa-servis-maintenance-cctv-palembang/` | ✅ Terbit 2026-11-11 |
+| 9 | Cara Mengatasi DVR CCTV Bunyi Beep Terus Menerus | dvr cctv bunyi beep terus | `/layanan/jasa-servis-maintenance-cctv-palembang/` | ✅ Terbit 2026-11-11 |
 | 10 | Panduan Mengamankan CCTV dari Sambaran Petir di Palembang | cctv anti petir palembang | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` |
 | 11 | Cara Mereset Password DVR Hikvision dan Dahua yang Lupa | reset password dvr hikvision | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
 | 12 | Mengapa Gambar CCTV Bergaris atau Bergelombang dan Solusinya | gambar cctv bergaris | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
@@ -32,7 +32,7 @@ Setiap artikel blog di bawah ini dirancang untuk menargetkan kata kunci informas
 ### Klaster C: Instalasi Teknis & Standar Keamanan (E-E-A-T)
 | Hari | Judul Artikel | Target Keyword Utama | Internal Link Money Page |
 | :--- | :--- | :--- | :--- |
-| 13 | Sertifikasi IP66 IP67 dan WDR CCTV Cuaca Ekstrem Palembang | sertifikasi ip66 ip67 cctv palembang | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` |
+| 13 | Sertifikasi IP66 IP67 dan WDR CCTV Cuaca Ekstrem Palembang | sertifikasi ip66 ip67 cctv palembang | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` | ✅ Terbit 2026-04-18 |
 | 14 | Titik Lokasi Strategis Pemasangan CCTV di Rumah Tinggal | titik pemasangan cctv rumah | `/layanan/pasang-cctv-rumah-palembang/` |
 | 15 | Keunggulan Fitur CCTV ColorVu Bisa Merekam Warna Malam Hari | cctv colorvu malam berwarna | `/layanan/paket-cctv-palembang-murah/` |
 | 16 | Panduan Memasang CCTV di Area Kasir Toko untuk Cegah Selisih Uang | cctv kasir toko | `/layanan/pasang-cctv-ruko-toko-palembang/` |

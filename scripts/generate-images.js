@@ -247,7 +247,7 @@ async function main() {
     {
       slug: 'perbedaan-cctv-analog-vs-ip-camera',
       title: 'Perbedaan CCTV Analog HD vs IP Camera PoE',
-      subtitle: 'Mana Pilihan Tepat untuk Rumah, Ruko, dan Gedung Pabrik?',
+      subtitle: 'Biaya per Titik & Total Kepemilikan 5 Tahun di Palembang',
       badge: 'KOMPARASI SISTEM',
     },
     {
@@ -255,12 +255,6 @@ async function main() {
       title: 'Sertifikasi IP66 IP67 dan True WDR Cuaca Ekstrem',
       subtitle: 'Standar Ketahanan Kamera Outdoor Menghadapi Hujan & Terik Palembang',
       badge: 'PANDUAN TEKNIS',
-    },
-    {
-      slug: 'perbandingan-ip-camera-vs-analog-hd-palembang',
-      title: 'Perbandingan IP Camera vs Analog HD Bisnis',
-      subtitle: 'Hitungan Biaya per Titik & Total Kepemilikan 5 Tahun di Palembang',
-      badge: 'KOMPARASI SISTEM',
     },
     {
       slug: 'dokumentasi-pemasangan-100-titik-cctv-palembang',
@@ -292,6 +286,12 @@ async function main() {
       title: 'Tips Memilih Merk CCTV Hikvision, Dahua, HiLook',
       subtitle: 'Orisinalitas Unit, Aplikasi HP, dan Dukungan Purnajual di Palembang',
       badge: 'PANDUAN PEMBELIAN',
+    },
+    {
+      slug: 'lama-rekaman-cctv-kapasitas-harddisk-palembang',
+      title: 'Lama Rekaman CCTV Sesuai Kapasitas Harddisk',
+      subtitle: 'Hitungan Hari Rekam 500GB sampai 8TB untuk 2 hingga 16 Kamera',
+      badge: 'PANDUAN TEKNIS',
     }
   ];
 

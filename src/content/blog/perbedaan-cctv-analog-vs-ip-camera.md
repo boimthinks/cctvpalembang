@@ -1,6 +1,6 @@
 ---
-title: "Perbedaan CCTV Analog HD vs IP Camera PoE untuk Properti Palembang"
-description: "Panduan perbandingan mendalam CCTV Analog HD vs IP Camera PoE digital. Pelajari perbedaan resolusi, kabel transmisi, biaya instalasi, dan kebutuhan untuk ruko hingga gedung pabrik."
+title: "Perbedaan CCTV Analog HD vs IP Camera PoE di Palembang"
+description: "Perbedaan CCTV Analog HD vs IP Camera PoE di Palembang, dari resolusi, kabel, biaya per titik, hingga total biaya kepemilikan lima tahun."
 publishDate: 2026-11-09
 author: "Tim Teknisi CCTV Palembang"
 category: "Komparasi Sistem"
@@ -26,7 +26,7 @@ Memilih antara sistem CCTV Analog HD dan IP Camera digital sering kali menjadi d
 
 Di sisi lain, menganggap CCTV Analog sudah usang juga merupakan kekeliruan besar, mengingat teknologi Analog HD (HD-TVI dan HD-CVI) terkini telah mampu menyajikan resolusi Full HD 1080p hingga 4K dengan kestabilan transmisi tanpa latensi jaringan.
 
-Untuk membantu Anda menentukan pilihan yang paling rasional, kami mengulas komparasi teknis kedua arsitektur sistem ini secara menyeluruh.
+Untuk membantu Anda menentukan pilihan yang paling rasional, kami mengulas komparasi teknis kedua arsitektur sistem ini, lengkap dengan hitungan biaya per titik dan total biaya kepemilikan lima tahun. Keputusan di lapangan jarang berhenti pada spesifikasi.
 
 Bagi Anda yang mengelola area perkantoran besar, gudang logistik, atau fasilitas manufaktur industri di kawasan Palembang, pelajari lebih lanjut layanan spesialis kami di [instalasi ip camera gedung dan pabrik palembang](/layanan/instalasi-ip-camera-gedung-pabrik-palembang/).
 
@@ -47,6 +47,53 @@ Berikut perbandingan aspek kunci antara kedua teknologi surveillance:
 | **Kelebihan Fitur AI** | Deteksi Gerak Dasar (Motion Detection) | Deteksi Wajah, Garis Maya, Hitung Objek (Smart VCA) |
 
 ---
+
+## Hitungan biaya per titik kamera di Palembang
+
+Angka berikut adalah rentang wajar pasar Palembang untuk pemasangan 4 titik dengan kualitas material standar kami. Harga mencakup unit, kabel, konektor, power supply, pipa conduit, dan ongkos pasang.
+
+| Komponen Biaya | Sistem Analog HD | Sistem IP Camera PoE |
+| :--- | :--- | :--- |
+| Unit kamera per titik | Rp 275.000 sampai Rp 450.000 | Rp 650.000 sampai Rp 1.400.000 |
+| Perekam | DVR 4 channel, Rp 550.000 sampai Rp 800.000 | NVR PoE 4 channel, Rp 1.400.000 sampai Rp 2.200.000 |
+| Media transmisi per titik | Kabel coaxial RG59 plus kabel power | Satu kabel LAN Cat6 |
+| Perangkat jaringan tambahan | Tidak ada | Switch PoE, Rp 450.000 sampai Rp 900.000 |
+| Harddisk surveillance | 500GB sampai 1TB | 1TB sampai 2TB |
+| Estimasi total 4 titik terpasang | Rp 2.850.000 sampai Rp 3.400.000 | Rp 4.900.000 sampai Rp 7.200.000 |
+| Biaya rata-rata per titik | Rp 710.000 sampai Rp 850.000 | Rp 1.225.000 sampai Rp 1.800.000 |
+
+Selisih per titik berkisar Rp 400.000 sampai Rp 950.000. Pada 20 titik kamera, selisih total bisa menembus Rp 10 juta. Di angka itu, pemilihan sistem berhenti menjadi urusan teknis dan berubah menjadi keputusan investasi.
+
+## Total biaya kepemilikan lima tahun
+
+Investasi awal bukan satu-satunya angka yang perlu dihitung pemilik usaha. Simulasi berikut memakai asumsi toko ritel dengan 6 titik kamera awal yang berkembang menjadi 12 titik pada tahun ketiga.
+
+| Pos biaya lima tahun | Analog HD | IP Camera PoE |
+| :--- | :--- | :--- |
+| Investasi awal 6 titik | Rp 4.400.000 | Rp 8.600.000 |
+| Ekspansi 6 titik tambahan tahun ketiga | Rp 4.900.000 (tarikan kabel baru dari tiap titik) | Rp 4.200.000 (tambah kamera dan port switch) |
+| Penggantian harddisk sekali | Rp 650.000 | Rp 850.000 |
+| Perawatan berkala dan pembersihan lensa | Rp 900.000 | Rp 1.100.000 |
+| Penggantian satu power supply sentral | Rp 350.000 | Tidak berlaku, daya dari switch PoE |
+| Perkiraan total lima tahun | Rp 11.200.000 | Rp 14.750.000 |
+
+Hitungan nominalnya masih memenangkan Analog HD. Selisihnya menyempit dari Rp 4,2 juta di awal menjadi sekitar Rp 3,5 juta setelah lima tahun, karena penambahan titik pada sistem IP lebih murah per unit. Bisnis yang menambah kamera setiap tahun akan melihat selisih ini terus mengecil dan bisa berbalik pada jumlah titik yang lebih besar.
+
+## Migrasi bertahap dengan DVR hybrid
+
+Pemilik usaha tidak harus mengunci pilihan selamanya. DVR hybrid menerima sinyal kamera Analog HD sekaligus kamera IP dalam satu perekam, dan inilah jalan yang paling sering kami pakai pada ruko serta kantor cabang di Palembang.
+
+Mulai dari 4 kamera Analog HD di titik paling kritis, misalnya pintu masuk, meja kasir, dan gudang belakang. Ketika anggaran tersedia, tambahkan IP Camera pada titik yang butuh detail tinggi seperti area parkir atau pintu bongkar muat. Seluruh rekaman tetap masuk ke satu perangkat dan dipantau dari satu aplikasi ponsel.
+
+Strategi ini menjaga modal awal tetap ringan, membuat kapasitas sistem tumbuh mengikuti perkembangan usaha, dan tidak membuang perangkat lama saat migrasi.
+
+## Dua pos biaya lokal yang sering terlewat
+
+Ada dua kondisi khas Palembang yang membuat anggaran meleset, dan keduanya tidak berkaitan dengan pilihan sistem.
+
+Pertama, induksi petir. Palembang punya intensitas petir tinggi pada musim basah. Tanpa grounding rod dengan tahanan di bawah 5 Ohm dan surge arrester pada jalur kabel, kamera analog maupun IP bisa rusak bersamaan dalam satu sambaran. Perlindungan ini menambah biaya Rp 300.000 sampai Rp 600.000, jauh lebih murah daripada mengganti perekam dan kamera sekaligus.
+
+Kedua, kerapihan jalur conduit. Plafon rumah dan ruko di Palembang sering dihuni tikus. Kabel tanpa pelindung pipa conduit PVC high impact akan putus dalam hitungan minggu. Kedua pos biaya ini berlaku sama pada kedua sistem, jadi tidak mengubah perbandingan, hanya menaikkan total anggaran yang perlu disiapkan.
 
 ## Mengenal Karakteristik CCTV Analog HD Modern
 

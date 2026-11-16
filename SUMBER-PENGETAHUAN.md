@@ -203,3 +203,23 @@ Kami melayani armada teknisi cepat untuk seluruh wilayah:
 - Wajib menyertakan minimal 1 tautan internal ke salah satu dari 5 Money Page di atas dengan trailing slash.
 - Wajib frontmatter FAQ 5-6 butir untuk keterbacaan pembaca.
 - CTA resmi: Nomor WhatsApp `0857-5890-3353` dengan jaminan Tanpa DP dan Garansi 1 Tahun.
+
+---
+
+## 7. DAFTAR ARTIKEL BLOG TERBIT (UPDATE 16 NOVEMBER 2026)
+
+Gunakan daftar ini untuk mencegah duplikasi topik. Setiap artikel wajib menautkan minimal satu Money Page dengan trailing slash.
+
+| Tanggal | URL | Topik | Money Page Target |
+| :--- | :--- | :--- | :--- |
+| 2026-04-18 | `/blog/penjelasan-teknis-ip66-ip67-wdr-cuaca-palembang/` | Sertifikasi IP66 IP67 dan True WDR | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` |
+| 2026-05-10 | `/blog/dokumentasi-pemasangan-100-titik-cctv-palembang/` | Studi kasus 100 titik CCTV perumahan | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` |
+| 2026-05-24 | `/blog/cara-klaim-garansi-cctv-1-tahun-palembang/` | Alur klaim garansi 1 tahun ganti baru | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 2026-11-07 | `/blog/biaya-pasang-cctv-rumah-palembang/` | Estimasi biaya pasang CCTV rumah | `/layanan/pasang-cctv-rumah-palembang/` |
+| 2026-11-09 | `/blog/perbedaan-cctv-analog-vs-ip-camera/` | Komparasi teknis dan biaya Analog HD vs IP Camera PoE | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` |
+| 2026-11-10 | `/blog/rekomendasi-cctv-terbaik-ruko-toko-palembang/` | Rekomendasi CCTV ruko dan toko | `/layanan/pasang-cctv-ruko-toko-palembang/` |
+| 2026-11-11 | `/blog/penyebab-dvr-cctv-bunyi-beep-dan-solusi-offline-hp/` | DVR bunyi beep dan CCTV offline di HP | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 2026-11-13 | `/blog/tips-memilih-merk-cctv-hikvision-dahua-hilook/` | Perbandingan merk Hikvision, Dahua, HiLook | `/layanan/paket-cctv-palembang-murah/` |
+| 2026-11-16 | `/blog/lama-rekaman-cctv-kapasitas-harddisk-palembang/` | Lama rekaman per kapasitas harddisk | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+
+Catatan konsolidasi: artikel `/blog/perbandingan-ip-camera-vs-analog-hd-palembang/` (terbit 2 Mei 2026) sudah digabung ke `/blog/perbedaan-cctv-analog-vs-ip-camera/` dan dialihkan permanen (301) melalui `public/.htaccess`. Jangan membuat artikel baru dengan sudut pandang biaya per titik analog vs IP tanpa memeriksa halaman tersebut lebih dulu.

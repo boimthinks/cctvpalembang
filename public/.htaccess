@@ -14,7 +14,10 @@ ErrorDocument 404 /404.html
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # 3. Trailing Slash Enforcer (Kecuali jika file fisik ada atau request file dengan ekstensi)
+  # 3. Redirect permanen artikel yang digabung (hindari konten duplikat)
+  RewriteRule ^blog/perbandingan-ip-camera-vs-analog-hd-palembang/?$ /blog/perbedaan-cctv-analog-vs-ip-camera/ [L,R=301]
+
+  # 4. Trailing Slash Enforcer (Kecuali jika file fisik ada atau request file dengan ekstensi)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_URI} !index\.html$
   RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{2,5}$
@@ -22,7 +25,7 @@ ErrorDocument 404 /404.html
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [L,R=301]
 </IfModule>
 
-# 4. Browser Caching (mod_expires)
+# 5. Browser Caching (mod_expires)
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresDefault "access plus 1 month"
@@ -49,7 +52,7 @@ ErrorDocument 404 /404.html
   ExpiresByType text/xml "access plus 1 hour"
 </IfModule>
 
-# 5. Gzip Compression (mod_deflate)
+# 6. Gzip Compression (mod_deflate)
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/plain
   AddOutputFilterByType DEFLATE text/html
@@ -63,7 +66,7 @@ ErrorDocument 404 /404.html
   AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
-# 6. Security Headers
+# 7. Security Headers
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"

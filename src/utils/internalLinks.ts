@@ -95,10 +95,10 @@ export const internalLinksRegistry: InternalLinkItem[] = [
     category: 'blog',
   },
   {
-    anchor: 'perbandingan ip camera vs analog hd untuk bisnis palembang',
-    url: '/blog/perbandingan-ip-camera-vs-analog-hd-palembang/',
-    title: 'Perbandingan IP Camera vs Analog HD untuk Bisnis Palembang',
-    description: 'Hitungan biaya per titik, total biaya kepemilikan 5 tahun, dan ROI sistem CCTV bisnis di Palembang.',
+    anchor: 'perbedaan cctv analog hd vs ip camera poe palembang',
+    url: '/blog/perbedaan-cctv-analog-vs-ip-camera/',
+    title: 'Perbedaan CCTV Analog HD vs IP Camera PoE di Palembang',
+    description: 'Komparasi teknis dan biaya per titik antara CCTV Analog HD dan IP Camera PoE untuk properti di Palembang.',
     category: 'blog',
   },
   {
