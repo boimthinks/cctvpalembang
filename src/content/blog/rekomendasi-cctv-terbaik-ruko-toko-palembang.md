@@ -2,7 +2,7 @@
 title: "Rekomendasi CCTV Terbaik untuk Ruko dan Toko Palembang"
 description: "Rekomendasi sistem CCTV ruko dan toko di Palembang. Cegah selisih kasir, titik buta etalase, spesifikasi audio, dan paket pasang tanpa uang muka."
 publishDate: 2026-11-10
-author: "Tim Teknisi CCTV Palembang"
+author: "Martha Rhino"
 category: "Panduan Bisnis"
 tags: ["cctv ruko palembang", "cctv toko palembang", "cctv kasir toko", "pasang cctv palembang"]
 image: "/images/blog/rekomendasi-cctv-terbaik-ruko-toko-palembang_poco.webp"

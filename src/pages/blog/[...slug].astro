@@ -49,6 +49,17 @@ const currentUrl = `${siteURL}/blog/${post.id}/`;
 // Filter headings untuk Table of Contents (H2 & H3)
 const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
 
+const authorProfiles: Record<string, { url: string; role: string; bio: string; photo: string }> = {
+  'Martha Rhino': {
+    url: '/author/rhino/',
+    role: 'Pendiri & Teknisi Senior CCTV Palembang',
+    bio: 'Praktisi pemasangan CCTV di Palembang sejak 2011. Berawal sebagai pekerja di perusahaan jasa CCTV, membuka layanan sendiri pada 2014 lewat sosial media pribadi, lalu mengembangkan layanan lewat website pada 2026.',
+    photo: '/images/martha-rhino.webp',
+  },
+};
+
+const authorProfile = authorProfiles[post.data.author];
+
 // JSON-LD Schemas: Article, Breadcrumbs, FAQPage
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -61,7 +72,12 @@ const articleSchema = {
   dateModified: post.data.publishDate.toISOString(),
   author: {
     '@type': 'Person',
+    '@id': authorProfile ? `${siteURL}${authorProfile.url}#person` : undefined,
     name: post.data.author,
+    url: authorProfile ? `${siteURL}${authorProfile.url}` : undefined,
+    image: authorProfile ? `${siteURL}${authorProfile.photo}` : undefined,
+    jobTitle: authorProfile ? authorProfile.role : undefined,
+    worksFor: { '@id': `${siteURL}/#organization` },
   },
   publisher: {
     '@id': `${siteURL}/#organization`,
@@ -102,11 +118,12 @@ if (post.data.faq && post.data.faq.length > 0) {
 ---
 
 <BaseLayout
-  title={`${post.data.title} — CCTV Palembang`}
+  title={`${post.data.title} | CCTV Palembang`}
   description={post.data.description}
   image={post.data.image}
   type="article"
   publishedTime={post.data.publishDate.toISOString()}
+  author={post.data.author}
   additionalSchemas={additionalSchemas}
 >
   <article class="py-10">
@@ -130,7 +147,9 @@ if (post.data.faq && post.data.faq.length > 0) {
             {post.data.publishDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}
           </span>
           <span>•</span>
-          <span class="text-slate-400 font-normal">Oleh {post.data.author}</span>
+          <span class="text-slate-400 font-normal">
+            <a href="/author/rhino/" class="hover:text-brand-300 underline-offset-4 hover:underline">Oleh {post.data.author}</a>
+          </span>
         </div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
           {post.data.title}
@@ -161,6 +180,41 @@ if (post.data.faq && post.data.faq.length > 0) {
           <div class="markdown-content">
             <Content />
           </div>
+
+          <!-- Kartu Penulis (sebelum FAQ) -->
+          {authorProfile && (
+            <div class="mt-12 pt-8 border-t border-slate-800">
+              <h2 class="text-2xl font-bold text-white mb-6">Tentang Penulis</h2>
+              <div class="bg-security-card border border-slate-800 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-start gap-5">
+                <a
+                  href={authorProfile.url}
+                  class="w-16 h-16 rounded-xl overflow-hidden bg-gradient-to-br from-brand-500 to-brand-900 border border-brand-400/40 shrink-0"
+                >
+                  <img
+                    src={authorProfile.photo}
+                    alt={post.data.author}
+                    width="250"
+                    height="250"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </a>
+                <div class="min-w-0">
+                  <a href={authorProfile.url} class="text-base font-bold text-white hover:text-brand-300 transition-colors">
+                    {post.data.author}
+                  </a>
+                  <div class="text-[11px] font-semibold text-brand-400 mb-2">{authorProfile.role}</div>
+                  <p class="text-sm text-slate-300 leading-relaxed">{authorProfile.bio}</p>
+                  <a
+                    href={authorProfile.url}
+                    class="inline-flex items-center gap-1 mt-3 text-xs font-bold text-brand-400 hover:text-brand-300 transition-colors"
+                  >
+                    Lihat profil lengkap <MaterialIcon name="arrow_forward" size={13} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
 
           <!-- Frontmatter FAQ Section (Jika ada) -->
           {post.data.faq && post.data.faq.length > 0 && (

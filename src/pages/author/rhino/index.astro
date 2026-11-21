@@ -1,0 +1,356 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import WhatsAppStickyCard from '@/components/common/WhatsAppStickyCard.astro';
+import MaterialIcon from '@/components/common/MaterialIcon.astro';
+import { getCollection } from 'astro:content';
+
+const siteURL = Astro.site ? Astro.site.origin : 'https://cctvpalembang.web.id';
+const currentUrl = `${siteURL}/author/rhino/`;
+
+const timeline = [
+  {
+    year: '2011',
+    title: 'Mulai dari lapangan, ikut bekerja di perusahaan jasa CCTV Palembang',
+    desc: 'Tahun 2011 Martha Rhino masuk sebagai pekerja di sebuah perusahaan jasa pemasangan CCTV di Palembang. Tiga tahun pertama dihabiskan bukan di belakang meja, tetapi di plafon rumah, di atas atap ruko, dan di lantai gudang. Mulai dari menarik kabel coaxial, memotong pipa conduit, crimping konektor BNC, menyetel DVR, sampai menghadapi pelanggan yang komplain gambar bergaris setelah hujan.',
+    icon: 'construction',
+  },
+  {
+    year: '2014',
+    title: 'Berhenti, lalu membuka layanan pemasangan sendiri',
+    desc: 'Setelah tiga tahun menimba pengalaman, Martha memutuskan berhenti dan membuka layanan pemasangan CCTV sendiri. Order pertama datang dari tetangga dan rekan yang sudah mengenal hasil kerjanya. Semua ditawarkan lewat sosial media pribadi, terutama Facebook, dari foto hasil pemasangan yang diunggah sendiri, bukan iklan berbayar.',
+    icon: 'handyman',
+  },
+  {
+    year: '2014 - 2025',
+    title: 'Bertumbuh dari mulut ke mulut di Palembang',
+    desc: 'Sejak saat itu basis pelanggan tumbuh dari rekomendasi: rumah hunian di Seberang Ulu, ruko dan toko kasir di Ilir Timur, gudang di Kertapati, sampai perumahan cluster di Sukarami. Pola kerja yang dipegang tetap sama, datang, ukur lokasi, pasang rapi, ajari pelanggan memantau dari HP, lalu bayar setelah sistem menyala normal.',
+    icon: 'trending_up',
+  },
+  {
+    year: '2026',
+    title: 'Berkembang lewat website cctvpalembang.web.id',
+    desc: 'Di 2026 layanan yang sebelumnya hanya dikenal lewat Facebook pribadi dikembangkan lewat website resmi. Tujuannya bukan sekadar menambah kanal penjualan, tetapi memberi pelanggan informasi terbuka: rincian paket, harga, cakupan wilayah, prosedur garansi, dan panduan teknis yang bisa dibaca sebelum memutuskan membeli.',
+    icon: 'language',
+  },
+];
+
+const expertise = [
+  {
+    icon: 'videocam',
+    title: 'Instalasi Analog HD',
+    desc: 'Kamera 2MP sampai 5MP, DVR Turbo HD, penarikan kabel RG59, dan pengaturan kompresi H.265+ agar masa simpan rekaman sesuai kebutuhan.',
+  },
+  {
+    icon: 'lan',
+    title: 'IP Camera & Jaringan PoE',
+    desc: 'NVR, switch PoE, penarikan UTP Cat6, pengalamatan IP, sampai penanganan jalur kabel yang melewati batas 100 meter.',
+  },
+  {
+    icon: 'bolt',
+    title: 'Grounding & Proteksi Petir',
+    desc: 'Pengukuran tahanan pembumian dengan earth tester, pemasangan surge arrester jalur data, dan perbaikan sistem yang mati setelah badai.',
+  },
+  {
+    icon: 'plumbing',
+    title: 'Instalasi Rapi Pipa Conduit',
+    desc: 'Semua tarikan kabel dilindungi pipa PVC high impact, sambungan di dalam junction box IP66, dan jalur kabel dirapikan mengikuti kontur bangunan.',
+  },
+  {
+    icon: 'storage',
+    title: 'Kapasitas Rekaman & Harddisk',
+    desc: 'Menghitung kebutuhan penyimpanan dari bitrate dan jumlah kamera, memilih harddisk surveillance, serta memperpanjang masa simpan tanpa membeli unit baru.',
+  },
+  {
+    icon: 'build',
+    title: 'Servis & Perawatan',
+    desc: 'Diagnosa DVR bunyi beep, kamera video loss, sistem offline di HP, penggantian adaptor, sampai penanganan konektor yang teroksidasi akibat hujan.',
+  },
+];
+
+const prinsip = [
+  {
+    title: 'Tanpa uang muka',
+    desc: 'Pelanggan membayar setelah sistem terpasang rapi, kamera menyala normal, dan cara memantau dari HP sudah diajarkan.',
+  },
+  {
+    title: 'Garansi 1 tahun ganti baru',
+    desc: 'Kerusakan unit kamera, DVR atau NVR, dan harddisk surveillance diganti baru di lokasi, bukan diservis berbulan-bulan.',
+  },
+  {
+    title: 'Kerja bersih dan sopan',
+    desc: 'Teknisi tidak merokok di properti pelanggan dan selalu membersihkan sisa debu bor sebelum berpamitan.',
+  },
+];
+
+const posts = (await getCollection('blog'))
+  .filter((post) => post.data.author === 'Martha Rhino')
+  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${currentUrl}#person`,
+  name: 'Martha Rhino',
+  jobTitle: 'Pendiri dan Teknisi Senior CCTV Palembang',
+  image: `${siteURL}/images/martha-rhino.webp`,
+  description:
+    'Praktisi pemasangan CCTV di Palembang sejak 2011. Berawal sebagai pekerja di perusahaan jasa CCTV, membuka layanan sendiri pada 2014, dan mengembangkan layanan lewat website pada 2026.',
+  url: currentUrl,
+  worksFor: { '@id': `${siteURL}/#organization` },
+  knowsAbout: [
+    'Instalasi CCTV analog HD',
+    'IP camera dan jaringan PoE',
+    'Grounding dan proteksi petir CCTV',
+    'DVR dan NVR',
+    'Kabel coaxial dan UTP',
+    'Perawatan sistem CCTV',
+  ],
+  areaServed: [
+    { '@type': 'City', name: 'Palembang' },
+    { '@type': 'AdministrativeArea', name: 'Ogan Ilir' },
+    { '@type': 'AdministrativeArea', name: 'Banyuasin' },
+    { '@type': 'City', name: 'Prabumulih' },
+  ],
+};
+
+const profileSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': `${currentUrl}#profilepage`,
+  url: currentUrl,
+  name: 'Profil Martha Rhino',
+  inLanguage: 'id-ID',
+  mainEntity: { '@id': `${currentUrl}#person` },
+  isPartOf: { '@id': `${siteURL}/#website` },
+  about: { '@id': `${siteURL}/#organization` },
+  dateModified: new Date('2026-11-17').toISOString(),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: `${siteURL}/` },
+    { '@type': 'ListItem', position: 2, name: 'Penulis', item: currentUrl },
+    { '@type': 'ListItem', position: 3, name: 'Martha Rhino', item: currentUrl },
+  ],
+};
+---
+
+<BaseLayout
+  title="Martha Rhino | Pendiri & Teknisi Senior CCTV Palembang"
+  description="Profil Martha Rhino, praktisi pemasangan CCTV di Palembang sejak 2011. Berawal dari perusahaan jasa CCTV, membuka layanan sendiri pada 2014, kini mengembangkan layanan lewat website."
+  additionalSchemas={[personSchema, profileSchema, breadcrumbSchema]}
+>
+  <!-- Hero Profil -->
+  <section class="bg-gradient-to-b from-security-dark to-slate-900 pt-10 pb-14 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-brand-300">Beranda</a>
+        <span>/</span>
+        <a href="/blog/" class="hover:text-brand-300">Blog</a>
+        <span>/</span>
+        <span class="text-slate-400">Martha Rhino</span>
+      </nav>
+
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-900 border border-brand-400/40 flex items-center justify-center shrink-0 shadow-xl shadow-brand-900/40 overflow-hidden">
+          <img
+            src="/images/martha-rhino.webp"
+            alt="Martha Rhino, pendiri dan teknisi senior CCTV Palembang"
+            width="250"
+            height="250"
+            class="w-full h-full object-cover"
+            loading="eager"
+          />
+        </div>
+        <div>
+          <span class="inline-block px-3 py-1 rounded-full text-[11px] font-bold bg-brand-500/15 text-brand-300 border border-brand-500/30 uppercase mb-3">
+            Profil Penulis
+          </span>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-3">
+            Martha Rhino
+          </h1>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
+            Pendiri dan teknisi senior CCTV Palembang. Menekuni pemasangan kamera pengawas sejak 2011, membuka layanan sendiri pada 2014, dan sampai sekarang masih turun langsung mengukur pembumian, memeriksa konektor, serta mendampingi teknisi di lokasi pelanggan.
+          </p>
+          <div class="flex flex-wrap items-center gap-3 mt-5 text-[11px] font-semibold">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-security-card border border-slate-700 text-slate-300">
+              <MaterialIcon name="history" size={14} className="text-brand-400" /> Aktif sejak 2011
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-security-card border border-slate-700 text-slate-300">
+              <MaterialIcon name="location_on" size={14} className="text-brand-400" /> Berbasis di Palembang
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-security-card border border-slate-700 text-slate-300">
+              <MaterialIcon name="article" size={14} className="text-brand-400" /> {posts.length} artikel teknis
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Konten -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      <!-- Kolom Kiri -->
+      <div class="lg:col-span-8 space-y-12">
+        <!-- Cerita -->
+        <div class="bg-security-card border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-4">
+          <h2 class="text-2xl font-bold text-white tracking-tight">Dari pekerja lapangan sampai membuka layanan sendiri</h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Martha Rhino bukan nama yang muncul dari kampanye pemasaran. Namanya dikenal pelanggan Palembang lewat rekomendasi dari mulut ke mulut: tetangga yang rumahnya dipasangi kamera, pemilik ruko yang sistemnya akhirnya stabil setelah bertahun-tahun bermasalah, atau pemilik gudang yang butuh titik tambahan tanpa membongkar instalasi lama.
+          </p>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Semua berawal pada 2011, ketika ia ikut bekerja di sebuah perusahaan jasa pemasangan CCTV di Palembang. Di sana ia belajar bahwa masalah terbesar pelanggan jarang soal merek kamera, melainkan soal pemasangan: kabel yang tidak dilindungi, sambungan dibiarkan terbuka, dan sistem yang mati setiap kali hujan petir. Pengalaman itu yang kemudian menjadi dasar cara kerjanya sekarang.
+          </p>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Pada 2014 ia berhenti dan membuka layanan pemasangan CCTV sendiri. Pemasaran waktu itu sederhana, mengandalkan sosial media pribadi lewat Facebook, mengunggah foto hasil pemasangan lalu menerima pesan dari rekan dan tetangga. Tidak ada kantor, tidak ada tim pemasaran, hanya satu orang dengan tangga, bor, dan kotak alat.
+          </p>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Pada 2026 layanan itu dikembangkan lewat website <a href="/" class="text-brand-400 font-medium underline underline-offset-4 hover:text-brand-300 transition-colors">cctvpalembang.web.id</a>. Perubahannya bukan pada cara kerja, tetapi pada keterbukaan informasi: harga paket, cakupan wilayah, prosedur garansi, dan panduan teknis kini bisa dibaca sebelum pelanggan menghubungi. Dua workshop fisik di Seberang Ulu dan Ilir Barat juga dibuka agar pelanggan punya alamat jelas saat mengurus klaim.
+          </p>
+        </div>
+
+        <!-- Timeline -->
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-6 flex items-center gap-2">
+            <MaterialIcon name="timeline" size={22} className="text-brand-400" />
+            Perjalanan 2011 sampai 2026
+          </h2>
+          <div class="relative border-l border-slate-700 ml-3 space-y-8">
+            {timeline.map((item) => (
+              <div class="relative pl-7">
+                <span class="absolute -left-[13px] top-1 w-6 h-6 rounded-full bg-security-card border border-brand-500/50 text-brand-400 flex items-center justify-center">
+                  <MaterialIcon name={item.icon} size={13} />
+                </span>
+                <div class="text-[11px] font-bold tracking-wider text-brand-300 uppercase mb-1">{item.year}</div>
+                <h3 class="text-base sm:text-lg font-bold text-white mb-2 leading-snug">{item.title}</h3>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Keahlian -->
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-6 flex items-center gap-2">
+            <MaterialIcon name="engineering" size={22} className="text-brand-400" />
+            Bidang yang dikerjakan langsung
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {expertise.map((item) => (
+              <div class="bg-security-card border border-slate-800 rounded-xl p-5 hover:border-brand-500/40 transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-brand-500/20 text-brand-400 flex items-center justify-center mb-4">
+                  <MaterialIcon name={item.icon} size={22} />
+                </div>
+                <h3 class="text-sm sm:text-base font-bold text-white mb-2">{item.title}</h3>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Prinsip -->
+        <div class="bg-security-card border border-slate-800 rounded-2xl p-6 sm:p-8">
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-5">Tiga hal yang tidak ditawar</h2>
+          <div class="space-y-4">
+            {prinsip.map((item, index) => (
+              <div class="flex gap-4">
+                <span class="w-7 h-7 shrink-0 rounded-lg bg-brand-700/40 border border-brand-500/40 text-brand-200 text-xs font-bold flex items-center justify-center">
+                  {index + 1}
+                </span>
+                <div>
+                  <h3 class="text-sm font-bold text-white mb-1">{item.title}</h3>
+                  <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Artikel -->
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-2 flex items-center gap-2">
+            <MaterialIcon name="library_books" size={22} className="text-brand-400" />
+            Artikel yang ditulis Martha Rhino
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-400 mb-6">
+            Semua artikel ditulis dari kasus lapangan di Palembang, bukan rangkuman brosur. Panduan lengkapnya ada di <a href="/blog/" class="text-brand-400 hover:text-brand-300 underline underline-offset-4">pusat edukasi CCTV Palembang</a>.
+          </p>
+          <div class="space-y-3">
+            {posts.map((post) => (
+              <a
+                href={`/blog/${post.id}/`}
+                class="block bg-security-card border border-slate-800 rounded-xl p-5 hover:border-brand-500/50 transition-colors group"
+              >
+                <div class="flex items-center gap-2 text-[11px] font-semibold text-brand-400 mb-2">
+                  <span>{post.data.category}</span>
+                  <span>•</span>
+                  <span class="text-slate-400 font-normal">
+                    {post.data.publishDate.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}
+                  </span>
+                </div>
+                <h3 class="text-sm sm:text-base font-bold text-white leading-snug group-hover:text-brand-300 transition-colors mb-1">
+                  {post.data.title}
+                </h3>
+                <p class="text-xs text-slate-400 leading-relaxed line-clamp-2">{post.data.description}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="lg:col-span-4 sticky top-24 space-y-6">
+        <WhatsAppStickyCard
+          title="Konsultasi Langsung dengan Martha"
+          subtitle="Ceritakan kondisi bangunan dan kebutuhan pemantauan Anda. Tim teknisi akan menghitung titik dan biaya yang wajar."
+          message="Halo Admin CCTV Palembang. Saya ingin konsultasi pemasangan CCTV..."
+        />
+
+        <div class="bg-security-card border border-slate-800 rounded-2xl p-6 text-xs text-slate-300 space-y-3">
+          <h3 class="font-bold text-white text-sm">Data Singkat</h3>
+          <p class="flex items-center justify-between gap-3 border-b border-slate-800 pb-2">
+            <span>Nama</span>
+            <span class="font-semibold text-white text-right">Martha Rhino</span>
+          </p>
+          <p class="flex items-center justify-between gap-3 border-b border-slate-800 pb-2">
+            <span>Peran</span>
+            <span class="font-semibold text-brand-300 text-right">Pendiri &amp; Teknisi Senior</span>
+          </p>
+          <p class="flex items-center justify-between gap-3 border-b border-slate-800 pb-2">
+            <span>Mulai menekuni</span>
+            <span class="font-semibold text-brand-300 text-right">2011</span>
+          </p>
+          <p class="flex items-center justify-between gap-3 border-b border-slate-800 pb-2">
+            <span>Layanan mandiri</span>
+            <span class="font-semibold text-brand-300 text-right">Sejak 2014</span>
+          </p>
+          <p class="flex items-center justify-between gap-3 border-b border-slate-800 pb-2">
+            <span>Basis</span>
+            <span class="font-semibold text-white text-right">Palembang</span>
+          </p>
+          <p class="text-[11px] text-slate-400 pt-1">
+            Melayani Palembang Raya, Ogan Ilir (Indralaya), Banyuasin (Talang Kelapa), dan Prabumulih dengan penjadwalan khusus.
+          </p>
+        </div>
+
+        <div class="bg-security-card border border-slate-800 rounded-2xl p-6 text-xs text-slate-300 space-y-3">
+          <h3 class="font-bold text-white text-sm">Workshop Resmi</h3>
+          <p class="leading-relaxed">
+            <span class="text-brand-300 font-semibold">Seberang Ulu (utama):</span><br />
+            Jl. Silaberanti No.24, Silaberanti, Kec. Seberang Ulu I, Palembang 30116
+          </p>
+          <p class="leading-relaxed">
+            <span class="text-brand-300 font-semibold">Ilir Barat:</span><br />
+            Jl. Demang Lebar Daun, Lorok Pakjo, Kec. Ilir Barat I, Palembang 30137
+          </p>
+          <a href="/tentang-kami/" class="inline-flex items-center gap-1 font-bold text-brand-400 hover:text-brand-300 pt-1">
+            Profil lengkap layanan <MaterialIcon name="arrow_forward" size={13} />
+          </a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

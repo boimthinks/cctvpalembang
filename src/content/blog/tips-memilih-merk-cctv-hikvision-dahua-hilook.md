@@ -2,7 +2,7 @@
 title: "Tips Memilih Merk CCTV Hikvision, Dahua, dan HiLook"
 description: "Panduan memilih merk CCTV Hikvision, Dahua, dan HiLook di Palembang. Perbandingan orisinalitas unit, aplikasi pantau HP, dukungan purnajual, dan posisi harga."
 publishDate: 2026-11-13
-author: "Tim Teknisi CCTV Palembang"
+author: "Martha Rhino"
 category: "Panduan Pembelian"
 tags: ["merk cctv terbaik", "hikvision dahua hilook", "cctv palembang", "merek kamera cctv"]
 image: "/images/blog/tips-memilih-merk-cctv-hikvision-dahua-hilook.webp"

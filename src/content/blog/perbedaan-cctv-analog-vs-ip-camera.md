@@ -2,7 +2,7 @@
 title: "Perbedaan CCTV Analog HD vs IP Camera PoE di Palembang"
 description: "Perbedaan CCTV Analog HD vs IP Camera PoE di Palembang, dari resolusi, kabel, biaya per titik, hingga total biaya kepemilikan lima tahun."
 publishDate: 2026-11-09
-author: "Tim Teknisi CCTV Palembang"
+author: "Martha Rhino"
 category: "Komparasi Sistem"
 tags: ["cctv analog", "ip camera poe", "perbedaan cctv", "instalasi cctv palembang"]
 image: "/images/blog/perbedaan-cctv-analog-vs-ip-camera.webp"

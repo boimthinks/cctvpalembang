@@ -292,6 +292,12 @@ async function main() {
       title: 'Lama Rekaman CCTV Sesuai Kapasitas Harddisk',
       subtitle: 'Hitungan Hari Rekam 500GB sampai 8TB untuk 2 hingga 16 Kamera',
       badge: 'PANDUAN TEKNIS',
+    },
+    {
+      slug: 'penyebab-kamera-cctv-mati-total-palembang',
+      title: 'Penyebab Kamera CCTV Mati Total dan Solusinya',
+      subtitle: 'Diagnosa Adaptor, Konektor DC, Kabel Putus, dan Board Rusak Palembang',
+      badge: 'PANDUAN SERVIS',
     }
   ];
 

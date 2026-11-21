@@ -15,7 +15,7 @@ Setiap artikel blog di bawah ini dirancang untuk menargetkan kata kunci informas
 | 1 | Estimasi Biaya Pasang CCTV Rumah di Palembang Rincian Paket Hemat Tanpa DP | biaya pasang cctv rumah palembang | `/layanan/pasang-cctv-rumah-palembang/` | ✅ Terbit 2026-11-07 |
 | 2 | Perbedaan CCTV Analog HD vs IP Camera PoE untuk Properti Palembang | perbedaan cctv analog vs ip camera | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` | ✅ Terbit 2026-11-09 |
 | 3 | Rekomendasi CCTV Terbaik untuk Ruko & Toko di Palembang | cctv terbaik untuk ruko palembang | `/layanan/pasang-cctv-ruko-toko-palembang/` | ✅ Terbit 2026-11-10 |
-| 4 | Rincian Biaya Pasang CCTV 4 Kamera di Palembang: Transparan Tanpa Biaya Tersembunyi | biaya pasang cctv 4 kamera palembang | `/layanan/paket-cctv-palembang-murah/` |
+| 4 | Rincian Biaya Pasang CCTV 4 Kamera di Palembang: Transparan Tanpa Biaya Tersembunyi | biaya pasang cctv 4 kamera palembang | `/layanan/paket-cctv-palembang-murah/` | ✅ Terbit 2026-11-21 |
 | 5 | Tips Memilih Merk CCTV Hikvision, Dahua, dan HiLook: Panduan Orisinalitas | merk cctv terbaik hikvision dahua | `/layanan/paket-cctv-palembang-murah/` | ✅ Terbit 2026-11-13 |
 | 6 | Berapa Lama Rekaman CCTV Tersimpan Berdasarkan Kapasitas Harddisk? | kapasitas rekaman cctv harddisk | `/layanan/jasa-servis-maintenance-cctv-palembang/` | ✅ Terbit 2026-11-16 |
 

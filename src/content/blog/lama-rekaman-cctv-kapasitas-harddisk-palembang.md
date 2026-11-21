@@ -2,7 +2,7 @@
 title: "Berapa Lama Rekaman CCTV Tersimpan di Harddisk 1TB"
 description: "Hitungan lama rekaman CCTV berdasarkan kapasitas harddisk 500GB sampai 8TB. Tabel per jumlah kamera, pengaruh bitrate, dan cara memperpanjang masa simpan."
 publishDate: 2026-11-16
-author: "Tim Teknisi CCTV Palembang"
+author: "Martha Rhino"
 category: "Panduan Teknis"
 tags: ["kapasitas rekaman cctv", "harddisk cctv", "lama rekaman cctv", "penyimpanan rekaman cctv"]
 image: "/images/blog/lama-rekaman-cctv-kapasitas-harddisk-palembang_poco.webp"

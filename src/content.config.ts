@@ -7,7 +7,7 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     publishDate: z.coerce.date(),
-    author: z.string().default('Tim Teknisi CCTV Palembang'),
+    author: z.string().default('Martha Rhino'),
     category: z.string().default('Panduan CCTV'),
     tags: z.array(z.string()).default([]),
     image: z.string().default('/images/blog/default.webp'),

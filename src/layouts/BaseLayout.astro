@@ -11,6 +11,7 @@ interface Props {
   image?: string;
   type?: string;
   publishedTime?: string;
+  author?: string;
   faq?: { question: string; answer: string }[];
   breadcrumbs?: { name: string; url: string }[];
   additionalSchemas?: Record<string, any>[];
@@ -22,6 +23,7 @@ const {
   image = '/images/og/default.webp',
   type = 'website',
   publishedTime,
+  author = 'CCTV Palembang',
   breadcrumbs = [],
   additionalSchemas = [],
 } = Astro.props;
@@ -110,7 +112,7 @@ const schemasToRender = [...baseSchemas, ...additionalSchemas];
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
     <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="author" content="CCTV Palembang" />
+    <meta name="author" content={author} />
     <meta name="geo.region" content="ID-SS" />
     <meta name="geo.placename" content="Palembang" />
 

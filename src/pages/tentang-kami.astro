@@ -3,6 +3,9 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import WhatsAppStickyCard from '@/components/common/WhatsAppStickyCard.astro';
 import MaterialIcon from '@/components/common/MaterialIcon.astro';
 
+const siteURL = Astro.site ? Astro.site.origin : 'https://cctvpalembang.web.id';
+const currentUrl = `${siteURL}/tentang-kami/`;
+
 const values = [
   {
     icon: 'verified_user',
@@ -38,11 +41,70 @@ const workshops = [
     coverage: 'Melayani Ilir Barat, Ilir Timur, Sukarami, Sako, Kalidoni, Gandus, hingga Talang Kelapa Banyuasin.',
   },
 ];
+
+// Tonggak perjalanan usaha, sinkron dengan halaman profil penulis /author/rhino/
+const milestones = [
+  {
+    year: '2011',
+    title: 'Belajar dari lapangan',
+    desc: 'Martha Rhino mulai bekerja di sebuah perusahaan jasa pemasangan CCTV di Palembang. Tiga tahun menarik kabel, memasang kamera di plafon dan atap ruko, serta menyetel DVR.',
+  },
+  {
+    year: '2014',
+    title: 'Layanan mandiri dibuka',
+    desc: 'Berhenti dari tempat kerja lama dan membuka layanan pemasangan CCTV sendiri. Order pertama datang dari tetangga dan rekan, ditawarkan lewat sosial media pribadi di Facebook.',
+  },
+  {
+    year: '2014 - 2025',
+    title: 'Tumbuh dari rekomendasi',
+    desc: 'Basis pelanggan melebar ke rumah hunian, ruko, toko kasir, gudang, dan perumahan cluster di Palembang. Semua datang dari cerita pelanggan sebelumnya, bukan iklan berbayar.',
+  },
+  {
+    year: '2026',
+    title: 'Resmi lewat website',
+    desc: 'Layanan dikembangkan lewat cctvpalembang.web.id dengan dua workshop fisik, rincian paket terbuka, prosedur garansi jelas, dan panduan teknis yang bisa dibaca sebelum membeli.',
+  },
+];
+
+const founderSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  // Merujuk entitas yang sama dengan halaman profil penulis agar tidak terpecah
+  '@id': `${siteURL}/author/rhino/#person`,
+  name: 'Martha Rhino',
+  url: `${siteURL}/author/rhino/`,
+  image: `${siteURL}/images/martha-rhino.webp`,
+  jobTitle: 'Pendiri dan Teknisi Senior CCTV Palembang',
+  worksFor: { '@id': `${siteURL}/#organization` },
+};
+
+const aboutPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  '@id': `${currentUrl}#aboutpage`,
+  url: currentUrl,
+  name: 'Tentang CCTV Palembang',
+  inLanguage: 'id-ID',
+  isPartOf: { '@id': `${siteURL}/#website` },
+  mainEntity: { '@id': `${siteURL}/#organization` },
+  about: { '@id': `${siteURL}/#organization` },
+  dateModified: new Date('2026-11-17').toISOString(),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: `${siteURL}/` },
+    { '@type': 'ListItem', position: 2, name: 'Tentang Kami', item: currentUrl },
+  ],
+};
 ---
 
 <BaseLayout
-  title="Tentang Kami — CCTV Palembang Jasa Pasang & Servis Terpercaya"
-  description="Profil CCTV Palembang: vendor instalasi CCTV terpercaya di Palembang. Dua workshop fisik Seberang Ulu & Ilir Barat, garansi 1 tahun ganti baru, tanpa DP."
+  title="Tentang Kami | CCTV Palembang Jasa Pasang & Servis Terpercaya"
+  description="Profil CCTV Palembang: jasa pemasangan dan servis CCTV di Palembang sejak 2014, didirikan Martha Rhino yang menekuni bidang ini sejak 2011. Dua workshop fisik, garansi 1 tahun ganti baru, tanpa DP."
+  additionalSchemas={[founderSchema, aboutPageSchema, breadcrumbSchema]}
 >
   <!-- Hero Section -->
   <section class="bg-gradient-to-b from-security-dark to-slate-900 pt-12 pb-16 border-b border-slate-800">
@@ -54,7 +116,7 @@ const workshops = [
         Tentang CCTV Palembang
       </h1>
       <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-        Penyedia resmi sistem keamanan kamera pengawas di Kota Palembang. Berpengalaman memasang ribuan titik CCTV untuk rumah hunian, ruko retail, perkantoran, dan kawasan industri berskala besar.
+        Jasa pemasangan dan servis CCTV di Palembang yang dibangun dari pengalaman lapangan sejak 2011. Menangani rumah hunian, ruko dan toko kasir, perkantoran, gudang, hingga kawasan industri, dengan dua workshop fisik dan garansi resmi 1 tahun ganti baru.
       </p>
     </div>
   </section>
@@ -70,11 +132,57 @@ const workshops = [
         <div class="bg-security-card border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-4">
           <h2 class="text-2xl font-bold text-white tracking-tight">Dedikasi Keamanan Properti di Kota Palembang</h2>
           <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Didirikan untuk menjawab keresahan masyarakat Palembang terhadap jasa pemasangan CCTV perorangan yang sering kali menghilang ketika terjadi kendala klaim garansi. Kami hadir dengan komitmen bisnis jangka panjang yang berbadan hukum legal, melayani kuitansi resmi bertanda tangan dan berstempel untuk instansi, CV, maupun perorangan.
+            Usaha ini tidak dimulai dari ruang rapat atau rencana bisnis, melainkan dari plafon rumah dan atap ruko. Pada 2011 Martha Rhino ikut bekerja di sebuah perusahaan jasa pemasangan CCTV di Palembang, belajar menarik kabel, memasang kamera, dan menghadapi komplain pelanggan yang gambarnya bergaris setelah hujan. Di situlah ia melihat masalah yang berulang: kebanyakan keluhan bukan soal merek kamera, tetapi soal pemasangan yang tidak rapi dan tidak memperhitungkan cuaca Palembang.
           </p>
           <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Seluruh pengerjaan kami dikawal langsung oleh teknisi berpengalaman yang memahami karakteristik lingkungan tropis basah dataran rendah Sungai Musi: dari antisipasi lonjakan induksi petir, suhu panas atap ruko, hingga perlindungan pipa PVC conduit dari hama tikus di plafon rumah.
+            Pada 2014 ia berhenti dan membuka layanan pemasangan CCTV sendiri. Pemasaran waktu itu hanya sosial media pribadi di Facebook, mengunggah foto hasil pemasangan lalu menerima pesan dari rekan dan tetangga. Pelanggan bertambah dari rekomendasi ke rekomendasi: rumah di Seberang Ulu, ruko di Ilir Timur, gudang di Kertapati, dan perumahan cluster di Sukarami.
           </p>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Pada 2026 layanan dikembangkan lewat website resmi ini. Perubahannya bukan pada cara kerja, tetapi pada keterbukaan: rincian paket dan harga, cakupan wilayah, prosedur garansi, sampai panduan teknis bisa dibaca sebelum Anda menghubungi. Dua workshop fisik di Seberang Ulu dan Ilir Barat dibuka agar pelanggan punya alamat jelas saat berkonsultasi atau mengurus klaim, dengan kuitansi resmi bertanda tangan dan berstempel untuk kebutuhan instansi, CV, maupun perorangan.
+          </p>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Seluruh pengerjaan dikawal langsung oleh teknisi yang memahami karakteristik lingkungan tropis basah dataran rendah Sungai Musi: antisipasi lonjakan induksi petir, suhu panas atap ruko, tanah urukan yang membuat grounding sulit, hingga perlindungan pipa PVC conduit dari gigitan tikus di plafon rumah.
+          </p>
+        </div>
+
+        <!-- Pendiri -->
+        <div class="bg-security-card border border-slate-800 rounded-2xl p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row gap-6 items-start">
+            <img
+              src="/images/martha-rhino.webp"
+              alt="Martha Rhino, pendiri CCTV Palembang"
+              width="250"
+              height="250"
+              class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border border-brand-400/40 shrink-0"
+              loading="lazy"
+            />
+            <div>
+              <span class="inline-block px-2.5 py-1 rounded-full text-[10px] font-bold bg-brand-500/15 text-brand-300 border border-brand-500/30 uppercase mb-2">
+                Pendiri
+              </span>
+              <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Martha Rhino</h2>
+              <p class="text-xs font-semibold text-brand-400 mt-1 mb-3">Pendiri &amp; Teknisi Senior CCTV Palembang</p>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Menekuni pemasangan kamera pengawas sejak 2011, membuka layanan sendiri pada 2014, dan sampai sekarang masih turun langsung mengukur tahanan pembumian, memeriksa konektor, serta mendampingi teknisi di lokasi pelanggan. Pengalaman lapangan itu juga ia tulis dalam artikel teknis di blog kami.
+              </p>
+              <a
+                href="/author/rhino/"
+                class="inline-flex items-center gap-1 mt-4 text-xs font-bold text-brand-400 hover:text-brand-300 transition-colors"
+              >
+                Profil lengkap Martha Rhino <MaterialIcon name="arrow_forward" size={13} />
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-7">
+            {milestones.map((m) => (
+              <div class="bg-security-dark/60 border border-slate-800 rounded-xl p-4">
+                <div class="text-[11px] font-bold tracking-wider text-brand-300 uppercase mb-1">{m.year}</div>
+                <h3 class="text-sm font-bold text-white mb-1">{m.title}</h3>
+                <p class="text-[11px] sm:text-xs text-slate-400 leading-relaxed">{m.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <!-- 4 Nilai Utama (USP) -->
@@ -125,10 +233,26 @@ const workshops = [
       <!-- Kolom Kanan: Sticky Sidebar -->
       <aside class="lg:col-span-4 sticky top-24 space-y-6">
         <WhatsAppStickyCard
-          title="Konsultasi &amp; Survei Gratis"
+          title="Konsultasi & Survei Gratis"
           subtitle="Hubungi admin resmi kami untuk jadwal survei gratis ke rumah atau kantor Anda se-Palembang Raya."
           message="Halo Admin CCTV Palembang. Saya ingin konsultasi pemasangan CCTV..."
         />
+
+        <a href="/author/rhino/" class="flex items-center gap-4 bg-security-card border border-slate-800 rounded-2xl p-4 hover:border-brand-500/40 transition-colors">
+          <img
+            src="/images/martha-rhino.webp"
+            alt="Martha Rhino, pendiri CCTV Palembang"
+            width="250"
+            height="250"
+            class="w-12 h-12 rounded-xl object-cover border border-brand-400/40 shrink-0"
+            loading="lazy"
+          />
+          <div class="text-xs">
+            <span class="block font-bold text-white">Martha Rhino</span>
+            <span class="block text-[11px] font-semibold text-brand-400">Pendiri &amp; Teknisi Senior</span>
+            <span class="block text-[11px] text-slate-400">Menekuni CCTV Palembang sejak 2011</span>
+          </div>
+        </a>
 
         <div class="bg-security-card border border-slate-800 rounded-2xl p-6 text-xs text-slate-300 space-y-3">
           <h3 class="font-bold text-white text-sm">Jam Operasional</h3>
@@ -142,6 +266,25 @@ const workshops = [
           </p>
           <p class="text-[11px] text-slate-400 pt-1">
             Melayani Kota Palembang, Ogan Ilir (Indralaya), Banyuasin (Talang Kelapa), dan Prabumulih.
+          </p>
+        </div>
+
+        <div class="bg-security-card border border-slate-800 rounded-2xl p-6 text-xs text-slate-300 space-y-3">
+          <h3 class="font-bold text-white text-sm">Kontak &amp; Legalitas</h3>
+          <p class="flex items-center justify-between gap-3 border-b border-slate-800 pb-2">
+            <span>WhatsApp</span>
+            <a href="https://wa.me/6285758903353?text=Halo%20Admin%20CCTV%20Palembang..." class="font-semibold text-brand-300 hover:text-brand-200">0857-5890-3353</a>
+          </p>
+          <p class="flex items-center justify-between gap-3 border-b border-slate-800 pb-2">
+            <span>Domain resmi</span>
+            <span class="font-semibold text-white text-right">cctvpalembang.web.id</span>
+          </p>
+          <p class="flex items-center justify-between gap-3 border-b border-slate-800 pb-2">
+            <span>Kuitansi resmi</span>
+            <span class="font-semibold text-emerald-400 text-right">Stempel &amp; TTD</span>
+          </p>
+          <p class="text-[11px] text-slate-400 pt-1">
+            Tersedia dokumen bertanda tangan dan berstempel untuk kebutuhan instansi, CV, dan PT.
           </p>
         </div>
       </aside>

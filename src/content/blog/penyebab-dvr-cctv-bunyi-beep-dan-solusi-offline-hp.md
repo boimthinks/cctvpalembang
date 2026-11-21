@@ -2,7 +2,7 @@
 title: "Penyebab DVR CCTV Bunyi Beep dan Solusi Offline HP"
 description: "Panduan teknis penyebab DVR CCTV bunyi beep terus menerus, harddisk error, dan solusi kamera offline di HP untuk warga Palembang. Lengkap estimasi biaya servis."
 publishDate: 2026-11-11
-author: "Tim Teknisi CCTV Palembang"
+author: "Martha Rhino"
 category: "Panduan Servis"
 tags: ["servis cctv palembang", "dvr bunyi beep", "cctv offline hp", "perbaikan cctv"]
 image: "/images/blog/penyebab-dvr-cctv-bunyi-beep-dan-solusi-offline-hp_poco.webp"

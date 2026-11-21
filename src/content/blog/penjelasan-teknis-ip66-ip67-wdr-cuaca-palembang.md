@@ -2,7 +2,7 @@
 title: "Sertifikasi IP66 IP67 dan WDR CCTV Cuaca Ekstrem Palembang"
 description: "Panduan teknis sertifikasi IP66 IP67 dan True WDR 120dB pada kamera CCTV outdoor untuk menghadapi hujan lebat dan terik cuaca ekstrem di Kota Palembang."
 publishDate: 2026-04-18
-author: "Tim Teknisi CCTV Palembang"
+author: "Martha Rhino"
 category: "Panduan Teknis"
 tags: ["sertifikasi ip66 ip67", "cctv wdr palembang", "cctv outdoor tahan cuaca", "kamera anti air"]
 image: "/images/blog/penjelasan-teknis-ip66-ip67-wdr-cuaca-palembang.webp"

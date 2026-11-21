@@ -2,7 +2,7 @@
 title: "Dokumentasi 100 Titik CCTV Kompleks Perumahan Palembang"
 description: "Dokumentasi teknis instalasi 100 titik CCTV IP PoE di kawasan perumahan Palembang. Desain backbone fiber optic, tiang perimeter, dan kontrol pos satpam."
 publishDate: 2026-05-10
-author: "Tim Teknisi CCTV Palembang"
+author: "Martha Rhino"
 category: "Studi Kasus"
 tags: ["cctv perumahan palembang", "instalasi 100 titik cctv", "fiber optic cctv", "keamanan cluster"]
 image: "/images/blog/dokumentasi-pemasangan-100-titik-cctv-palembang_poco.webp"

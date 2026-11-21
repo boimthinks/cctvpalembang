@@ -2,7 +2,7 @@
 title: "Estimasi Biaya Pasang CCTV Rumah di Palembang Rincian Paket Hemat Tanpa DP"
 description: "Panduan lengkap estimasi biaya pasang CCTV rumah di Palembang. Rincian harga paket 2 hingga 4 kamera, material pipa conduit, tips hemat, dan jaminan bayar setelah selesai pasang."
 publishDate: 2026-11-07
-author: "Tim Teknisi CCTV Palembang"
+author: "Martha Rhino"
 category: "Panduan Biaya"
 tags: ["biaya pasang cctv", "cctv rumah palembang", "harga cctv palembang", "pasang cctv tanpa dp"]
 image: "/images/blog/biaya-pasang-cctv-rumah-palembang_poco.webp"

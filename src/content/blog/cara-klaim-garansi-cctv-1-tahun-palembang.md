@@ -2,7 +2,7 @@
 title: "Cara Klaim Garansi CCTV 1 Tahun Ganti Baru di Palembang"
 description: "Panduan klaim garansi CCTV 1 tahun ganti baru di Palembang. Dokumen wajib, alur pengajuan, kategori kerusakan yang ditanggung, dan SLA 24-48 jam."
 publishDate: 2026-05-24
-author: "Tim Teknisi CCTV Palembang"
+author: "Martha Rhino"
 category: "Layanan Purna Jual"
 tags: ["garansi cctv palembang", "klaim garansi cctv", "layanan purna jual cctv", "servis cctv palembang"]
 image: "/images/blog/cara-klaim-garansi-cctv-1-tahun-palembang_poco.webp"

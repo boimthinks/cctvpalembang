@@ -13,6 +13,7 @@ Dokumen ini adalah acuan mutlak data brand, harga riil, spesifikasi teknis, data
 - **Nomor Kontak WhatsApp Resmi:** `0857-5890-3353`
 - **Link WhatsApp Terarah:** `https://wa.me/6285758903353?text=Halo%20Admin%20CCTV%20Palembang%20%28cctvpalembang.web.id%29.%20Saya%20tertarik%20konsultasi%20pemasangan%20CCTV%20di%20wilayah%20saya...`
 - **Jam Operasional Layanan:** Senin s/d Minggu (07.00 - 21.00 WIB)
+- **Pendiri & Penulis Resmi (Author Blog):** Martha Rhino, teknisi senior. Praktisi pemasangan CCTV di Palembang sejak 2011 (berawal sebagai pekerja di perusahaan jasa CCTV Palembang), membuka layanan sendiri pada 2014 lewat sosial media pribadi (Facebook), lalu mengembangkan layanan lewat website pada 2026. Profil: `/author/rhino/`. Seluruh artikel blog wajib memakai `author: "Martha Rhino"`.
 - **Alamat Fisik / Workshop Resmi:**
   1. **Workshop Seberang Ulu (Kantor Utama):**
      Jl. Silaberanti No.24, Silaberanti, Kecamatan Seberang Ulu I, Kota Palembang, Sumatera Selatan 30116.
@@ -195,6 +196,7 @@ Kami melayani armada teknisi cepat untuk seluruh wilayah:
 5. `/layanan/paket-cctv-palembang-murah/` (Target: Pencari paket promo 2, 4, 8 kamera terima beres).
 
 ### B. Aturan Penulisan Blog (Spoke)
+- **Author Wajib:** `author: "Martha Rhino"` di frontmatter (profil `/author/rhino/`). Jangan memakai nama tim atau nama lain.
 - **Trailing Slash Wajib:** Seluruh tautan internal wajib menggunakan trailing slash di akhir URL (misal: `/layanan/pasang-cctv-rumah-palembang/`).
 - Panjang artikel: 1.200 - 1.800 kata.
 - Format penulisan humanis (bebas klise AI, bahasa lugas dan mengalir).
@@ -206,7 +208,7 @@ Kami melayani armada teknisi cepat untuk seluruh wilayah:
 
 ---
 
-## 7. DAFTAR ARTIKEL BLOG TERBIT (UPDATE 16 NOVEMBER 2026)
+## 7. DAFTAR ARTIKEL BLOG TERBIT (UPDATE 18 NOVEMBER 2026)
 
 Gunakan daftar ini untuk mencegah duplikasi topik. Setiap artikel wajib menautkan minimal satu Money Page dengan trailing slash.
 
@@ -221,5 +223,7 @@ Gunakan daftar ini untuk mencegah duplikasi topik. Setiap artikel wajib menautka
 | 2026-11-11 | `/blog/penyebab-dvr-cctv-bunyi-beep-dan-solusi-offline-hp/` | DVR bunyi beep dan CCTV offline di HP | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
 | 2026-11-13 | `/blog/tips-memilih-merk-cctv-hikvision-dahua-hilook/` | Perbandingan merk Hikvision, Dahua, HiLook | `/layanan/paket-cctv-palembang-murah/` |
 | 2026-11-16 | `/blog/lama-rekaman-cctv-kapasitas-harddisk-palembang/` | Lama rekaman per kapasitas harddisk | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 2026-11-17 | `/blog/proteksi-cctv-sambaran-petir-palembang/` | Proteksi petir: grounding, surge arrester, standar tahanan | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 2026-11-18 | `/blog/penyebab-kamera-cctv-mati-total-palembang/` | Diagnosa kamera mati total: daya, konektor, kabel, board | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
 
 Catatan konsolidasi: artikel `/blog/perbandingan-ip-camera-vs-analog-hd-palembang/` (terbit 2 Mei 2026) sudah digabung ke `/blog/perbedaan-cctv-analog-vs-ip-camera/` dan dialihkan permanen (301) melalui `public/.htaccess`. Jangan membuat artikel baru dengan sudut pandang biaya per titik analog vs IP tanpa memeriksa halaman tersebut lebih dulu.
