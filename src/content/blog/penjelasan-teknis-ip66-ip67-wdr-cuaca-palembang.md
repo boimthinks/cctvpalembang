@@ -150,4 +150,4 @@ Memastikan kamera pengawas tetap merekam secara jernih di tengah guyuran hujan l
 
 Seluruh paket pemasangan kami sediakan dengan jaminan tanpa uang muka, artinya Anda baru membayar setelah seluruh kamera terpasang rapi, gambar terbukti jernih, dan aplikasi pemantau di ponsel berfungsi normal. Kami juga memberikan garansi resmi 1 tahun ganti baru langsung di lokasi jika terjadi kendala perangkat.
 
-Hubungi admin teknis kami sekarang melalui WhatsApp di nomor **0857-5890-3353** untuk konsultasi gratis dan penjadwalan pemasangan di seluruh wilayah Palembang, Banyuasin, dan Ogan Ilir.
+Hubungi admin teknis kami sekarang melalui WhatsApp di nomor **0851-0171-8690** untuk konsultasi gratis dan penjadwalan pemasangan di seluruh wilayah Palembang, Banyuasin, dan Ogan Ilir.

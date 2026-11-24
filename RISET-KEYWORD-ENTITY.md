@@ -2,7 +2,7 @@
 ## Project: cctvpalembang.web.id
 **Kata Kunci Target Utama:** "pasang cctv palembang"
 **Wilayah Target:** Palembang & Sekitarnya (Sumatera Selatan)
-**Kontak Resmi:** 0857-5890-3353 (WhatsApp)
+**Kontak Resmi:** 0851-0171-8690 (WhatsApp)
 **Workshop Utama:** Jl. Silaberanti No.24, Silaberanti, Kec. Seberang Ulu I, Kota Palembang 30116
 **Workshop Hub Ilir:** Jl. Demang Lebar Daun, Lorok Pakjo, Kec. Ilir Barat I, Kota Palembang 30137
 

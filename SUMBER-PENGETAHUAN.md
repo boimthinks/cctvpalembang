@@ -10,8 +10,8 @@ Dokumen ini adalah acuan mutlak data brand, harga riil, spesifikasi teknis, data
 - **Nama Brand:** CCTV Palembang
 - **Domain Resmi:** `cctvpalembang.web.id`
 - **Badan Usaha / Legalitas:** Penyedia resmi sistem keamanan & instalasi CCTV di Palembang (berbadan hukum legal, melayani kuitansi resmi bertanda tangan dan berstempel untuk kebutuhan instansi/CV/PT).
-- **Nomor Kontak WhatsApp Resmi:** `0857-5890-3353`
-- **Link WhatsApp Terarah:** `https://wa.me/6285758903353?text=Halo%20Admin%20CCTV%20Palembang%20%28cctvpalembang.web.id%29.%20Saya%20tertarik%20konsultasi%20pemasangan%20CCTV%20di%20wilayah%20saya...`
+- **Nomor Kontak WhatsApp Resmi:** `0851-0171-8690`
+- **Link WhatsApp Terarah:** `https://wa.me/6285101718690?text=Halo%20Admin%20CCTV%20Palembang%20%28cctvpalembang.web.id%29.%20Saya%20tertarik%20konsultasi%20pemasangan%20CCTV%20di%20wilayah%20saya...`
 - **Jam Operasional Layanan:** Senin s/d Minggu (07.00 - 21.00 WIB)
 - **Pendiri & Penulis Resmi (Author Blog):** Martha Rhino, teknisi senior. Praktisi pemasangan CCTV di Palembang sejak 2011 (berawal sebagai pekerja di perusahaan jasa CCTV Palembang), membuka layanan sendiri pada 2014 lewat sosial media pribadi (Facebook), lalu mengembangkan layanan lewat website pada 2026. Profil: `/author/rhino/`. Seluruh artikel blog wajib memakai `author: "Martha Rhino"`.
 - **Alamat Fisik / Workshop Resmi:**
@@ -204,7 +204,7 @@ Kami melayani armada teknisi cepat untuk seluruh wilayah:
 - Wajib memuat tabel komparasi atau simulasi biaya transparan.
 - Wajib menyertakan minimal 1 tautan internal ke salah satu dari 5 Money Page di atas dengan trailing slash.
 - Wajib frontmatter FAQ 5-6 butir untuk keterbacaan pembaca.
-- CTA resmi: Nomor WhatsApp `0857-5890-3353` dengan jaminan Tanpa DP dan Garansi 1 Tahun.
+- CTA resmi: Nomor WhatsApp `0851-0171-8690` dengan jaminan Tanpa DP dan Garansi 1 Tahun.
 
 ---
 

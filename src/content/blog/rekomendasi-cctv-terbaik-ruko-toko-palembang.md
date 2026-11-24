@@ -112,4 +112,4 @@ Anda dapat memantau rekaman kamera keempat toko secara bersamaan dalam format ta
 
 Pastikan aset usaha dan kenyamanan operasional kasir toko Anda terlindungi dengan perangkat resmi bergaransi 1 tahun ganti baru. Teknisi kami beroperasi setiap hari dari workshop Silaberanti Seberang Ulu dan Demang Lebar Daun untuk melayani seluruh titik usaha di Kota Palembang.
 
-Hubungi admin teknis kami via WhatsApp di nomor **0857-5890-3353** untuk survei denah lokasi toko atau pemesanan paket pemasangan terima beres langsung bayar di tempat.
+Hubungi admin teknis kami via WhatsApp di nomor **0851-0171-8690** untuk survei denah lokasi toko atau pemesanan paket pemasangan terima beres langsung bayar di tempat.

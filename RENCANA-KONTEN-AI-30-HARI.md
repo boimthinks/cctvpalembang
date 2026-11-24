@@ -1,7 +1,7 @@
 # RENCANA KONTEN AI 30 HARI — cctvpalembang.web.id
 **Periode Produksi:** Harian (1 Artikel per Hari)
 **Target Utama:** "pasang cctv palembang"
-**Kontak CTA:** 0857-5890-3353 (WhatsApp)
+**Kontak CTA:** 0851-0171-8690 (WhatsApp)
 
 ---
 

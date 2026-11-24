@@ -72,7 +72,7 @@ Proses pengajuan klaim dirancang ringkas agar tidak membebani waktu Anda. Ikuti 
 
 ### Langkah Pertama Hubungi Kontak Resmi Melalui WhatsApp
 
-Buka aplikasi WhatsApp dan kirim pesan ke nomor layanan resmi kami di **0857-5890-3353**. Sebutkan nama pemesan awal dan alamat properti tempat kamera dipasang. Gunakan nomor ponsel yang sama saat proses pemesanan agar riwayat pesanan otomatis terhubung dengan basis data kami.
+Buka aplikasi WhatsApp dan kirim pesan ke nomor layanan resmi kami di **0851-0171-8690**. Sebutkan nama pemesan awal dan alamat properti tempat kamera dipasang. Gunakan nomor ponsel yang sama saat proses pemesanan agar riwayat pesanan otomatis terhubung dengan basis data kami.
 
 ### Langkah Kedua Kirimkan Bukti Visual Kendala Teknis
 
@@ -145,7 +145,7 @@ Daftar paket komplit terima beres dengan perlindungan garansi satu tahun ganti b
 Kenyamanan Anda adalah tolok ukur keberhasilan kerja kami. Jangan ragu menghubungi tim kami jika mendapati gangguan sekecil apa pun pada tampilan kamera keamanan di rumah, ruko, maupun gedung Anda.
 
 Siapkan informasi kendala dan hubungi admin layanan pelanggan kami sekarang:
-- **WhatsApp Layanan Garansi:** **0857-5890-3353**
+- **WhatsApp Layanan Garansi:** **0851-0171-8690**
 - **Jam Layanan Pelanggan:** Senin sampai Minggu, pukul 07.00 hingga 21.00 WIB
 - **Kantor Seberang Ulu:** Jalan Silaberanti Nomor 24, Silaberanti, Kecamatan Seberang Ulu I, Kota Palembang 30116
 - **Kantor Ilir Barat:** Jalan Demang Lebar Daun, Lorok Pakjo, Kecamatan Ilir Barat I, Kota Palembang 30137

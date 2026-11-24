@@ -186,7 +186,7 @@ export const servicesData: ServiceDetail[] = [
       },
       {
         question: 'Bagaimana prosedur klaim jika ada kamera yang mati dalam masa garansi?',
-        answer: 'Cukup kirim pesan WhatsApp ke nomor resmi kami 0857-5890-3353. Tim teknisi kami akan menjadwalkan kunjungan pengecekan ke rumah Anda. Bila terjadi kerusakan teknis pada perangkat, unit langsung diganti baru di tempat tanpa prosedur birokrasi rumit.'
+        answer: 'Cukup kirim pesan WhatsApp ke nomor resmi kami 0851-0171-8690. Tim teknisi kami akan menjadwalkan kunjungan pengecekan ke rumah Anda. Bila terjadi kerusakan teknis pada perangkat, unit langsung diganti baru di tempat tanpa prosedur birokrasi rumit.'
       },
       {
         question: 'Berapa lama proses pemasangan 4 titik kamera di rumah tinggal?',
@@ -725,7 +725,7 @@ export const servicesData: ServiceDetail[] = [
       },
       {
         question: 'Bagaimana cara memesan paket promo ini?',
-        answer: 'Caranya sangat mudah. Cukup klik tombol WhatsApp di website ini (nomor 0857-5890-3353), informasikan paket pilihan Anda dan alamat lokasi pemasangan di Palembang. Tim admin kami akan langsung mengonfirmasi jadwal kedatangan teknisi ke tempat Anda.'
+        answer: 'Caranya sangat mudah. Cukup klik tombol WhatsApp di website ini (nomor 0851-0171-8690), informasikan paket pilihan Anda dan alamat lokasi pemasangan di Palembang. Tim admin kami akan langsung mengonfirmasi jadwal kedatangan teknisi ke tempat Anda.'
       }
     ]
   }

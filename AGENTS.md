@@ -17,7 +17,7 @@ Semua agen AI, subagent, dan sesi Antigravity WAJIB membaca dan mematuhi dokumen
 
 - **`SUMBER-PENGETAHUAN.md`** di root direktori proyek adalah **SATU-SATUNYA SUMBER KEBENARAN** untuk:
   - Identitas Brand, Legalitas, dan Workshop fisik (Silaberanti Seberang Ulu I & Demang Lebar Daun Lorok Pakjo).
-  - Nomor Kontak WhatsApp Resmi (`0857-5890-3353`).
+  - Nomor Kontak WhatsApp Resmi (`0851-0171-8690`).
   - Database Kata Kunci Potensial (SEO & GEO 2026).
   - Rincian Paket Pemasangan CCTV, Harga Riil, dan Syarat Pembayaran (Tanpa DP / COD).
   - Garansi Resmi 1 Tahun Ganti Baru dan SOP Teknisi (Pipa PVC Conduit, No-Smoking).
@@ -53,8 +53,8 @@ Sebelum menulis atau mengedit konten website:
 - **Money Pages (`/layanan/[slug]/`)**: Halaman pilar komersial berbobot tinggi. Wajib memuat tabel breakdown RAB, perbandingan paket fisik, spesifikasi hardware, SOP & K3, serta 6 butir FAQ.
 - **Blog Spokes (`/blog/[slug]/`)**: Artikel pendukung edukatif/masalah lapangan. Wajib menyertakan minimal 1 tautan kontekstual berakhiran trailing slash `/` ke Money Page terkait.
 - **CTA WhatsApp Terpadu**:
-  - Nomor: `0857-5890-3353`
-  - URL Format: `https://wa.me/6285758903353?text=Halo%20Admin%20CCTV%20Palembang...`
+  - Nomor: `0851-0171-8690`
+  - URL Format: `https://wa.me/6285101718690?text=Halo%20Admin%20CCTV%20Palembang...`
 
 ---
 

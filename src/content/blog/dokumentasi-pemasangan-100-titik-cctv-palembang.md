@@ -127,4 +127,4 @@ Memasang sistem keamanan berskala kawasan perumahan bukan sekadar urusan menempe
 
 Kami menyediakan layanan survei bentangan jalur gratis, perancangan denah topologi jaringan fiber optic, serta penyusunan Rencana Anggaran Biaya (RAB) resmi yang siap dipresentasikan di hadapan rapat pengurus RT, RW, atau developer perumahan. Seluruh pengerjaan kami dukung dengan komitmen tanpa uang muka serta garansi resmi 1 tahun ganti baru untuk menjamin ketenangan seluruh warga.
 
-Hubungi admin teknis kami sekarang melalui WhatsApp di nomor **0857-5890-3353** untuk konsultasi teknis, survei lokasi, dan pemaparan proposal sistem keamanan lingkungan di seluruh wilayah Kota Palembang dan sekitarnya.
+Hubungi admin teknis kami sekarang melalui WhatsApp di nomor **0851-0171-8690** untuk konsultasi teknis, survei lokasi, dan pemaparan proposal sistem keamanan lingkungan di seluruh wilayah Kota Palembang dan sekitarnya.

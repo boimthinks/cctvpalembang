@@ -149,7 +149,7 @@ function createOgSvg1200x630(title, description) {
         <div style="display:flex; gap:24px; font-size:18px; color:#38bdf8; font-weight:700;">
           <span style="background:rgba(2,132,199,0.3); padding:8px 18px; border-radius:30px; border:1px solid #0284c7;">Bebas Uang Muka (Tanpa DP)</span>
           <span style="background:rgba(2,132,199,0.3); padding:8px 18px; border-radius:30px; border:1px solid #0284c7;">Garansi 1 Tahun Ganti Baru</span>
-          <span style="background:rgba(2,132,199,0.3); padding:8px 18px; border-radius:30px; border:1px solid #0284c7;">Hotline: 0857-5890-3353</span>
+          <span style="background:rgba(2,132,199,0.3); padding:8px 18px; border-radius:30px; border:1px solid #0284c7;">Hotline: 0851-0171-8690</span>
         </div>
       </div>
     </foreignObject>

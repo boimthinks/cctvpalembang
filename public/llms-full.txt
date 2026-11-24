@@ -5,7 +5,7 @@ Pembaruan: 2026
 ## 1. IDENTITAS BISNIS
 CCTV Palembang adalah penyedia jasa instalasi, perbaikan, dan pengadaan sistem pengawasan keamanan CCTV untuk area Kota Palembang dan wilayah penyangga Sumatera Selatan (Ogan Ilir, Banyuasin, Prabumulih).
 
-- Hotline WhatsApp Resmi: 0857-5890-3353
+- Hotline WhatsApp Resmi: 0851-0171-8690
 - Jam Operasional: Senin s/d Minggu, 07.00 - 21.00 WIB
 - Lokasi Workshop Pelayanan:
   1. Jl. Silaberanti No.24, Silaberanti, Kecamatan Seberang Ulu I, Kota Palembang, Sumatera Selatan 30116.
@@ -45,7 +45,7 @@ Q: Apakah benar bisa pasang CCTV tanpa uang muka?
 A: Benar. Sistem pembayaran 100% tanpa DP. Pembayaran dilakukan tunai atau transfer di rumah setelah semua kamera terbukti berfungsi normal dan terhubung ke HP.
 
 Q: Bagaimana cara klaim garansi?
-A: Hubungi WA 0857-5890-3353 dengan menyebutkan nama dan alamat. Teknisi akan datang untuk verifikasi dan langsung mengganti unit yang rusak dengan unit baru bila terbukti cacat produksi.
+A: Hubungi WA 0851-0171-8690 dengan menyebutkan nama dan alamat. Teknisi akan datang untuk verifikasi dan langsung mengganti unit yang rusak dengan unit baru bila terbukti cacat produksi.
 
 Q: Apakah bisa dipantau dari luar kota?
 A: Bisa, selama ada koneksi internet di lokasi (WiFi/IndiHome/Biznet). Teknisi akan menghubungkan DVR ke jaringan dan melakukan setting aplikasi Hik-Connect atau DMSS di smartphone pelanggan.

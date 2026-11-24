@@ -105,6 +105,6 @@ Poin garansi penting untuk dipahami. Garansi servis artinya unit rusak harus dis
 
 Biaya pasang CCTV 4 kamera di Palembang tidak perlu ditebak-tebak. Kirimkan foto titik-titik yang ingin dipantau, dan tim teknisi kami hitung kebutuhan kabel serta harga akhirnya tanpa biaya apa pun. Anda juga bisa mampir langsung ke workshop kami di Jl. Silaberanti No.24, Seberang Ulu I, atau di Jl. Demang Lebar Daun, Lorok Pakjo, Ilir Barat I.
 
-- **WhatsApp Resmi:** [0857-5890-3353](https://wa.me/6285758903353?text=Halo%20Admin%20CCTV%20Palembang.%20Saya%20ingin%20konsultasi%20biaya%20pasang%20CCTV%204%20kamera...)
+- **WhatsApp Resmi:** [0851-0171-8690](https://wa.me/6285101718690?text=Halo%20Admin%20CCTV%20Palembang.%20Saya%20ingin%20konsultasi%20biaya%20pasang%20CCTV%204%20kamera...)
 - **Layanan terkait:** [Paket CCTV Palembang Murah](/layanan/paket-cctv-palembang-murah/)
 - **Artikel pendukung:** [Estimasi Biaya Pasang CCTV Rumah di Palembang](/blog/biaya-pasang-cctv-rumah-palembang/)

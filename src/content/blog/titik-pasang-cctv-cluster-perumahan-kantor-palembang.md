@@ -135,7 +135,7 @@ Poin terakhir penting untuk kantor dan instansi. Kuitansi resmi dibutuhkan saat 
 
 Penentuan titik kamera tidak perlu dikerjakan sendiri. Kirimkan foto denah atau foto properti dari beberapa sudut lewat WhatsApp, kami bantu tandai titik yang paling efisien dan hitung kebutuhan kabelnya. Untuk kantor, kami bisa datang survei tanpa biaya di wilayah Palembang.
 
-- **WhatsApp Resmi:** [0857-5890-3353](https://wa.me/6285758903353?text=Halo%20Admin%20CCTV%20Palembang%20%28cctvpalembang.web.id%29.%20Saya%20ingin%20konsultasi%20titik%20pasang%20CCTV%20untuk%20cluster%20perumahan%20atau%20kantor...)
+- **WhatsApp Resmi:** [0851-0171-8690](https://wa.me/6285101718690?text=Halo%20Admin%20CCTV%20Palembang%20%28cctvpalembang.web.id%29.%20Saya%20ingin%20konsultasi%20titik%20pasang%20CCTV%20untuk%20cluster%20perumahan%20atau%20kantor...)
 - **Layanan terkait:** [Pasang CCTV Rumah dan Cluster Palembang](/layanan/pasang-cctv-rumah-palembang/) dan [Instalasi IP Camera Gedung dan Pabrik Palembang](/layanan/instalasi-ip-camera-gedung-pabrik-palembang/)
 - **Workshop:** Jl. Silaberanti No.24, Seberang Ulu I, atau Jl. Demang Lebar Daun, Lorok Pakjo, Ilir Barat I
 

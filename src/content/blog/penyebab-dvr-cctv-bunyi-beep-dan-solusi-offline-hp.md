@@ -138,6 +138,6 @@ Garansi penggantian unit baru resmi 1 tahun untuk setiap suku cadang yang Anda b
 
 Jangan biarkan rumah, kantor, atau toko Anda berada dalam kondisi tanpa pengawasan akibat DVR mati atau rekaman tidak tersimpan. Untuk panggilan teknisi cepat ke alamat Anda di wilayah Kota Palembang dan sekitarnya:
 
-- **WhatsApp Call & Chat:** [0857-5890-3353](https://wa.me/6285758903353?text=Halo%20Admin%20CCTV%20Palembang.%20DVR%20saya%20berbunyi%20beep%20dan%20offline%20di%20HP.%20Mohon%20jadwal%20servis...)
+- **WhatsApp Call & Chat:** [0851-0171-8690](https://wa.me/6285101718690?text=Halo%20Admin%20CCTV%20Palembang.%20DVR%20saya%20berbunyi%20beep%20dan%20offline%20di%20HP.%20Mohon%20jadwal%20servis...)
 - **Workshop Wilayah Ulu:** Jl. Silaberanti No.24, Silaberanti, Kec. Seberang Ulu I, Kota Palembang 30116.
 - **Workshop Wilayah Ilir:** Jl. Demang Lebar Daun, Lorok Pakjo, Kec. Ilir Barat I, Kota Palembang 30137.

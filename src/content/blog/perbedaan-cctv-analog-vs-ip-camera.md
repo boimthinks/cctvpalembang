@@ -136,5 +136,5 @@ Sistem IP Camera bekerja layaknya sebuah komputer mini. Setiap kamera memiliki a
 
 Apapun tipe teknologi pengawasan yang Anda pilih, pastikan instalasi dikerjakan oleh teknisi bersertifikat yang memahami standar kerapihan pipa conduit dan sistem proteksi petir khas iklim Sumatera Selatan.
 
-- **Hotline Konsultasi:** [0857-5890-3353](https://wa.me/6285758903353?text=Halo%20Admin%20CCTV%20Palembang.%20Saya%20ingin%20konsultasi%20perbedaan%20analog%20dan%20IP%20camera...)
+- **Hotline Konsultasi:** [0851-0171-8690](https://wa.me/6285101718690?text=Halo%20Admin%20CCTV%20Palembang.%20Saya%20ingin%20konsultasi%20perbedaan%20analog%20dan%20IP%20camera...)
 - **Jaminan Layanan:** Bebas DP (Selesai Pasang Baru Bayar) &amp; Garansi 1 Tahun Ganti Baru.

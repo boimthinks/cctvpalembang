@@ -100,4 +100,4 @@ Tidak ada merek yang salah di antara ketiganya. Yang menentukan adalah apakah un
 
 Hikvision dan Dahua tetap jadi pilihan aman untuk rumah, ruko, dan gedung di Palembang karena orisinalitas unit dan dukungan purnajual yang mudah dijangkau. HiLook layak dipertimbangkan bila anggaran terbatas dan prioritas Anda pada jumlah titik kamera.
 
-Untuk konsultasi gratis, hitung titik pasang yang Anda butuhkan, atau sekadar ingin tahu merk mana yang cocok untuk kondisi rumah Anda, hubungi WhatsApp resmi kami di 0857-5890-3353. Tim teknisi kami siap menjelaskan perbedaan teknis ketiganya tanpa jargon yang membingungkan. Pembayaran hanya setelah seluruh sistem terpasang rapi dan Anda bisa memantau lewat HP.
+Untuk konsultasi gratis, hitung titik pasang yang Anda butuhkan, atau sekadar ingin tahu merk mana yang cocok untuk kondisi rumah Anda, hubungi WhatsApp resmi kami di 0851-0171-8690. Tim teknisi kami siap menjelaskan perbedaan teknis ketiganya tanpa jargon yang membingungkan. Pembayaran hanya setelah seluruh sistem terpasang rapi dan Anda bisa memantau lewat HP.

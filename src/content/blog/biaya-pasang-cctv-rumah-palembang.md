@@ -19,7 +19,7 @@ faq:
   - question: "Apakah ada biaya bulanan setelah CCTV terpasang di rumah?"
     answer: "Tidak ada biaya langganan bulanan sama sekali. Rekaman video tersimpan di dalam harddisk lokal secara gratis, dan pemantauan online melalui aplikasi smartphone (Hik-Connect atau DMSS) bebas biaya selamanya menggunakan koneksi WiFi internet rumah Anda."
   - question: "Bagaimana cara mendapatkan garansi ganti baru jika kamera rusak?"
-    answer: "Cukup hubungi WhatsApp resmi 0857-5890-3353. Tim teknisi kami akan datang ke rumah Anda maksimal dalam waktu 24-48 jam kerja untuk memeriksa dan langsung menukar unit yang rusak dengan unit baru tanpa proses servis berbulan-bulan."
+    answer: "Cukup hubungi WhatsApp resmi 0851-0171-8690. Tim teknisi kami akan datang ke rumah Anda maksimal dalam waktu 24-48 jam kerja untuk memeriksa dan langsung menukar unit yang rusak dengan unit baru tanpa proses servis berbulan-bulan."
 ---
 
 Mengetahui perkiraan pengeluaran sebelum memasang sistem keamanan adalah langkah bijak bagi setiap pemilik rumah di Palembang. Banyak orang khawatir akan munculnya biaya tak terduga, seperti ongkos tarikan kabel yang dihitung mahal di belakang, biaya setting internet smartphone, hingga pungutan uang muka yang rawan penipuan.
@@ -95,6 +95,6 @@ Kami memberlakukan sistem **100% Bayar di Tempat (COD)** untuk semua pelanggan d
 
 Amankan hunian dan keluarga tercinta Anda dari ancaman tindak kejahatan sekarang juga. Untuk konsultasi gratis titik pasang, perhitungan kabel, atau penjadwalan kedatangan teknisi, silakan hubungi kami:
 
-- **Hotline WhatsApp Resmi:** [0857-5890-3353](https://wa.me/6285758903353?text=Halo%20Admin%20CCTV%20Palembang.%20Saya%20ingin%20konsultasi%20biaya%20pasang%20CCTV%20rumah...)
+- **Hotline WhatsApp Resmi:** [0851-0171-8690](https://wa.me/6285101718690?text=Halo%20Admin%20CCTV%20Palembang.%20Saya%20ingin%20konsultasi%20biaya%20pasang%20CCTV%20rumah...)
 - **Workshop Seberang Ulu:** Jl. Silaberanti No.24, Silaberanti, Kec. Seberang Ulu I, Kota Palembang 30116.
 - **Workshop Ilir Barat:** Jl. Demang Lebar Daun, Lorok Pakjo, Kec. Ilir Barat I, Kota Palembang 30137.
