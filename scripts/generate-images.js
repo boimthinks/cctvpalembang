@@ -298,6 +298,12 @@ async function main() {
       title: 'Penyebab Kamera CCTV Mati Total dan Solusinya',
       subtitle: 'Diagnosa Adaptor, Konektor DC, Kabel Putus, dan Board Rusak Palembang',
       badge: 'PANDUAN SERVIS',
+    },
+    {
+      slug: 'titik-pasang-cctv-cluster-perumahan-kantor-palembang',
+      title: 'Titik Pasang CCTV Cluster Perumahan dan Kantor',
+      subtitle: 'Hitungan Kamera per Properti, Jam Rekam, dan Sudut Aman ke Tetangga',
+      badge: 'PANDUAN PEMASANGAN',
     }
   ];
 

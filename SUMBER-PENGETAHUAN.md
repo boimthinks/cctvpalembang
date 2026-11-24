@@ -208,7 +208,7 @@ Kami melayani armada teknisi cepat untuk seluruh wilayah:
 
 ---
 
-## 7. DAFTAR ARTIKEL BLOG TERBIT (UPDATE 18 NOVEMBER 2026)
+## 7. DAFTAR ARTIKEL BLOG TERBIT (UPDATE 24 NOVEMBER 2026)
 
 Gunakan daftar ini untuk mencegah duplikasi topik. Setiap artikel wajib menautkan minimal satu Money Page dengan trailing slash.
 
@@ -225,5 +225,7 @@ Gunakan daftar ini untuk mencegah duplikasi topik. Setiap artikel wajib menautka
 | 2026-11-16 | `/blog/lama-rekaman-cctv-kapasitas-harddisk-palembang/` | Lama rekaman per kapasitas harddisk | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
 | 2026-11-17 | `/blog/proteksi-cctv-sambaran-petir-palembang/` | Proteksi petir: grounding, surge arrester, standar tahanan | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
 | 2026-11-18 | `/blog/penyebab-kamera-cctv-mati-total-palembang/` | Diagnosa kamera mati total: daya, konektor, kabel, board | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 2026-11-21 | `/blog/rincian-biaya-pasang-cctv-4-kamera-palembang/` | Rincian biaya paket 4 kamera dan biaya tersembunyi | `/layanan/paket-cctv-palembang-murah/` |
+| 2026-11-24 | `/blog/titik-pasang-cctv-cluster-perumahan-kantor-palembang/` | Titik kamera cluster perumahan dan kantor | `/layanan/pasang-cctv-rumah-palembang/` |
 
 Catatan konsolidasi: artikel `/blog/perbandingan-ip-camera-vs-analog-hd-palembang/` (terbit 2 Mei 2026) sudah digabung ke `/blog/perbedaan-cctv-analog-vs-ip-camera/` dan dialihkan permanen (301) melalui `public/.htaccess`. Jangan membuat artikel baru dengan sudut pandang biaya per titik analog vs IP tanpa memeriksa halaman tersebut lebih dulu.
