@@ -22,22 +22,22 @@ Setiap artikel blog di bawah ini dirancang untuk menargetkan kata kunci informas
 ### Klaster B: Masalah Lapangan & Troubleshooting Servis
 | Hari | Judul Artikel | Target Keyword Utama | Internal Link Money Page |
 | :--- | :--- | :--- | :--- |
-| 7 | Penyebab Kamera CCTV Mati Total dan Cara Mengatasinya dengan Tepat | kamera cctv mati total | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 7 | Penyebab Kamera CCTV Mati Total dan Cara Mengatasinya dengan Tepat | kamera cctv mati total | `/layanan/jasa-servis-maintenance-cctv-palembang/` | ✅ Terbit 2026-11-18 (`penyebab-kamera-cctv-mati-total-palembang`) |
 | 8 | Mengapa CCTV Tidak Bisa Online di HP: Solusi Lengkap | cctv tidak bisa online di hp | `/layanan/jasa-servis-maintenance-cctv-palembang/` | ✅ Terbit 2026-11-11 |
 | 9 | Cara Mengatasi DVR CCTV Bunyi Beep Terus Menerus | dvr cctv bunyi beep terus | `/layanan/jasa-servis-maintenance-cctv-palembang/` | ✅ Terbit 2026-11-11 |
-| 10 | Panduan Mengamankan CCTV dari Sambaran Petir di Palembang | cctv anti petir palembang | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` |
-| 11 | Cara Mereset Password DVR Hikvision dan Dahua yang Lupa | reset password dvr hikvision | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
-| 12 | Mengapa Gambar CCTV Bergaris atau Bergelombang dan Solusinya | gambar cctv bergaris | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 10 | Panduan Mengamankan CCTV dari Sambaran Petir di Palembang | cctv anti petir palembang | `/layanan/jasa-servis-maintenance-cctv-palembang/` | ✅ Terbit 2026-11-17 (`proteksi-cctv-sambaran-petir-palembang`) |
+| 11 | Cara Mereset Password DVR Hikvision dan Dahua yang Lupa | reset password dvr hikvision | `/layanan/jasa-servis-maintenance-cctv-palembang/` | ✅ Terbit 2026-11-26 (`cara-reset-password-dvr-hikvision-dahua-palembang`) |
+| 12 | Mengapa Gambar CCTV Bergaris atau Bergelombang dan Solusinya | gambar cctv bergaris | `/layanan/jasa-servis-maintenance-cctv-palembang/` | 📝 Draf (`gambar-cctv-bergaris-bergelombang-palembang`) |
 
 ### Klaster C: Instalasi Teknis & Standar Keamanan (E-E-A-T)
 | Hari | Judul Artikel | Target Keyword Utama | Internal Link Money Page |
 | :--- | :--- | :--- | :--- |
-| 13 | Sertifikasi IP66 IP67 dan WDR CCTV Cuaca Ekstrem Palembang | sertifikasi ip66 ip67 cctv palembang | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` | ✅ Terbit 2026-04-18 |
-| 14 | Titik Lokasi Strategis Pemasangan CCTV di Rumah Tinggal | titik pemasangan cctv rumah | `/layanan/pasang-cctv-rumah-palembang/` |
-| 15 | Keunggulan Fitur CCTV ColorVu Bisa Merekam Warna Malam Hari | cctv colorvu malam berwarna | `/layanan/paket-cctv-palembang-murah/` |
-| 16 | Panduan Memasang CCTV di Area Kasir Toko untuk Cegah Selisih Uang | cctv kasir toko | `/layanan/pasang-cctv-ruko-toko-palembang/` |
-| 17 | Sistem CCTV NVR PoE untuk Kantor dan Gudang Skala Besar | nvr poe cctv gudang | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` |
-| 18 | Perbedaan Harddisk CCTV Surveillance vs Harddisk Komputer Biasa | harddisk cctv surveillance | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 13 | Sertifikasi IP66 IP67 dan WDR CCTV Cuaca Ekstrem Palembang | sertifikasi ip66 ip67 cctv palembang | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` | ✅ Terbit 2026-04-18 (`penjelasan-teknis-ip66-ip67-wdr-cuaca-palembang`) |
+| 14 | Titik Lokasi Strategis Pemasangan CCTV di Rumah Tinggal | titik pemasangan cctv rumah | `/layanan/pasang-cctv-rumah-palembang/` | 📝 Draf (`titik-strategis-pemasangan-cctv-rumah-palembang`) |
+| 15 | Keunggulan Fitur CCTV ColorVu Bisa Merekam Warna Malam Hari | cctv colorvu malam berwarna | `/layanan/paket-cctv-palembang-murah/` | 📝 Draf (`kamera-cctv-colorvu-rekaman-berwarna-malam`) |
+| 16 | Panduan Memasang CCTV di Area Kasir Toko untuk Cegah Selisih Uang | cctv kasir toko | `/layanan/pasang-cctv-ruko-toko-palembang/` | 📝 Draf (`panduan-cctv-area-kasir-toko-palembang`) |
+| 17 | Sistem CCTV NVR PoE untuk Kantor dan Gudang Skala Besar | nvr poe cctv gudang | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` | 📝 Draf (`sistem-cctv-nvr-poe-kantor-gudang-palembang`) |
+| 18 | Perbedaan Harddisk CCTV Surveillance vs Harddisk Komputer Biasa | harddisk cctv surveillance | `/layanan/jasa-servis-maintenance-cctv-palembang/` | 📝 Draf (`harddisk-cctv-surveillance-vs-harddisk-komputer`) |
 
 ### Klaster D: Kebutuhan Spesifik & Area Lokal Palembang (Geotargeting)
 | Hari | Judul Artikel | Target Keyword Utama | Internal Link Money Page |
@@ -55,7 +55,7 @@ Setiap artikel blog di bawah ini dirancang untuk menargetkan kata kunci informas
 | 25 | CCTV dengan Audio Dua Arah Bisa Bicara Langsung Lewat HP | cctv audio dua arah | `/layanan/pasang-cctv-rumah-palembang/` |
 | 26 | Fitur AI Human and Vehicle Detection pada CCTV Cegah Alarm Palsu | cctv ai human detection | `/layanan/pasang-cctv-ruko-toko-palembang/` |
 | 27 | Tips Mengatur Sudut Pandang Lensa CCTV 2.8mm vs 3.6mm | lensa cctv 2.8mm vs 3.6mm | `/layanan/pasang-cctv-ruko-toko-palembang/` |
-| 28 | Cara Menyambungkan CCTV ke Smart TV dan Banyak HP Keluarga | cctv ke smart tv | `/layanan/pasang-cctv-rumah-palembang/` |
+| 28 | Cara Menyambungkan CCTV ke Smart TV dan Banyak HP Keluarga | cctv ke smart tv | `/layanan/pasang-cctv-rumah-palembang/` | 📝 Draf (`cara-menyambungkan-cctv-ke-smart-tv-banyak-hp-palembang`) |
 | 29 | Checklist Perawatan Rutin CCTV Tahunan Agar Tahan Lebih dari 5 Tahun | perawatan rutin cctv | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
 | 30 | Perbandingan Biaya CCTV Online Cloud vs Rekaman Harddisk Lokal | cctv cloud vs harddisk | `/layanan/paket-cctv-palembang-murah/` |
 
@@ -70,3 +70,30 @@ Setiap hari sebelum menulis artikel:
 4. **Internal Linking:** Wajib ada minimal 1 tautan kontekstual ke Money Page target.
 5. **Sinkronisasi Aset:** Daftarkan nama file thumbnail baru ke `scripts/generate-images.js`.
 6. **Verifikasi Build:** Jalankan `npm run build` dan pastikan EXIT CODE 0.
+
+---
+
+## STATUS DRAF (per 2026-11-26)
+
+Skema blog sekarang punya field `draft: true`. Build produksi menyaring artikel
+draft, sedangkan `astro dev` tetap menampilkannya untuk review. Alat bantu:
+`src/lib/articles.ts` (`getPublishedArticles`) dipakai semua halaman daftar.
+
+Delapan draft yang sudah ditulis. Satu sudah terbit 26 Nov 2026, tujuh menunggu penerbitan:
+
+| Hari | Slug | Kategori | Money Page |
+| ---: | --- | --- | --- |
+| 11 | `cara-reset-password-dvr-hikvision-dahua-palembang` (TERBIT 2026-11-26) | Panduan Servis | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 12 | `gambar-cctv-bergaris-bergelombang-palembang` | Panduan Servis | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 14 | `titik-strategis-pemasangan-cctv-rumah-palembang` | Panduan Pemasangan | `/layanan/pasang-cctv-rumah-palembang/` |
+| 15 | `kamera-cctv-colorvu-rekaman-berwarna-malam` | Panduan Teknis | `/layanan/paket-cctv-palembang-murah/` |
+| 16 | `panduan-cctv-area-kasir-toko-palembang` | Panduan Bisnis | `/layanan/pasang-cctv-ruko-toko-palembang/` |
+| 17 | `sistem-cctv-nvr-poe-kantor-gudang-palembang` | Panduan Teknis | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` |
+| 18 | `harddisk-cctv-surveillance-vs-harddisk-komputer` | Panduan Teknis | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 28 | `cara-menyambungkan-cctv-ke-smart-tv-banyak-hp-palembang` | Panduan Teknis | `/layanan/pasang-cctv-rumah-palembang/` |
+
+Prompt gambar kedelapan artikel sudah dicatat di
+`_workflow/inbox-gambar/ANTREAN.md`. Selama gambar asli belum ada, draft
+memakai gambar bawaan `/images/blog/default.webp` agar build tetap lolos.
+Draft tidak menaut ke draft lain supaya `cek_tautan.py` tetap bersih saat
+artikel diterbitkan satu per satu.

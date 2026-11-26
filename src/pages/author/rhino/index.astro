@@ -2,7 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import WhatsAppStickyCard from '@/components/common/WhatsAppStickyCard.astro';
 import MaterialIcon from '@/components/common/MaterialIcon.astro';
-import { getCollection } from 'astro:content';
+import { getPublishedArticles } from '@/lib/articles';
 
 const siteURL = Astro.site ? Astro.site.origin : 'https://cctvpalembang.web.id';
 const currentUrl = `${siteURL}/author/rhino/`;
@@ -82,9 +82,8 @@ const prinsip = [
   },
 ];
 
-const posts = (await getCollection('blog'))
-  .filter((post) => post.data.author === 'Martha Rhino')
-  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+const posts = (await getPublishedArticles())
+  .filter((post) => post.data.author === 'Martha Rhino');
 
 const personSchema = {
   '@context': 'https://schema.org',

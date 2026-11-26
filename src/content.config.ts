@@ -12,6 +12,7 @@ const blog = defineCollection({
     tags: z.array(z.string()).default([]),
     image: z.string().default('/images/blog/default.webp'),
     featured: z.boolean().default(false),
+    draft: z.boolean().default(false),
     faq: z.array(
       z.object({
         question: z.string(),

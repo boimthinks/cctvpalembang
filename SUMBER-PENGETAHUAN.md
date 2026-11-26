@@ -208,9 +208,13 @@ Kami melayani armada teknisi cepat untuk seluruh wilayah:
 
 ---
 
-## 7. DAFTAR ARTIKEL BLOG TERBIT (UPDATE 24 NOVEMBER 2026)
+## 7. DAFTAR ARTIKEL BLOG TERBIT (UPDATE 26 NOVEMBER 2026)
 
 Gunakan daftar ini untuk mencegah duplikasi topik. Setiap artikel wajib menautkan minimal satu Money Page dengan trailing slash.
+
+Catatan: baris tanggal 2026-11-26 sudah terbit. Tujuh baris lain, tanggal 2026-11-28
+sampai 2026-12-04, masih DRAF (`draft: true`) dan belum tayang di produksi. Tanggal
+tersebut akan digeser ke tanggal penerbitan sebenarnya oleh `terbit.py`.
 
 | Tanggal | URL | Topik | Money Page Target |
 | :--- | :--- | :--- | :--- |
@@ -227,5 +231,13 @@ Gunakan daftar ini untuk mencegah duplikasi topik. Setiap artikel wajib menautka
 | 2026-11-18 | `/blog/penyebab-kamera-cctv-mati-total-palembang/` | Diagnosa kamera mati total: daya, konektor, kabel, board | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
 | 2026-11-21 | `/blog/rincian-biaya-pasang-cctv-4-kamera-palembang/` | Rincian biaya paket 4 kamera dan biaya tersembunyi | `/layanan/paket-cctv-palembang-murah/` |
 | 2026-11-24 | `/blog/titik-pasang-cctv-cluster-perumahan-kantor-palembang/` | Titik kamera cluster perumahan dan kantor | `/layanan/pasang-cctv-rumah-palembang/` |
+| 2026-11-26 | `/blog/cara-reset-password-dvr-hikvision-dahua-palembang/` | Pemulihan password DVR/NVR Hikvision dan Dahua | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 2026-11-28 | `/blog/gambar-cctv-bergaris-bergelombang-palembang/` | Gambar bergaris, bergelombang, dan salju | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 2026-11-29 | `/blog/titik-strategis-pemasangan-cctv-rumah-palembang/` | Titik strategis kamera di rumah tinggal | `/layanan/pasang-cctv-rumah-palembang/` |
+| 2026-11-30 | `/blog/kamera-cctv-colorvu-rekaman-berwarna-malam/` | Kinerja ColorVu dan Full Color saat malam | `/layanan/paket-cctv-palembang-murah/` |
+| 2026-12-01 | `/blog/panduan-cctv-area-kasir-toko-palembang/` | Sudut kamera kasir dan bukti selisih uang | `/layanan/pasang-cctv-ruko-toko-palembang/` |
+| 2026-12-02 | `/blog/sistem-cctv-nvr-poe-kantor-gudang-palembang/` | NVR PoE, switch PoE, dan rack gudang | `/layanan/instalasi-ip-camera-gedung-pabrik-palembang/` |
+| 2026-12-03 | `/blog/harddisk-cctv-surveillance-vs-harddisk-komputer/` | Harddisk surveillance vs harddisk desktop | `/layanan/jasa-servis-maintenance-cctv-palembang/` |
+| 2026-12-04 | `/blog/cara-menyambungkan-cctv-ke-smart-tv-banyak-hp-palembang/` | Tampilan smart TV dan berbagi akses HP | `/layanan/pasang-cctv-rumah-palembang/` |
 
 Catatan konsolidasi: artikel `/blog/perbandingan-ip-camera-vs-analog-hd-palembang/` (terbit 2 Mei 2026) sudah digabung ke `/blog/perbedaan-cctv-analog-vs-ip-camera/` dan dialihkan permanen (301) melalui `public/.htaccess`. Jangan membuat artikel baru dengan sudut pandang biaya per titik analog vs IP tanpa memeriksa halaman tersebut lebih dulu.

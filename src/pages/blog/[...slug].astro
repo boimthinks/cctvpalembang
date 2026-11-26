@@ -4,9 +4,10 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import WhatsAppStickyCard from '@/components/common/WhatsAppStickyCard.astro';
 import GoogleSourcePreferences from '@/components/common/GoogleSourcePreferences.astro';
 import MaterialIcon from '@/components/common/MaterialIcon.astro';
+import { getPublishedArticles, bolehTampil } from '@/lib/articles';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const posts = (await getCollection('blog')).filter(bolehTampil);
   return posts.map((post) => ({
     params: { slug: post.id },
     props: { post },
@@ -21,7 +22,7 @@ const { post } = Astro.props;
 const { Content, headings } = await render(post);
 
 // Ambil semua artikel untuk kalkulasi artikel terkait
-const allPosts = await getCollection('blog');
+const allPosts = await getPublishedArticles();
 
 // Algoritma rekomendasi artikel terkait:
 // 1. Kecualikan artikel yang sedang dibaca
