@@ -1,13 +1,13 @@
 ---
 title: "Gambar CCTV Bergaris atau Bergelombang: Penyebab dan Solusi"
 description: "Layar DVR bergaris, bergelombang, atau berbayang? Ini urutan diagnosa teknisi Palembang dari kabel RG59, konektor BNC, adaptor, sampai gangguan daya bersama."
-publishDate: 2026-11-28
+publishDate: 2026-11-27
 author: "Martha Rhino"
 category: "Panduan Servis"
 tags: ["gambar cctv bergaris", "cctv bergelombang", "konektor bnc cctv", "servis cctv palembang"]
 image: "/images/blog/gambar-cctv-bergaris-bergelombang-palembang.webp"
 featured: false
-draft: true
+draft: false
 faq:
   - question: "Kenapa gambar CCTV bergaris setelah hujan?"
     answer: "Air yang masuk ke konektor BNC atau jack DC hampir selalu jadi penyebabnya. Sambungan outdoor yang tidak dilindungi back box akan menyerap embun dan hujan, lalu sinyal video terganggu. Keringkan konektor, ganti bila sudah berkarat, lalu tutup rapat dengan isolasi vulkanisir atau back box."
