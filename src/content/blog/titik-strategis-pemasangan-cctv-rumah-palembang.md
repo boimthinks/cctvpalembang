@@ -1,13 +1,13 @@
 ---
 title: "Titik Strategis Pemasangan CCTV di Rumah Tinggal Palembang"
 description: "Denah titik CCTV rumah di Palembang: kamera gerbang, carport, teras, dan halaman belakang. Lengkap dengan tinggi pasang, sudut lensa, dan kebutuhan kabel."
-publishDate: 2026-11-29
+publishDate: 2026-11-28
 author: "Martha Rhino"
 category: "Panduan Pemasangan"
 tags: ["titik pemasangan cctv rumah", "posisi cctv rumah palembang", "tinggi pasang cctv", "cctv rumah palembang"]
 image: "/images/blog/titik-strategis-pemasangan-cctv-rumah-palembang.webp"
 featured: false
-draft: true
+draft: false
 faq:
   - question: "Berapa ketinggian ideal memasang kamera CCTV di rumah?"
     answer: "Untuk kamera dome di teras dan dalam rumah, 2,5 sampai 3 meter. Untuk kamera bullet di gerbang dan carport, 2,7 sampai 3,2 meter. Di bawah 2,4 meter kamera mudah dijangkau tangan dan rawan dirusak. Di atas 3,5 meter wajah orang akan terlihat dari atas dan sulit dikenali."
